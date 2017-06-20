@@ -1,6 +1,6 @@
 {
   "name": "locomotive-piston",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Locomotive Piston",
   "main": "./index.js",
   "keywords": [
@@ -32,7 +32,8 @@
     "immutable": "^3.8.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-router": "3.0.5"
+    "react-router": "3.0.5",
+    "locomotive-gears": "^0.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

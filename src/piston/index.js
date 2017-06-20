@@ -4,7 +4,7 @@ import Immutable from 'immutable'
 
 import {
   Gears
-} from 'react-gears'
+} from 'locomotive-gears'
 
 import {
   Reverse
