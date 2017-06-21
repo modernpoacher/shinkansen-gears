@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Immutable from 'immutable'
 
 import {
-  Gears
-} from 'shinkansen-gears'
+  Rails
+} from 'shinkansen-rails'
 
 import {
   Reverse
@@ -14,7 +14,7 @@ import {
   Forward
 } from './forward'
 
-export class Piston extends React.Component {
+export class Gears extends React.Component {
   state = {} // define state
 
   /**
@@ -22,7 +22,7 @@ export class Piston extends React.Component {
    *
    *  @param {Object} props   Latest props
    */
-  componentWillReceiveProps (props) { // // console.log('(Piston)componentWillReceiveProps()', props) // eslint-disable-line
+  componentWillReceiveProps (props) { // // console.log('(Gears)componentWillReceiveProps()', props) // eslint-disable-line
     const {
       reverse,
       forward
@@ -39,7 +39,7 @@ export class Piston extends React.Component {
    *
    *  @param {Object} props   Latest props
    */
-  shouldComponentUpdate (props) { // // console.log('(Piston)shouldComponentUpdate()', props)
+  shouldComponentUpdate (props) { // // console.log('(Gears)shouldComponentUpdate()', props)
     /**
      *  Compare new 'props' to old 'state'
      */
@@ -62,7 +62,7 @@ export class Piston extends React.Component {
     )
   }
 
-  render () { // // console.log('(Piston)render()')
+  render () { // // console.log('(Gears)render()')
 
     const {
       reverse,
@@ -70,14 +70,14 @@ export class Piston extends React.Component {
       pattern
     } = this.props
 
-    const r = Gears.engage(reverse, pattern)
-    const f = Gears.engage(forward, pattern)
+    const r = Rails.engage(reverse, pattern)
+    const f = Rails.engage(forward, pattern)
 
     if (r || f) {
       return (
-        <ul className='shinkansen-piston' key='shinkansen-piston'>
-          {(r) ? (<Reverse pathname={Gears.path(reverse, pattern)} />) : false}
-          {(f) ? (<Forward pathname={Gears.path(forward, pattern)} />) : false}
+        <ul className='shinkansen-gears' key='shinkansen-gears'>
+          {(r) ? (<Reverse pathname={Rails.path(reverse, pattern)} />) : false}
+          {(f) ? (<Forward pathname={Rails.path(forward, pattern)} />) : false}
         </ul>
       )
     }
@@ -86,11 +86,11 @@ export class Piston extends React.Component {
   }
 }
 
-Piston.defaultProps = {
-  pattern: Gears.pattern()
+Gears.defaultProps = {
+  pattern: Rails.pattern()
 }
 
-Piston.propTypes = {
+Gears.propTypes = {
   reverse: PropTypes.object,
   forward: PropTypes.object,
   pattern: PropTypes.string
