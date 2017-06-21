@@ -1,17 +1,17 @@
 {
-  "name": "locomotive-piston",
-  "version": "0.0.2",
-  "description": "Locomotive Piston",
+  "name": "shinkansen-piston",
+  "version": "0.0.1",
+  "description": "Shinkansen Piston",
   "main": "./index.js",
   "keywords": [
-    "Locomotive",
+    "Shinkansen",
     "Piston",
     "Zashiki Karakuri",
     "React"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com/modernpoacher/Locomotive.Piston.git"
+    "url": "git@github.com/modernpoacher/Shinkansen.Piston.git"
   },
   "author": "Jonathan Perry for Modern Poacher",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-router": "3.0.5",
-    "locomotive-gears": "^0.0.2"
+    "shinkansen-gears": "^0.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

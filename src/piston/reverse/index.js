@@ -16,7 +16,7 @@ export class Reverse extends React.Component {
     }
 
     return (
-      <li key={key} className='locomotive-piston-reverse'>
+      <li key={key} className='shinkansen-piston-reverse'>
         <Link to={to}>
           Reverse
         </Link>

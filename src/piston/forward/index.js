@@ -16,7 +16,7 @@ export class Forward extends React.Component {
     }
 
     return (
-      <li key={key} className='locomotive-piston-forward'>
+      <li key={key} className='shinkansen-piston-forward'>
         <Link to={to}>
           Forward
         </Link>

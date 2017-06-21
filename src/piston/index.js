@@ -4,7 +4,7 @@ import Immutable from 'immutable'
 
 import {
   Gears
-} from 'locomotive-gears'
+} from 'shinkansen-gears'
 
 import {
   Reverse
@@ -75,7 +75,7 @@ export class Piston extends React.Component {
 
     if (r || f) {
       return (
-        <ul className='locomotive-piston' key='locomotive-piston'>
+        <ul className='shinkansen-piston' key='shinkansen-piston'>
           {(r) ? (<Reverse pathname={Gears.path(reverse, pattern)} />) : false}
           {(f) ? (<Forward pathname={Gears.path(forward, pattern)} />) : false}
         </ul>
