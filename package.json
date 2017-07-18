@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
+    "build:watch": "babel src -d lib -w",
     "prepublishOnly": "npm run build",
     "lint": "eslint src"
   },
