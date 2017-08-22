@@ -1,9 +1,7 @@
 {
   "compact": true,
   "presets": [
-    "es2015",
-    "es2016",
-    "es2017",
+    "env",
     "react",
     "stage-0",
     "stage-1"
