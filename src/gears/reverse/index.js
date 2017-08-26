@@ -4,27 +4,23 @@ import {
   Link
 } from 'react-router'
 
-export class Reverse extends React.Component {
-  render () {
-    const {
-      pathname
-    } = this.props
-
-    const key = `${pathname}-reverse`
-    const to = {
-      pathname
-    }
-
-    return (
-      <li key={key} className='shinkansen-gears-reverse'>
-        <Link to={to}>
-          Reverse
-        </Link>
-      </li>
-    )
+const Reverse = ({ pathname }) => {
+  const key = `${pathname}-reverse`
+  const to = {
+    pathname
   }
+
+  return (
+    <li key={key} className='shinkansen-gears-reverse'>
+      <Link to={to}>
+        Reverse
+      </Link>
+    </li>
+  )
 }
 
 Reverse.propTypes = {
   pathname: PropTypes.string.isRequired
 }
+
+export default Reverse

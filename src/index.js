@@ -1,3 +1,1 @@
-export {
-  Gears
-} from './gears'
+export Gears from './gears'

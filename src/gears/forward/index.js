@@ -4,27 +4,23 @@ import {
   Link
 } from 'react-router'
 
-export class Forward extends React.Component {
-  render () {
-    const {
-      pathname
-    } = this.props
-
-    const key = `${pathname}-forward`
-    const to = {
-      pathname
-    }
-
-    return (
-      <li key={key} className='shinkansen-gears-forward'>
-        <Link to={to}>
-          Forward
-        </Link>
-      </li>
-    )
+const Forward = ({ pathname }) => {
+  const key = `${pathname}-forward`
+  const to = {
+    pathname
   }
+
+  return (
+    <li key={key} className='shinkansen-gears-forward'>
+      <Link to={to}>
+        Forward
+      </Link>
+    </li>
+  )
 }
 
 Forward.propTypes = {
   pathname: PropTypes.string.isRequired
 }
+
+export default Forward

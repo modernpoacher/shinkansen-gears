@@ -6,15 +6,10 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import {
-  Reverse
-} from './reverse'
+import Reverse from './reverse'
+import Forward from './forward'
 
-import {
-  Forward
-} from './forward'
-
-export class Gears extends React.Component {
+export default class Gears extends React.Component {
   state = {} // define state
 
   /**
@@ -22,12 +17,7 @@ export class Gears extends React.Component {
    *
    *  @param {Object} props   Latest props
    */
-  componentWillReceiveProps (props) { // // console.log('(Gears)componentWillReceiveProps()', props) // eslint-disable-line
-    const {
-      reverse,
-      forward
-    } = props
-
+  componentWillReceiveProps ({ reverse, forward }) { // console.log('(Gears)componentWillReceiveProps()', { reverse, forward }) // eslint-disable-line
     this.setState({
       REVERSE: Immutable.Map(reverse),
       FORWARD: Immutable.Map(forward)
@@ -39,10 +29,13 @@ export class Gears extends React.Component {
    *
    *  @param {Object} props   Latest props
    */
-  shouldComponentUpdate (props) { // // console.log('(Gears)shouldComponentUpdate()', props)
-    /**
-     *  Compare new 'props' to old 'state'
-     */
+  shouldComponentUpdate ({ pattern, ...props }) { // console.log('(Gears)shouldComponentUpdate()', { pattern, ...props })
+    const {
+      pattern: PATTERN
+    } = this.props
+
+    if (pattern !== PATTERN) return true
+
     const {
       reverse,
       forward
@@ -62,27 +55,37 @@ export class Gears extends React.Component {
     )
   }
 
-  render () { // // console.log('(Gears)render()')
-
+  render () { // console.log('(Gears)render()')
     const {
       reverse,
       forward,
       pattern
     } = this.props
 
-    const r = Rails.engage(reverse, pattern)
-    const f = Rails.engage(forward, pattern)
+    const reverseGear = (Rails.engage(reverse, pattern))
+      ? (
+        <Reverse
+          pathname={Rails.path(reverse, pattern)}
+        />
+      ) : null
 
-    if (r || f) {
+    const forwardGear = (Rails.engage(forward, pattern))
+      ? (
+        <Forward
+          pathname={Rails.path(forward, pattern)}
+        />
+      ) : null
+
+    if (reverseGear || forwardGear) {
       return (
         <ul className='shinkansen-gears' key='shinkansen-gears'>
-          {(r) ? (<Reverse pathname={Rails.path(reverse, pattern)} />) : false}
-          {(f) ? (<Forward pathname={Rails.path(forward, pattern)} />) : false}
+          {reverseGear}
+          {forwardGear}
         </ul>
       )
     }
 
-    return false
+    return null
   }
 }
 
