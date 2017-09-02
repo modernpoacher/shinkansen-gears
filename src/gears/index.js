@@ -9,6 +9,34 @@ import {
 import Reverse from './reverse'
 import Forward from './forward'
 
+function renderReverse (reverse, pattern) {
+  if (Rails.engage(reverse, pattern)) {
+    const pathname = Rails.path(reverse, pattern)
+
+    return (
+      <Reverse
+        pathname={pathname}
+      />
+    )
+  }
+
+  return null
+}
+
+function renderForward (forward, pattern) {
+  if (Rails.engage(forward, pattern)) {
+    const pathname = Rails.path(forward, pattern)
+
+    return (
+      <Forward
+        pathname={pathname}
+      />
+    )
+  }
+
+  return null
+}
+
 export default class Gears extends React.Component {
   state = {} // define state
 
@@ -18,18 +46,33 @@ export default class Gears extends React.Component {
    *  @param {Object} props   Latest props
    */
   componentWillReceiveProps ({ reverse, forward }) { // console.log('(Gears)componentWillReceiveProps()', { reverse, forward }) // eslint-disable-line
-    this.setState({
-      REVERSE: Immutable.Map(reverse),
-      FORWARD: Immutable.Map(forward)
-    })
+    const r = Immutable.Map(reverse)
+    const f = Immutable.Map(forward)
+
+    const {
+      reverse: R,
+      forward: F
+    } = this.state
+
+    if (!Immutable.is(r, R)) {
+      this.setState({
+        reverse: r
+      })
+    }
+
+    if (!Immutable.is(f, F)) {
+      this.setState({
+        forward: f
+      })
+    }
   }
 
   /**
-   *  Compare latest 'props' with previous 'state' for changes to 'reverse' or 'forward'
+   *  Compare latest 'props' and 'state' for changes to 'pattern', 'reverse' or 'forward'
    *
    *  @param {Object} props   Latest props
    */
-  shouldComponentUpdate ({ pattern, ...props }) { // console.log('(Gears)shouldComponentUpdate()', { pattern, ...props })
+  shouldComponentUpdate ({ pattern }, state) { // console.log('(Gears)shouldComponentUpdate()', { pattern }, state)
     const {
       pattern: PATTERN
     } = this.props
@@ -39,20 +82,14 @@ export default class Gears extends React.Component {
     const {
       reverse,
       forward
-    } = props
+    } = state
 
     const {
-      REVERSE,
-      FORWARD
+      reverse: REVERSE,
+      forward: FORWARD
     } = this.state // state must be defined
 
-    /**
-     *  Compare object values
-     */
-    return (
-      !(Immutable.is(Immutable.Map(reverse), REVERSE)) ||
-      !(Immutable.is(Immutable.Map(forward), FORWARD))
-    )
+    return (reverse !== REVERSE || forward !== FORWARD)
   }
 
   render () { // console.log('(Gears)render()')
@@ -62,23 +99,12 @@ export default class Gears extends React.Component {
       pattern
     } = this.props
 
-    const reverseGear = (Rails.engage(reverse, pattern))
-      ? (
-        <Reverse
-          pathname={Rails.path(reverse, pattern)}
-        />
-      ) : null
-
-    const forwardGear = (Rails.engage(forward, pattern))
-      ? (
-        <Forward
-          pathname={Rails.path(forward, pattern)}
-        />
-      ) : null
+    const reverseGear = renderReverse(reverse, pattern)
+    const forwardGear = renderForward(forward, pattern)
 
     if (reverseGear || forwardGear) {
       return (
-        <ul className='shinkansen-gears' key='shinkansen-gears'>
+        <ul className='shinkansen-gears'>
           {reverseGear}
           {forwardGear}
         </ul>
@@ -90,6 +116,8 @@ export default class Gears extends React.Component {
 }
 
 Gears.defaultProps = {
+  reverse: {},
+  forward: {},
   pattern: Rails.pattern()
 }
 
