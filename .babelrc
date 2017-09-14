@@ -1,5 +1,6 @@
 {
   "compact": true,
+  "comments": false,
   "presets": [
     "env",
     "react",

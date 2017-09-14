@@ -13,16 +13,17 @@
     "type": "git",
     "url": "git@github.com/modernpoacher/Shinkansen.Gears.git"
   },
-  "author": "Jonathan Perry for Modern Poacher",
+  "author": "Jonathan Perry for Modern Poacher Limited",
   "license": "MIT",
   "engines": {
     "node": ">=7.0.0"
   },
   "scripts": {
     "build": "babel src -d lib",
-    "build:watch": "babel src -d lib -w",
+    "build:watch": "npm run build -- -w",
     "prepublishOnly": "npm run build",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "standard": {
     "parser": "babel-eslint"

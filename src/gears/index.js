@@ -10,8 +10,8 @@ import Reverse from './reverse'
 import Forward from './forward'
 
 function renderReverse (reverse, pattern) {
-  if (Rails.engage(reverse, pattern)) {
-    const pathname = Rails.path(reverse, pattern)
+  if (Rails.go(reverse, pattern)) {
+    const pathname = Rails.to(reverse, pattern)
 
     return (
       <Reverse
@@ -24,8 +24,8 @@ function renderReverse (reverse, pattern) {
 }
 
 function renderForward (forward, pattern) {
-  if (Rails.engage(forward, pattern)) {
-    const pathname = Rails.path(forward, pattern)
+  if (Rails.go(forward, pattern)) {
+    const pathname = Rails.to(forward, pattern)
 
     return (
       <Forward
