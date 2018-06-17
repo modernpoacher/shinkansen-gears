@@ -1,6 +1,6 @@
 {
   "name": "shinkansen-gears",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Shinkansen Gears",
   "main": "./index.js",
   "keywords": [
@@ -35,13 +35,14 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-router": "3.0.5",
-    "shinkansen-rails": "0.0.7"
+    "shinkansen-rails": "0.0.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
