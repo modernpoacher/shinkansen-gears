@@ -2,9 +2,15 @@
   "compact": true,
   "comments": false,
   "presets": [
-    "env",
+    [
+      "env", {
+        "targets": {
+          "node": "current"
+        },
+        "useBuiltIns": true
+      }
+    ],
     "react",
-    "stage-0",
-    "stage-1"
+    "stage-0"
   ]
 }
