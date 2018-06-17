@@ -1,6 +1,6 @@
 {
   "name": "shinkansen-gears",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Shinkansen Gears",
   "main": "./index.js",
   "keywords": [
@@ -35,7 +35,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-router": "3.0.5",
-    "shinkansen-rails": "0.0.9"
+    "shinkansen-rails": "0.0.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
