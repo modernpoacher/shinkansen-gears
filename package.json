@@ -22,6 +22,7 @@
     "prepublishOnly": "npm run lint:fix; npm run babel",
     "prebuild": "bash index.sh",
     "build": "npm run babel",
+    "clean": "rm -rf lib node_modules",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- -w",
     "lint": "eslint src",
