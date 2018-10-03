@@ -89,7 +89,10 @@ export default class Gears extends React.Component {
       forward: FORWARD
     } = this.state // state must be defined
 
-    return (reverse !== REVERSE || forward !== FORWARD)
+    return (
+      reverse !== REVERSE ||
+      forward !== FORWARD
+    )
   }
 
   render () { // console.log('(Gears)render()')
