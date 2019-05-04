@@ -24,7 +24,7 @@
     "clean": "bash clean.sh",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- -w",
-    "lint": "eslint src",
+    "lint": "eslint src *.js",
     "lint:fix": "npm run lint -- --fix",
     "pre-commit": "npm run lint && npm run babel && git add lib"
   },
@@ -36,7 +36,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-router": "3.0.5",
-    "shinkansen-rails": "0.0.12"
+    "shinkansen-rails": "0.0.14"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
