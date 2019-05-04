@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com/modernpoacher/Shinkansen.Gears.git"
+    "url": "git@github.com/modernpoacher/shinkansen-gears.git"
   },
   "author": "Jonathan Perry for Modern Poacher Limited",
   "license": "MIT",
