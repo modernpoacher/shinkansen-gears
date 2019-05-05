@@ -5,7 +5,7 @@ import {
 } from 'react-router'
 
 const Forward = ({ pathname }) => {
-  const key = `${pathname}-forward`
+  const key = pathname.concat('-forward')
   const to = {
     pathname
   }
