@@ -1,0 +1,6 @@
+.storybook
+.eslintignore
+.eslintrc
+.npmignore
+.npmrc
+clean.sh

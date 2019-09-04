@@ -16,7 +16,7 @@ module.exports = {
     ],
     '@babel/react'
   ],
-  'plugins': [
+  plugins: [
     '@babel/proposal-export-default-from',
     '@babel/proposal-class-properties'
   ]
