@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import {
   Link
-} from 'react-router'
+} from 'react-router-dom'
 
 const Reverse = ({ pathname }) => {
   const key = pathname.concat('-reverse')
