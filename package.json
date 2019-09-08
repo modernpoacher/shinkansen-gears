@@ -21,7 +21,7 @@
     "prepublishOnly": "npm run lint:fix && npm run babel",
     "prebuild": "npm run clean",
     "build": "npm run babel",
-    "clean": "bash clean.sh",
+    "clean": "rimraf lib",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- -w",
     "lint": "eslint src *.js",
@@ -33,16 +33,16 @@
   },
   "dependencies": {
     "immutable": "3.8.2",
-    "shinkansen-rails": "1.0.0"
+    "shinkansen-rails": "1.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.5.5",
+    "@babel/register": "^7.6.0",
     "@modernpoacher/deps": "0.0.6",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
@@ -55,7 +55,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.1",
-    "husky": "^3.0.5"
+    "husky": "^3.0.5",
+    "rimraf": "^3.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
