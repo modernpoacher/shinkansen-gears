@@ -9,7 +9,7 @@ import {
 import Reverse from './reverse'
 import Forward from './forward'
 
-function renderReverse (reverse, pattern) {
+export function renderReverse (reverse, pattern) {
   if (Rails.go(reverse, pattern)) {
     const pathname = Rails.to(reverse, pattern)
 
@@ -23,7 +23,7 @@ function renderReverse (reverse, pattern) {
   return null
 }
 
-function renderForward (forward, pattern) {
+export function renderForward (forward, pattern) {
   if (Rails.go(forward, pattern)) {
     const pathname = Rails.to(forward, pattern)
 
@@ -44,26 +44,15 @@ export default class Gears extends React.Component {
    *  Convert latest 'props' to an Immutable.Map() and store in 'state'
    *
    *  @param {Object} props   Latest props
+   *  @param {Object} state   Current state
    */
-  componentWillReceiveProps ({ reverse, forward }) { // console.log('(Gears)componentWillReceiveProps()', { reverse, forward }) // eslint-disable-line
+  static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) { // console.log('[Gears]getDerivedStateFromProps()')
     const r = Immutable.Map(reverse)
     const f = Immutable.Map(forward)
 
-    const {
-      reverse: R,
-      forward: F
-    } = this.state
-
-    if (!Immutable.is(r, R)) {
-      this.setState({
-        reverse: r
-      })
-    }
-
-    if (!Immutable.is(f, F)) {
-      this.setState({
-        forward: f
-      })
+    return {
+      reverse: Immutable.is(R, r) ? R : r,
+      forward: Immutable.is(F, f) ? F : f
     }
   }
 

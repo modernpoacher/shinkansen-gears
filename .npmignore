@@ -4,3 +4,8 @@
 # NPM
 .npmignore
 .npmrc
+
+coverage
+__tests__
+
+jest.config.js
