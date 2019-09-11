@@ -26,6 +26,7 @@
     "babel:watch": "npm run babel -- -w",
     "lint": "eslint src *.js",
     "lint:fix": "npm run lint -- --fix",
+    "test": "jest --verbose false --collect-coverage false",
     "pre-commit": "npm run lint && npm run babel && git add lib",
     "deps": "deps",
     "deps:prod": "deps --save-prod",
