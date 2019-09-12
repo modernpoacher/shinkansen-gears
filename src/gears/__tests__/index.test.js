@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
@@ -22,6 +23,8 @@ jest.mock('shinkansen-rails', () => ({
   }
 }))
 
+jest.mock('react-router-dom')
+
 describe('shinkansen-gears/gears', () => {
   beforeEach(() => {
     jest.resetAllMocks()
@@ -29,10 +32,14 @@ describe('shinkansen-gears/gears', () => {
 
   describe('Always', () => {
     it('renders', () => {
+      const component = (
+        <Gears />
+      )
+
       Rails.go.mockReturnValue(true)
       Rails.to.mockReturnValue('MOCK TO')
 
-      expect(shallow(<Gears />))
+      expect(renderer.create(component).toJSON())
         .toMatchSnapshot()
     })
   })
@@ -64,21 +71,21 @@ describe('shinkansen-gears/gears', () => {
     const mockReverseChanged = {}
     const mockForwardChanged = {}
 
+    const component = (
+      <Gears
+        reverse={mockReverse}
+        forward={mockForward}
+        pattern='MOCK PATTERN'
+      />
+    )
+
     beforeEach(() => {
       Immutable.Map.mockImplementation((v) => v)
-
-      const component = (
-        <Gears
-          reverse={mockReverse}
-          forward={mockForward}
-          pattern={'MOCK PATTERN'}
-        />
-      )
 
       shallow(component)
     })
 
-    describe('`props` have changed', () => {
+    describe('`props` has changed', () => {
       let returnValue
 
       beforeEach(() => {
@@ -106,7 +113,7 @@ describe('shinkansen-gears/gears', () => {
       })
     })
 
-    describe('`props` have not changed', () => {
+    describe('`props` has not changed', () => {
       let returnValue
 
       beforeEach(() => {
@@ -136,70 +143,81 @@ describe('shinkansen-gears/gears', () => {
   })
 
   describe('`shouldComponentUpdate()`', () => {
+    const mockReverse = {}
+    const mockForward = {}
+    const mockState = {
+      forward: mockForward,
+      reverse: mockReverse
+    }
+
     let wrapper
     let instance
 
+    const component = (
+      <Gears
+        reverse={mockReverse}
+        forward={mockForward}
+        pattern='MOCK PATTERN' />
+    )
+
     beforeEach(() => {
-      wrapper = shallow(<Gears pattern={'MOCK PATTERN'} />)
+      wrapper = shallow(component)
 
       instance = wrapper.instance()
     })
 
-    describe('`props` have changed', () => {
+    describe('`props` has changed', () => {
+      describe('`pattern` has changed', () => {
+        it('returns true', () => {
+          Immutable.is.mockReturnValue(true)
+
+          expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }, mockState))
+            .toBe(true)
+        })
+      })
+    })
+
+    describe('`props` has not changed', () => {
       beforeEach(() => {
         Immutable.is.mockReturnValue(true)
       })
 
-      describe('`pattern` has changed', () => {
-        it('returns true', () => {
-          expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }))
-            .toBe(true)
+      describe('`state` has changed', () => {
+        describe('`reverse` has changed', () => {
+          it('returns true', () => {
+            wrapper.setState(mockState)
+
+            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, reverse: {} }))
+              .toBe(true)
+          })
+        })
+
+        describe('`forward` has changed', () => {
+          it('returns true', () => {
+            wrapper.setState(mockState)
+
+            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, forward: {} }))
+              .toBe(true)
+          })
         })
       })
 
-      describe('`pattern` has not changed', () => {
-        const mockState = {
-          reverse: 'MOCK REVERSE',
-          forward: 'MOCK FORWARD'
-        }
+      describe('`state` has not changed', () => {
+        describe('`reverse` has not changed', () => {
+          it('returns false', () => {
+            wrapper.setState(mockState)
 
-        describe('`state` has `reverse`', () => {
-          describe('`reverse` has changed', () => {
-            it('returns true', () => {
-              wrapper.setState(mockState)
-
-              expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, reverse: 'MOCK REVERSE CHANGED' }))
-                .toBe(true)
-            })
-          })
-
-          describe('`reverse` has not changed', () => {
-            it('returns false', () => {
-              wrapper.setState(mockState)
-
-              expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
-                .toBe(false)
-            })
+            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+              .toBe(false)
           })
         })
 
-        describe('`state` has `forward`', () => {
-          describe('`forward` has changed', () => {
-            it('returns true', () => {
-              wrapper.setState(mockState)
+        describe('`forward` has not changed', () => {
+          it('returns false', () => {
+            wrapper.setState(mockState)
 
-              expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, forward: 'MOCK FORWARD CHANGED' }))
-                .toBe(true)
-            })
-          })
-
-          describe('`forward` has not changed', () => {
-            it('returns false', () => {
-              wrapper.setState(mockState)
-
-              expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
-                .toBe(false)
-            })
+            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+              .toBe(false)
           })
         })
       })

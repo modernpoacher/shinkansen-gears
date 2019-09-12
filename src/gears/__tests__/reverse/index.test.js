@@ -1,14 +1,17 @@
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import renderer from 'react-test-renderer'
 
 import Reverse from 'shinkansen-gears/gears/reverse'
 
-Enzyme.configure({ adapter: new Adapter() })
+jest.mock('react-router-dom')
 
 describe('shinkansen-gears/gears/reverse', () => {
   it('renders', () => {
-    expect(shallow(<Reverse pathname={'MOCK PATHNAME'} />))
+    const component = (
+      <Reverse pathname='MOCK PATHNAME' />
+    )
+
+    expect(renderer.create(component).toJSON())
       .toMatchSnapshot()
   })
 })
