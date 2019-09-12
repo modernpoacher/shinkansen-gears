@@ -27,10 +27,11 @@
     "lint": "eslint src *.js",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --verbose false --collect-coverage false",
-    "pre-commit": "npm run lint && npm run babel && git add lib",
+    "pre-commit": "npm run lint && npm run deps-install:peer && npm test && npm run babel && git add lib",
     "deps": "deps",
     "deps:prod": "deps --save-prod",
-    "deps:dev": "deps --save-dev"
+    "deps:dev": "deps --save-dev",
+    "deps-install:peer": "deps-install --peer"
   },
   "dependencies": {
     "immutable": "3.8.2",
@@ -44,7 +45,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.6.0",
-    "@modernpoacher/deps": "0.0.11",
+    "@modernpoacher/deps": "0.0.12",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
