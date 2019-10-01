@@ -1,28 +1,17 @@
 {
   "env": {
     "es6": true,
-    "browser": true,
-    "jest": true
+    "browser": true
   },
   "extends": [
-    "standard",
-    "plugin:react/recommended"
+    "eslint:recommended",
+    "standard"
   ],
   "parserOptions": {
+    "ecmaVersion": 10,
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
-  "rules": {
-    "react/display-name": 0
-  },
-  "settings": {
-    "react": {
-      "version": "16.2.0"
-    }
-  }
+  "parser": "babel-eslint"
 }
