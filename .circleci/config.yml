@@ -28,7 +28,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           name: Publish package
-          command:
+          command: |
             set -e
 
             NAME=$(node -p "require('./package.json').name")
