@@ -5,3 +5,9 @@
 
 node_modules
 coverage
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc

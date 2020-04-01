@@ -1,3 +1,6 @@
+.circleci
+
+.editorconfig
 .eslintignore
 .eslintrc
 
