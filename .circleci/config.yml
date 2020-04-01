@@ -21,13 +21,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Authenticate with NPM
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run:
           name: Install
           command: npm install
       - run:
-          name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-      - run:
-          name: Publish package
+          name: Publish to NPM
           command: |
             set -e
 
