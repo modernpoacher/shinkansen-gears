@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "immutable": "3.8.2",
-    "shinkansen-rails": "1.0.6"
+    "shinkansen-rails": "1.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -55,7 +55,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
