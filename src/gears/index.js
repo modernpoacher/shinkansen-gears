@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Immutable from 'immutable'
 
@@ -37,7 +37,7 @@ export function renderForward (forward, pattern) {
   return null
 }
 
-export default class Gears extends React.Component {
+export default class Gears extends Component {
   state = {} // define state
 
   /**

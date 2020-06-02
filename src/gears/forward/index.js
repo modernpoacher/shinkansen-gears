@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
-const Forward = ({ pathname }) => {
+function Forward ({ pathname }) {
   const key = pathname.concat('-forward')
   const to = {
     pathname

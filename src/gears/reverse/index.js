@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
-const Reverse = ({ pathname }) => {
+function Reverse ({ pathname }) {
   const key = pathname.concat('-reverse')
   const to = {
     pathname
