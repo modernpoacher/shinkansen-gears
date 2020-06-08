@@ -1,0 +1,15 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "addons.js",
+        "config.js"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
+      }
+    }
+  ]
+}

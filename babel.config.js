@@ -22,6 +22,7 @@ module.exports = {
     [
       'module-resolver', {
         alias: {
+          stories: './stories',
           'shinkansen-gears': './src'
         }
       }
