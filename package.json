@@ -22,19 +22,20 @@
     "prepublishOnly": "npm run lint:fix && npm run babel",
     "prebuild": "npm run clean",
     "build": "npm run babel",
+    "build:watch": "npm run babel:watch",
     "clean": "rimraf lib",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- -w",
     "lint": "eslint src *.js",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest --verbose false --collect-coverage false",
+    "test": "NODE_ENV=test jest --verbose false --collect-coverage false",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "pre-commit": "npm run lint && npm test && npm run babel && git add lib"
   },
   "dependencies": {
     "immutable": "3.8.2",
-    "shinkansen-rails": "1.0.8"
+    "shinkansen-rails": "1.0.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
