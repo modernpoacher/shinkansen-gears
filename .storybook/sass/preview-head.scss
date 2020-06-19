@@ -1,0 +1,11 @@
+@import-normalize;
+
+@import "design-system/layouts";
+
+#root {
+  @include zashiki;
+
+  margin: 1rem auto;
+
+  .shinkansen-gears { @include gears; }
+}

@@ -19,19 +19,19 @@ const REVERSE = {
 
 storiesOf('Gears', module)
   .addDecorator(StorybookReactRouter())
-  .add('Forward - Reverse', () => (
+  .add('Reverse - Forward', () => (
     <Gears
-      forward={FORWARD}
       reverse={REVERSE}
-    />
-  ))
-  .add('Forward', () => (
-    <Gears
       forward={FORWARD}
     />
   ))
   .add('Reverse', () => (
     <Gears
       reverse={REVERSE}
+    />
+  ))
+  .add('Forward', () => (
+    <Gears
+      forward={FORWARD}
     />
   ))
