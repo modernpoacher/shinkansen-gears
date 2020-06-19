@@ -1,6 +1,6 @@
 {
   "name": "shinkansen-gears",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Shinkansen Gears",
   "main": "./index.js",
   "keywords": [
