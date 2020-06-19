@@ -348,6 +348,47 @@ p {
   }
 }
 
+.anchor,
+.skip-link,
+a {
+  font-family: proxima-nova,sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+.anchor,
+.anchor:link,
+.skip-link,
+.skip-link:link,
+a,
+a:link {
+  text-decoration: underline;
+  color: #4d90fe
+}
+
+.anchor:hover,
+.skip-link:hover,
+a:hover {
+  color: #003078
+}
+
+.anchor:visited,
+.skip-link:visited,
+a:visited {
+  color: #4c2c92
+}
+
+.anchor:active,
+.anchor:focus,
+.skip-link:active,
+.skip-link:focus,
+a:active,
+a:focus {
+  outline: 2px solid transparent;
+  background-color: #fd0;
+  color: #171819
+}
+
 dl,
 ol,
 ul {
@@ -400,52 +441,6 @@ p {
 .anchor,
 a {
   margin: 0
-}
-
-.anchor,
-.skip-link,
-a {
-  font-family: proxima-nova,sans-serif;
-  font-weight: 400;
-  font-style: normal
-}
-
-.anchor,
-.anchor:link,
-.skip-link,
-.skip-link:link,
-a,
-a:link {
-  text-decoration: underline;
-  color: #315284
-}
-
-.anchor:hover,
-.skip-link:hover,
-a:hover {
-  color: #004
-}
-
-.anchor:visited,
-.skip-link:visited,
-a:visited {
-  color: #45286f
-}
-
-.anchor:active,
-.anchor:focus,
-.skip-link:active,
-.skip-link:focus,
-a:active,
-a:focus {
-  background-color: #fff;
-  color: #fff
-}
-
-.anchor:focus,
-.skip-link:focus,
-a:focus {
-  outline-color: #f27b20
 }
 
 body,
@@ -537,16 +532,16 @@ main {
   display: block
 }
 
+#root button:focus,
 #root button:hover {
-  text-decoration: underline;
-  color: #fff
+  text-decoration: underline
 }
 
 #root button:focus {
-  background-color: #fff;
-  color: #24548a;
-  text-decoration: underline;
-  outline-color: #f27b20
+  color: #171819;
+  background-color: #fd0;
+  border: 2px solid #fd0;
+  outline-color: #171819
 }
 
 #root label {
@@ -622,7 +617,7 @@ main {
 #root input:not([type=checkbox]):not([type=radio]):focus,
 #root select:focus,
 #root textarea:focus {
-  outline: 3px solid #f27b20;
+  outline: 3px solid #fd0;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
   border-color: #000
@@ -691,13 +686,13 @@ main {
   outline: 3px solid transparent;
   text-decoration: none;
   outline-offset: 0;
-  box-shadow: 0 -2px #f27b20,0 4px #000;
+  box-shadow: 0 -2px #fd0,0 4px #000;
   color: #171819;
-  background-color: #f27b20
+  background-color: #fd0
 }
 
 #root .sprocket.error-summary:focus {
-  outline: 3px solid #f27b20;
+  outline: 3px solid #fd0;
   outline-offset: 0;
   border-color: #000
 }
@@ -838,7 +833,7 @@ main {
 }
 
 #root .cog.radio input:focus + label:before {
-  box-shadow: 0 0 0 2px #f27b20
+  box-shadow: 0 0 0 2px #fd0
 }
 
 #root .cog.radio input:checked + label:after {
@@ -906,7 +901,7 @@ main {
 }
 
 #root .cog.checkbox input:focus + label:before {
-  box-shadow: 0 0 0 2px #f27b20
+  box-shadow: 0 0 0 2px #fd0
 }
 
 #root .cog.checkbox input:checked + label:after {
@@ -1036,6 +1031,8 @@ main {
 
 #root .shinkansen-gears li a {
   outline-offset: 2px;
+  outline-width: 1px;
+  outline-style: auto;
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: proxima-nova,sans-serif;
@@ -1089,7 +1086,7 @@ main {
 
 #root .shinkansen-gears li a:focus {
   text-decoration: underline;
-  outline-color: #f27b20
+  outline-color: #fd0
 }
 
 #root .shinkansen-gears li:last-of-type {
