@@ -11,7 +11,7 @@ describe('shinkansen-gears/gears/reverse', () => {
       <Reverse pathname='MOCK PATHNAME' />
     )
 
-    expect(renderer.create(component).toJSON())
+    return expect(renderer.create(component).toJSON())
       .toMatchSnapshot()
   })
 })

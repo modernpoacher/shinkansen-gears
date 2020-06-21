@@ -39,28 +39,28 @@ describe('shinkansen-gears/gears', () => {
       Rails.go.mockReturnValue(true)
       Rails.to.mockReturnValue('MOCK TO')
 
-      expect(renderer.create(component).toJSON())
+      return expect(renderer.create(component).toJSON())
         .toMatchSnapshot()
     })
   })
 
   describe('`renderReverse`', () => {
     it('is defined', () => {
-      expect(renderReverse)
+      return expect(renderReverse)
         .toBeDefined()
     })
   })
 
   describe('`renderForward`', () => {
     it('is defined', () => {
-      expect(renderForward)
+      return expect(renderForward)
         .toBeDefined()
     })
   })
 
   describe('`Gears.getDerivedStateFromProps`', () => {
     it('is defined', () => {
-      expect(Gears.getDerivedStateFromProps)
+      return expect(Gears.getDerivedStateFromProps)
         .toBeDefined()
     })
   })
@@ -95,17 +95,17 @@ describe('shinkansen-gears/gears', () => {
       })
 
       it('invokes `Immutable.Map` with `reverse`', () => {
-        expect(Immutable.Map)
+        return expect(Immutable.Map)
           .toBeCalledWith(mockReverseChanged)
       })
 
       it('invokes `Immutable.Map` with `forward`', () => {
-        expect(Immutable.Map)
+        return expect(Immutable.Map)
           .toBeCalledWith(mockForwardChanged)
       })
 
       it('returns the `state`', () => {
-        expect(returnValue)
+        return expect(returnValue)
           .toEqual({
             reverse: mockReverseChanged,
             forward: mockForwardChanged
@@ -123,17 +123,17 @@ describe('shinkansen-gears/gears', () => {
       })
 
       it('invokes `Immutable.Map` with `reverse`', () => {
-        expect(Immutable.Map)
+        return expect(Immutable.Map)
           .toBeCalledWith(mockReverse)
       })
 
       it('invokes `Immutable.Map` with `forward`', () => {
-        expect(Immutable.Map)
+        return expect(Immutable.Map)
           .toBeCalledWith(mockForward)
       })
 
       it('returns the `state`', () => {
-        expect(returnValue)
+        return expect(returnValue)
           .toEqual({
             reverse: mockReverse,
             forward: mockForward
@@ -171,7 +171,7 @@ describe('shinkansen-gears/gears', () => {
         it('returns true', () => {
           Immutable.is.mockReturnValue(true)
 
-          expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }, mockState))
+          return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }, mockState))
             .toBe(true)
         })
       })
@@ -187,7 +187,7 @@ describe('shinkansen-gears/gears', () => {
           it('returns true', () => {
             wrapper.setState(mockState)
 
-            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, reverse: {} }))
+            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, reverse: {} }))
               .toBe(true)
           })
         })
@@ -196,7 +196,7 @@ describe('shinkansen-gears/gears', () => {
           it('returns true', () => {
             wrapper.setState(mockState)
 
-            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, forward: {} }))
+            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, forward: {} }))
               .toBe(true)
           })
         })
@@ -207,7 +207,7 @@ describe('shinkansen-gears/gears', () => {
           it('returns false', () => {
             wrapper.setState(mockState)
 
-            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
               .toBe(false)
           })
         })
@@ -216,7 +216,7 @@ describe('shinkansen-gears/gears', () => {
           it('returns false', () => {
             wrapper.setState(mockState)
 
-            expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
               .toBe(false)
           })
         })
@@ -235,7 +235,7 @@ describe('shinkansen-gears/gears', () => {
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
 
-        expect(Rails.to)
+        return expect(Rails.to)
           .toBeCalledWith('MOCK REVERSE', 'MOCK PATTERN')
       })
     })
@@ -246,7 +246,7 @@ describe('shinkansen-gears/gears', () => {
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
 
-        expect(Rails.to)
+        return expect(Rails.to)
           .not.toBeCalled()
       })
     })
@@ -263,7 +263,7 @@ describe('shinkansen-gears/gears', () => {
 
         renderForward('MOCK FORWARD', 'MOCK PATTERN')
 
-        expect(Rails.to)
+        return expect(Rails.to)
           .toBeCalledWith('MOCK FORWARD', 'MOCK PATTERN')
       })
     })
@@ -274,7 +274,7 @@ describe('shinkansen-gears/gears', () => {
 
         renderForward('MOCK FORWARD', 'MOCK PATTERN')
 
-        expect(Rails.to)
+        return expect(Rails.to)
           .not.toBeCalled()
       })
     })
