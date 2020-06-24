@@ -24,7 +24,7 @@
   "scripts": {
     "prepublishOnly": "cross-env NODE_ENV=production npm run build",
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=development concurrently -r \"npm run babel\" \"gulp build\"",
+    "build": "cross-env NODE_ENV=development concurrently -r \"npm run babel -- --ignore \"**/__tests__/**\"\" \"gulp build\"",
     "build:watch": "cross-env NODE_ENV=development concurrently -r \"npm run babel:watch\" \"gulp build:watch\"",
     "transform": "gulp transform",
     "transform:watch": "gulp transform:watch",
