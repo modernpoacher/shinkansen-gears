@@ -1,6 +1,6 @@
 const debug = require('debug')
 
-const log = debug('shinkansen')
+const log = debug('shinkansen:gears')
 
 const {
   env: {
@@ -23,9 +23,13 @@ const presets = [
     '@babel/env', {
       useBuiltIns: 'entry',
       targets: {
-        node: 'current',
+        node: '12.18.1',
         browsers: [
-          'last 2 versions'
+          'last 4 versions',
+          'safari >= 9',
+          'ios >= 8',
+          'ie >= 9',
+          '> 2%'
         ]
       },
       corejs: 3
