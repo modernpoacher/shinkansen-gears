@@ -2,7 +2,6 @@
   "name": "shinkansen-gears",
   "version": "1.0.14",
   "description": "Shinkansen Gears",
-  "main": "./index.js",
   "keywords": [
     "Shinkansen",
     "Gears",
@@ -12,12 +11,13 @@
     "React",
     "React Router"
   ],
+  "main": "./index.js",
+  "author": "Jonathan Perry for Modern Poacher Limited <modernpoacher@modernpoacher.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com/modernpoacher/shinkansen-gears.git"
   },
-  "author": "Jonathan Perry for Modern Poacher Limited",
-  "license": "MIT",
   "scripts": {
     "prepublishOnly": "npm run lint:fix && npm run babel",
     "prebuild": "npm run clean",
