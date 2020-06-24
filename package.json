@@ -41,7 +41,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "immutable": "3.8.2",
-    "shinkansen-rails": "1.0.11"
+    "shinkansen-rails": "1.0.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
