@@ -19,7 +19,7 @@
     "url": "git@github.com/modernpoacher/shinkansen-gears.git"
   },
   "scripts": {
-    "prepublishOnly": "npm run lint:fix && npm run babel",
+    "prepublishOnly": "cross-env NODE_ENV=production npm run build",
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=development concurrently -r \"npm run babel\" \"gulp build\"",
     "build:watch": "cross-env NODE_ENV=development concurrently -r \"npm run babel:watch\" \"gulp build:watch\"",
@@ -28,7 +28,7 @@
     "clean": "rimraf lib",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- -w",
-    "lint": "eslint src build stories *.js",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "NODE_ENV=test jest --verbose false --collect-coverage false",
     "storybook": "npm run build && npm run transform && start-storybook -p 6006",
