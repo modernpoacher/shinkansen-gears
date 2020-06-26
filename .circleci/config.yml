@@ -35,6 +35,9 @@ jobs:
             VERSION=$(node -p "require('./package').version")
             PUBLISHED_VERSION=$(npm view $NAME version)
 
+            echo Version is $VERSION
+            echo Published version is $PUBLISHED_VERSION
+
             [[ $VERSION =~ $PATTERN ]]
 
             VERSION_MAJOR="${BASH_REMATCH[1]}"
