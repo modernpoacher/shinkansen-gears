@@ -43,14 +43,14 @@
     "immutable": "3.8.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
-    "@babel/register": "^7.10.4",
-    "@modernpoacher/design-system": "0.0.40",
+    "@babel/register": "^7.10.5",
+    "@modernpoacher/design-system": "0.0.41",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/react": "^5.3.19",
