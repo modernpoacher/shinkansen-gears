@@ -2,7 +2,7 @@
 
 # Shinkansen Gears
 
-*Gears* implements *React* + *React Router* navigation components for Zashiki.
+*Gears* implements *React* + *React Router* navigation components for *Zashiki Karakuri*.
 
 ## Usage
 
