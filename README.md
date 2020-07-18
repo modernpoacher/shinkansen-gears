@@ -1,4 +1,4 @@
-## @modernpoacher/shinkansen-gears
+## shinkansen-gears
 
 # Shinkansen Gears
 
