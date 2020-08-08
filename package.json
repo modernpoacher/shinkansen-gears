@@ -50,7 +50,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
-    "@modernpoacher/design-system": "0.0.60",
+    "@modernpoacher/design-system": "0.0.61",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/react": "^5.3.19",
