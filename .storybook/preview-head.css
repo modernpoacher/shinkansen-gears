@@ -23,6 +23,7 @@ ul ul {
 
 hr {
   box-sizing: content-box;
+  color: inherit;
   height: 0;
   overflow: visible
 }
@@ -56,6 +57,11 @@ small {
 
 svg:not(:root) {
   overflow: hidden
+}
+
+table {
+  border-color: inherit;
+  text-indent: 0
 }
 
 button,
