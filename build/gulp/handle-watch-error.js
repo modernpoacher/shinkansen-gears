@@ -14,6 +14,8 @@ export function handleWatchError ({
   filename: f,
   path: p
 } = {}) {
+  console.log('\n\n\n\nHELLO\n\n\n\n')
+
   switch (code) {
     case 'EPERM':
       log(`A watched file or directory has invalid permissions: '${path.relative(currentDir, f || p)}'`)
