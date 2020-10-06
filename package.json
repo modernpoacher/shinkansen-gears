@@ -33,7 +33,7 @@
     "babel:watch": "npm run babel -- -w",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "cross-env NODE_ENV=test jest --collect-coverage false --verbose",
+    "test": "cross-env NODE_ENV=test jest --collect-coverage false --verbose --run-in-band",
     "storybook": "npm run build && npm run transform && start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "pre-commit": "npm run lint && npm test && npm run build && npm run transform && git add lib .storybook"
