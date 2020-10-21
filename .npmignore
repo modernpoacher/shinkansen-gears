@@ -1,19 +1,29 @@
 .DS_Store
 
 .circleci
+.github
 
+.storybook
 .editorconfig
 .eslintignore
 .eslintrc
+
+.depsrc
 
 # NPM
 .npmignore
 .npmrc
 
-coverage
-__tests__
+# Build
+build
+gulpfile.js
 
+# Jest
+__tests__
 jest.config.js
+
+# Coverage
+coverage
 
 # Storybook
 stories
