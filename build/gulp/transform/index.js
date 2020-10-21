@@ -13,7 +13,7 @@ import handleWatchError from 'build/gulp/handle-watch-error'
 import {
   readFile,
   writeFile
-} from 'sacred-fs'
+} from 'fs/promises'
 
 const log = debug('shinkansen-gears:transform')
 
