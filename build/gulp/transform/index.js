@@ -29,7 +29,7 @@ export async function transform () {
   const css = await readFile('.storybook/preview-head.css', 'utf8')
 
   return (
-    writeFile('.storybook/preview-head.html', (
+    await writeFile('.storybook/preview-head.html', (
       await readFile('.storybook/preview-head.html', 'utf8')
     ).replace(STYLESHEET, `$1\n${css.trim()}\n$2`), 'utf8')
   )
