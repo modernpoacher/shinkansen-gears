@@ -11,7 +11,7 @@ import {
   modulePath
 } from 'build/paths'
 
-import handleWatchError from 'build/gulp/handle-watch-error'
+import handleError from 'build/gulp/handle-error'
 
 const buildSourcePath = path.relative(currentDir, sourcePath)
 const buildTargetPath = path.relative(currentDir, targetPath)
@@ -45,6 +45,6 @@ export function iconsWatch () {
       },
       gulp.series(iconsClean, icons)
     )
-      .on('error', handleWatchError)
+      .on('error', handleError)
   )
 }

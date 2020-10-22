@@ -8,7 +8,7 @@ import {
   sourcePath
 } from 'build/paths'
 
-import handleWatchError from 'build/gulp/handle-watch-error'
+import handleError from 'build/gulp/handle-error'
 
 import {
   readFile,
@@ -16,6 +16,8 @@ import {
 } from 'fs/promises'
 
 const log = debug('shinkansen-gears:transform')
+
+log('`transform` is awake')
 
 const STYLESHEET = /(<style type="text\/css">)[ -~\w\d"'+-:;,#%{}/*\n\s✓•]*(<\/style>)/gm
 
@@ -38,16 +40,14 @@ export function transformWatch () {
 
   return (
     gulp.watch(
-      [
-        path.join(buildSourcePath, '**/*.css')
-      ],
+      path.join(buildSourcePath, '**/*.css'),
       {
         name: 'css-watch',
         cwd: currentDir
       },
       transform
     )
-      .on('error', handleWatchError)
+      .on('error', handleError)
   )
 }
 
