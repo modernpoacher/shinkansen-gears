@@ -24,8 +24,8 @@
   "scripts": {
     "prepublishOnly": "cross-env NODE_ENV=production npm run build",
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=development concurrently -r \"npm run babel -- --ignore \"**/__tests__/**\"\" \"gulp build\"",
-    "build:watch": "cross-env NODE_ENV=development concurrently -r \"npm run babel:watch\" \"gulp build:watch\"",
+    "build": "cross-env DEBUG=shinkansen:gears npm run babel -- --ignore \"**/__tests__/**\" && gulp build",
+    "build:watch": "cross-env DEBUG=shinkansen:gears concurrently -r \"npm run babel:watch\" \"gulp build:watch\"",
     "transform": "gulp transform",
     "transform:watch": "gulp transform:watch",
     "clean": "rimraf lib",
