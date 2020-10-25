@@ -26,7 +26,7 @@ export function fontsClean () {
 
 export function fonts () {
   return (
-    gulp.src([path.join(buildSourcePath, 'fonts/**/*.*')])
+    gulp.src(path.join(buildSourcePath, 'fonts/**/*.*'))
       .pipe(gulp.dest(path.join(buildTargetPath, 'fonts')))
       .pipe(debug({ title: 'Fonts' }))
   )

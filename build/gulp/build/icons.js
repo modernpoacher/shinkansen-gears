@@ -26,7 +26,7 @@ export function iconsClean () {
 
 export function icons () {
   return (
-    gulp.src([path.join(buildSourcePath, 'icons/**/*.*')])
+    gulp.src(path.join(buildSourcePath, 'icons/**/*.*'))
       .pipe(gulp.dest(path.join(buildTargetPath, 'icons')))
       .pipe(debug({ title: 'Icons' }))
   )
