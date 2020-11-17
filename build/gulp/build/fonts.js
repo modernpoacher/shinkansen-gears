@@ -9,7 +9,7 @@ import {
   sourcePath,
   targetPath,
   modulePath
-} from 'build/paths'
+} from 'build/gulp/paths'
 
 import handleError from 'build/gulp/handle-error'
 
@@ -17,7 +17,7 @@ const buildSourcePath = path.relative(currentDir, sourcePath)
 const buildTargetPath = path.relative(currentDir, targetPath)
 const buildModulePath = path.relative(currentDir, modulePath)
 
-export function fontsClean () {
+export function cleanFonts () {
   return (
     gulp.src(path.join(buildTargetPath, 'fonts/*'), { read: false })
       .pipe(vinylPaths((paths) => del(paths, { force: true })))
@@ -32,7 +32,7 @@ export function fonts () {
   )
 }
 
-export function fontsWatch () {
+export function watchFonts () {
   return (
     gulp.watch(
       [
@@ -43,8 +43,7 @@ export function fontsWatch () {
         name: 'fonts-watch',
         cwd: currentDir
       },
-      gulp.series(fontsClean, fonts)
-    )
-      .on('error', handleError)
+      gulp.series(cleanFonts, fonts)
+    ).on('error', handleError)
   )
 }

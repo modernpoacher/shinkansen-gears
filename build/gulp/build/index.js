@@ -1,17 +1,17 @@
 export {
-  fontsClean,
+  cleanFonts,
   fonts,
-  fontsWatch
+  watchFonts
 } from './fonts'
 
 export {
-  iconsClean,
+  cleanIcons,
   icons,
-  iconsWatch
+  watchIcons
 } from './icons'
 
 export {
-  cssClean,
+  cleanCss,
   css,
-  cssWatch
+  watchCss
 } from './css'

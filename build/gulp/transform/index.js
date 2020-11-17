@@ -15,7 +15,7 @@ import {
   writeFile
 } from 'fs/promises'
 
-const log = debug('shinkansen-gears:transform')
+const log = debug('shinkansen-gears:build:gulp:transform')
 
 log('`transform` is awake')
 
@@ -46,8 +46,7 @@ export function transformWatch () {
         cwd: currentDir
       },
       transform
-    )
-      .on('error', handleError)
+    ).on('error', handleError)
   )
 }
 

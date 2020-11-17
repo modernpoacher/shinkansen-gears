@@ -4,15 +4,15 @@ require('regenerator-runtime/runtime')
 const gulp = require('gulp')
 
 const {
-  fontsClean: buildFontsClean,
+  cleanFonts,
   fonts: buildFonts,
-  fontsWatch: buildFontsWatch,
-  iconsClean: buildImagesClean,
-  icons: buildImages,
-  iconsWatch: buildImagesWatch,
-  cssClean: buildCssClean,
+  watchFonts,
+  cleanIcons,
+  icons: buildIcons,
+  watchIcons,
+  cleanCss,
   css: buildCss,
-  cssWatch: buildCssWatch
+  watchCss
 } = require('./build/gulp/build')
 
 const {
@@ -21,40 +21,43 @@ const {
 } = require('./build/gulp/transform')
 
 gulp
-  .task('build:fonts:clean', buildFontsClean)
+  .task('clean:fonts', cleanFonts)
 
 gulp
-  .task('build:fonts', gulp.series('build:fonts:clean', buildFonts))
+  .task('build:fonts', gulp.series('clean:fonts', buildFonts))
 
 gulp
-  .task('build:fonts:watch', gulp.series('build:fonts', buildFontsWatch))
+  .task('watch:fonts', gulp.series('build:fonts', watchFonts))
 
 gulp
-  .task('build:icons:clean', buildImagesClean)
+  .task('clean:icons', cleanIcons)
 
 gulp
-  .task('build:icons', gulp.series('build:icons:clean', buildImages))
+  .task('build:icons', gulp.series('clean:icons', buildIcons))
 
 gulp
-  .task('build:icons:watch', gulp.series('build:icons', buildImagesWatch))
+  .task('watch:icons', gulp.series('build:icons', watchIcons))
 
 gulp
-  .task('build:css:clean', buildCssClean)
+  .task('clean:css', cleanCss)
 
 gulp
-  .task('build:css', gulp.series('build:css:clean', buildCss))
+  .task('build:css', gulp.series('clean:css', buildCss))
 
 gulp
-  .task('build:css:watch', gulp.series('build:css', buildCssWatch))
+  .task('watch:css', gulp.series('build:css', watchCss))
 
 gulp
-  .task('build:clean', gulp.series('build:fonts:clean', 'build:icons:clean', 'build:css:clean'))
+  .task('build:clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
+
+gulp
+  .task('clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
 
 gulp
   .task('build', gulp.series('build:fonts', 'build:icons', 'build:css'))
 
 gulp
-  .task('build:watch', gulp.parallel('build:fonts:watch', 'build:icons:watch', 'build:css:watch'))
+  .task('watch', gulp.parallel('watch:fonts', 'watch:icons', 'watch:css'))
 
 gulp
   .task('transform', transform)
