@@ -40,7 +40,7 @@
     "pre-commit": "npm run lint && npm test && npm run build && npm run transform && git add lib .storybook"
   },
   "dependencies": {
-    "debug": "^4.2.0",
+    "debug": "^4.3.1",
     "immutable": "3.8.2"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "@babel/register": "^7.12.1",
-    "@modernpoacher/design-system": "0.0.150",
+    "@modernpoacher/design-system": "0.0.151",
     "autoprefixer": "^10.0.2",
     "babel-jest": "^26.6.3",
     "babel-plugin-module-resolver": "^4.0.0",
@@ -84,7 +84,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^4.3.0",
     "jest": "^26.6.3",
-    "postcss": "^8.1.7",
+    "postcss": "^8.1.8",
     "postcss-easy-import": "^3.0.0",
     "postcss-map": "^0.11.0",
     "postcss-normalize": "^9.0.0",
