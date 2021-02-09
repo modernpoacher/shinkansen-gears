@@ -81,7 +81,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "husky": "^4.3.8",
+    "husky": "^5.0.9",
     "jest": "^26.6.3",
     "postcss": "^8.2.5",
     "postcss-easy-import": "^3.0.0",
