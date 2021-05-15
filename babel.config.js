@@ -40,9 +40,16 @@ const presets = [
 
 const plugins = [
   '@babel/proposal-export-default-from',
-  '@babel/proposal-class-properties',
+  [
+    '@babel/proposal-class-properties',
+    {
+      loose: false
+    }
+  ],
   [
     'module-resolver', {
+      root: ['./src'],
+      cwd: 'babelrc',
       alias: {
         'shinkansen-gears': './src',
         build: './build',

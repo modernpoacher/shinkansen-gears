@@ -22,6 +22,10 @@ gulpfile.js
 __tests__
 jest.config.js
 
+# NYC
+.nycrc
+.nyc_output
+
 # Coverage
 coverage
 

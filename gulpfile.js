@@ -16,6 +16,7 @@ const {
 } = require('./build/gulp/build')
 
 const {
+  transformClean,
   transform,
   transformWatch
 } = require('./build/gulp/transform')
@@ -48,9 +49,6 @@ gulp
   .task('watch:css', gulp.series('build:css', watchCss))
 
 gulp
-  .task('build:clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
-
-gulp
   .task('clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
 
 gulp
@@ -61,6 +59,15 @@ gulp
 
 gulp
   .task('transform', transform)
+
+gulp
+  .task('build:clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
+
+gulp
+  .task('build:watch', gulp.series('watch:fonts', 'watch:icons', 'watch:css'))
+
+gulp
+  .task('transform:clean', transformClean)
 
 gulp
   .task('transform:watch', transformWatch)

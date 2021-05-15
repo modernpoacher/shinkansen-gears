@@ -35,6 +35,12 @@ export async function transform () {
   )
 }
 
+export function transformClean () {
+  log('transformClean')
+
+  return Promise.resolve()
+}
+
 export function transformWatch () {
   log('transformWatch')
 
