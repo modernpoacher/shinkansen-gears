@@ -265,6 +265,9 @@ a {
 
 body,
 html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-color: #fff;
   color: #171819;
   font-family: proxima-nova,sans-serif;
@@ -272,10 +275,7 @@ html {
   font-style: normal;
   font-weight: 400;
   height: 100%;
-  line-height: 22px;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%
+  line-height: 22px
 }
 
 body,
