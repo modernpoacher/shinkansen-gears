@@ -1,7 +1,8 @@
 import path from 'path'
 import gulp from 'gulp'
 import glob from 'glob-all'
-import sass from 'gulp-sass'
+import dartSass from 'dart-sass'
+import gulpSass from 'gulp-sass'
 import debug from 'gulp-debug'
 
 import postCss from 'gulp-postcss'
@@ -24,6 +25,8 @@ import {
 
 import handleError from 'build/gulp/handle-error'
 
+const sass = gulpSass(dartSass)
+
 const buildSourcePath = path.relative(currentDir, sourcePath)
 const buildTargetPath = path.relative(currentDir, targetPath)
 const buildModulePath = path.relative(currentDir, modulePath)
@@ -31,7 +34,7 @@ const buildModulePath = path.relative(currentDir, modulePath)
 function getTransformForSass () {
   return (
     sass({
-      outputStyle: 'nested',
+      outputStyle: 'compressed', // 'nested',
       includePaths: [
         path.join(buildModulePath, '@modernpoacher/design-system/src/sass')
       ]
