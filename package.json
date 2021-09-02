@@ -60,7 +60,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^6.2.1",
-    "core-js": "^3.16.4",
+    "core-js": "^3.17.1",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.8",
     "dart-sass": "^1.25.0",
