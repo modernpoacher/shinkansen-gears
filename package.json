@@ -53,7 +53,7 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
     "@babel/register": "^7.15.3",
-    "@modernpoacher/design-system": "0.0.381",
+    "@modernpoacher/design-system": "0.0.382",
     "autoprefixer": "^10.3.4",
     "babel-jest": "^27.2.0",
     "babel-plugin-module-resolver": "^4.1.0",
