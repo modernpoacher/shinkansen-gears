@@ -292,7 +292,7 @@ main {
 }
 
 #root {
-  margin: 1rem auto;
+  margin: 0 auto;
   max-width: 1020px
 }
 
@@ -396,22 +396,22 @@ main {
   padding: 0
 }
 
-#root fieldset > legend {
+#root fieldset legend {
+  border: none;
   color: #171819;
   font-family: proxima-nova,sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.625rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.75rem;
-  line-height: 2rem;
-  margin: 0 0 .25rem;
+  font-weight: 700;
+  line-height: 2.125rem;
+  margin: 0 0 1em;
   padding: 0
 }
 
 @media only screen and (max-width:767px) {
-  #root fieldset > legend {
-    font-size: 1rem;
-    line-height: 1.375rem
+  #root fieldset legend {
+    font-size: 1.25rem;
+    line-height: 1.75rem
   }
 }
 
@@ -451,7 +451,16 @@ main {
 
 #root .sprocket {
   line-height: 1.375rem;
-  margin: 0 0 1rem
+  margin: 1rem 0;
+  padding: 0
+}
+
+#root .sprocket:first-child {
+  margin-top: 0
+}
+
+#root .sprocket:last-child {
+  margin-bottom: 0
 }
 
 #root .sprocket.error-summary {
@@ -462,8 +471,7 @@ main {
   padding: 1rem
 }
 
-#root .sprocket.error-summary h2 {
-  margin-bottom: 1rem;
+#root .sprocket.error-summary > h2:first-child {
   margin-top: 0
 }
 
@@ -521,6 +529,10 @@ main {
   border-color: #000;
   outline: 3px solid #fd0;
   outline-offset: 0
+}
+
+#root .sprocket.check-answers > h2:first-child {
+  margin-top: 0
 }
 
 #root .sprocket.check-answers dl {
@@ -582,10 +594,6 @@ main {
   width: 1px
 }
 
-#root .sprocket .sprocket {
-  margin-bottom: 0
-}
-
 #root .sprocket.fieldset legend {
   color: #171819;
   font-family: proxima-nova,sans-serif;
@@ -593,7 +601,7 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: 2.125rem;
-  margin: 0 0 1rem;
+  margin-top: 0;
   padding: 0
 }
 
@@ -683,9 +691,22 @@ main {
   }
 }
 
+#root .sprocket .sprocket {
+  margin-bottom: 0
+}
+
 #root .cog {
   line-height: 1.375rem;
-  margin: 0 0 1rem
+  margin: 1rem 0;
+  padding: 0
+}
+
+#root .cog:first-child {
+  margin-top: 0
+}
+
+#root .cog:last-child {
+  margin-bottom: 0
 }
 
 #root .cog.radio {
@@ -915,7 +936,8 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: 2.5rem;
-  margin: 1em 0
+  margin: 0 0 1em;
+  padding: 0
 }
 
 @media only screen and (max-width:767px) {

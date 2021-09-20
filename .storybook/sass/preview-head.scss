@@ -3,7 +3,7 @@
 #root {
   @include zashiki;
 
-  margin: 1rem auto;
+  margin: 0 auto;
 
   .shinkansen-gears { @include gears; }
 }
