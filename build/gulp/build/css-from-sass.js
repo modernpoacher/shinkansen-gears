@@ -89,7 +89,7 @@ export default function cssFromSass () {
       .pipe(getTransformForCleanCss())
       .pipe(getTransformForCssPurge())
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(buildTargetPath))
+      .pipe(gulp.dest(path.join(buildTargetPath, 'css')))
       .pipe(debug({ title: 'CSS' }))
       .on('error', handleError)
   )

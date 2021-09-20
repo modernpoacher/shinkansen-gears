@@ -28,7 +28,7 @@ export function cleanCss () {
   log('cleanCss')
 
   return (
-    gulp.src(path.join(buildTargetPath, 'stylesheets/*'), { read: false })
+    gulp.src([path.join(buildTargetPath, 'css/*.css'), path.join(buildTargetPath, 'css/*.map')], { read: false })
       .pipe(vinylPaths((paths) => del(paths, { force: true })))
   )
 }
