@@ -104,6 +104,6 @@
     "rimraf": "^3.0.2",
     "sass": "^1.43.3",
     "shinkansen-rails": "1.0.18",
-    "vinyl-paths": "3.0.1"
+    "vinyl-paths": "4.0.0"
   }
 }
