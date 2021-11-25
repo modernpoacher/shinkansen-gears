@@ -53,7 +53,7 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/register": "^7.16.0",
-    "@modernpoacher/design-system": "0.0.435",
+    "@modernpoacher/design-system": "0.0.436",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
@@ -89,7 +89,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.1",
     "postcss-easy-import": "^3.0.0",
     "postcss-map": "^0.11.0",
     "postcss-normalize": "^10.0.1",
@@ -102,7 +102,7 @@
     "react-test-renderer": "16.14.0",
     "regenerator-runtime": "^0.13.9",
     "rimraf": "^3.0.2",
-    "sass": "^1.43.4",
+    "sass": "^1.43.5",
     "shinkansen-rails": "1.0.18",
     "vinyl-paths": "3.0.1"
   }
