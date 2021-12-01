@@ -22,7 +22,7 @@ const presets = [
   [
     '@babel/env', {
       targets: {
-        node: '16.13.0',
+        node: 'current',
         browsers: [
           'last 4 versions',
           'safari >= 9',
