@@ -59,7 +59,7 @@
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
     "autoprefixer": "^10.4.0",
-    "babel-jest": "^27.4.2",
+    "babel-jest": "^27.4.4",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -88,7 +88,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.3",
+    "jest": "^27.4.4",
     "postcss": "^8.4.4",
     "postcss-easy-import": "^3.0.0",
     "postcss-map": "^0.11.0",
@@ -102,7 +102,7 @@
     "react-test-renderer": "16.14.0",
     "regenerator-runtime": "^0.13.9",
     "rimraf": "^3.0.2",
-    "sass": "^1.44.0",
+    "sass": "^1.45.0",
     "shinkansen-rails": "1.0.18",
     "vinyl-paths": "3.0.1"
   }
