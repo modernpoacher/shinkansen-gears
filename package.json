@@ -65,7 +65,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^6.5.1",
-    "core-js": "^3.20.0",
+    "core-js": "^3.20.1",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.14",
     "del": "^6.0.0",
