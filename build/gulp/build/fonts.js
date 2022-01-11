@@ -13,21 +13,21 @@ import {
 
 import handleError from 'build/gulp/handle-error'
 
-const buildSourcePath = path.relative(currentDir, sourcePath)
-const buildTargetPath = path.relative(currentDir, targetPath)
-const buildModulePath = path.relative(currentDir, modulePath)
+const SOURCE_PATH = path.relative(currentDir, sourcePath)
+const TARGET_PATH = path.relative(currentDir, targetPath)
+const MODULE_PATH = path.relative(currentDir, modulePath)
 
 export function cleanFonts () {
   return (
-    gulp.src(path.join(buildTargetPath, 'fonts/*'), { read: false })
+    gulp.src(path.join(TARGET_PATH, 'fonts/*'), { read: false })
       .pipe(vinylPaths((paths) => del(paths, { force: true })))
   )
 }
 
 export function fonts () {
   return (
-    gulp.src(path.join(buildSourcePath, 'fonts/**/*.*'))
-      .pipe(gulp.dest(path.join(buildTargetPath, 'fonts')))
+    gulp.src(path.join(SOURCE_PATH, 'fonts/**/*.*'))
+      .pipe(gulp.dest(path.join(TARGET_PATH, 'fonts')))
       .pipe(debug({ title: 'Fonts' }))
   )
 }
@@ -36,8 +36,8 @@ export function watchFonts () {
   return (
     gulp.watch(
       [
-        path.join(buildSourcePath, 'fonts/**/*.*'),
-        path.join(buildModulePath, '@modernpoacher/design-system/src/fonts/**/*.*')
+        path.join(SOURCE_PATH, 'fonts/**/*.*'),
+        path.join(MODULE_PATH, '@modernpoacher/design-system/src/fonts/**/*.*')
       ],
       {
         name: 'fonts-watch',

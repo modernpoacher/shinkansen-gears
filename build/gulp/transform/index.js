@@ -27,11 +27,11 @@ log('`transform` is awake')
 
 const CSS = /(<style.*>)[ -~"'+-:;,#%{}()/*\n\s\u200b\u2713\u2022]*(<\/style>)/gm // eslint-disable-line no-irregular-whitespace
 
-const buildSourcePath = path.relative(currentDir, sourcePath)
-const buildTargetPath = path.relative(currentDir, targetPath)
+const SOURCE_PATH = path.relative(currentDir, sourcePath)
+const TARGET_PATH = path.relative(currentDir, targetPath)
 
-const getCss = async (css = '') => {
-  const filePath = path.join(buildSourcePath, 'css/preview-head.css')
+async function getCss (css = '') {
+  const filePath = path.join(SOURCE_PATH, 'css/preview-head.css')
   const fileData = await readFile(filePath, 'utf8')
 
   return `$1\n${fileData.trim()}\n$2`.trim()
@@ -40,7 +40,7 @@ const getCss = async (css = '') => {
 export async function transform () {
   log('transform')
 
-  const htmlFilePath = path.join(buildTargetPath, 'preview-head.html')
+  const htmlFilePath = path.join(TARGET_PATH, 'preview-head.html')
 
   return (await writeFile(htmlFilePath, (await readFile(htmlFilePath, 'utf8')).replace(CSS, await getCss()), 'utf8'))
 }
@@ -56,7 +56,7 @@ export function transformWatch () {
 
   return (
     gulp.watch(
-      path.join(buildSourcePath, 'css/*.css'),
+      path.join(SOURCE_PATH, 'css/*.css'),
       {
         name: 'css-watch',
         cwd: currentDir

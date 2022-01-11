@@ -27,23 +27,23 @@ import handleError from 'build/gulp/handle-error'
 
 const sass = gulpSass(dartSass)
 
-const buildSourcePath = path.relative(currentDir, sourcePath)
-const buildTargetPath = path.relative(currentDir, targetPath)
-const buildModulePath = path.relative(currentDir, modulePath)
+const SOURCE_PATH = path.relative(currentDir, sourcePath)
+const TARGET_PATH = path.relative(currentDir, targetPath)
+const MODULE_PATH = path.relative(currentDir, modulePath)
 
 function getTransformForSass () {
   return (
     sass({
       outputStyle: 'compressed', // 'nested',
       includePaths: [
-        path.join(buildModulePath, '@modernpoacher/design-system/src/sass')
+        path.join(MODULE_PATH, '@modernpoacher/design-system/src/sass')
       ]
     }).on('error', sass.logError)
   )
 }
 
 function getTransformForPostCss () {
-  const maps = glob.sync(path.join(buildModulePath, '@modernpoacher/design-system/src/tokens/**/*.*'))
+  const maps = glob.sync(path.join(MODULE_PATH, '@modernpoacher/design-system/src/tokens/**/*.*'))
 
   return (
     postCss([
@@ -82,14 +82,14 @@ function getTransformForCssPurge () {
 
 export default function cssFromSass () {
   return (
-    gulp.src([path.join(buildSourcePath, 'sass/**/*.*'), `!${path.join(buildSourcePath, 'sass/**/_*.*')}`])
+    gulp.src([path.join(SOURCE_PATH, 'sass/**/*.*'), `!${path.join(SOURCE_PATH, 'sass/**/_*.*')}`])
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(getTransformForSass())
       .pipe(getTransformForPostCss())
       .pipe(getTransformForCleanCss())
       .pipe(getTransformForCssPurge())
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(path.join(buildTargetPath, 'css')))
+      .pipe(gulp.dest(path.join(TARGET_PATH, 'css')))
       .pipe(debug({ title: 'CSS' }))
       .on('error', handleError)
   )

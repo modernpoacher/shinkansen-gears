@@ -18,9 +18,9 @@ import cssFromSass from './css-from-sass'
 
 const log = debug('shinkansen-gears:build:gulp:build')
 
-const buildSourcePath = path.relative(currentDir, sourcePath)
-const buildTargetPath = path.relative(currentDir, targetPath)
-const buildModulePath = path.relative(currentDir, modulePath)
+const SOURCE_PATH = path.relative(currentDir, sourcePath)
+const TARGET_PATH = path.relative(currentDir, targetPath)
+const MODULE_PATH = path.relative(currentDir, modulePath)
 
 log('`shinkansen-gears:build:gulp:build` is awake')
 
@@ -28,7 +28,7 @@ export function cleanCss () {
   log('cleanCss')
 
   return (
-    gulp.src([path.join(buildTargetPath, 'css/*.css'), path.join(buildTargetPath, 'css/*.map')], { read: false })
+    gulp.src([path.join(TARGET_PATH, 'css/*.css'), path.join(TARGET_PATH, 'css/*.map')], { read: false })
       .pipe(vinylPaths((paths) => del(paths, { force: true })))
   )
 }
@@ -41,10 +41,10 @@ export function watchCss () {
   return (
     gulp.watch(
       [
-        path.join(buildSourcePath, 'sass/**/*.*'),
-        path.join(buildSourcePath, 'fonts/**/*.*'),
-        path.join(buildSourcePath, 'icons/**/*.*'),
-        path.join(buildModulePath, '@modernpoacher/design-system/src/**/*.*')
+        path.join(SOURCE_PATH, 'sass/**/*.*'),
+        path.join(SOURCE_PATH, 'fonts/**/*.*'),
+        path.join(SOURCE_PATH, 'icons/**/*.*'),
+        path.join(MODULE_PATH, '@modernpoacher/design-system/src/**/*.*')
       ],
       {
         name: 'css-watch',
