@@ -77,7 +77,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "5.2.0",
-    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react": "^7.29.3",
     "glob-all": "^3.2.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
