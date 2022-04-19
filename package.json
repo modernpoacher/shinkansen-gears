@@ -53,7 +53,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/register": "^7.17.7",
-    "@modernpoacher/design-system": "0.0.540",
+    "@modernpoacher/design-system": "0.0.541",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
@@ -102,7 +102,7 @@
     "react-test-renderer": "16.14.0",
     "regenerator-runtime": "^0.13.9",
     "rimraf": "^3.0.2",
-    "sass": "^1.50.0",
+    "sass": "^1.50.1",
     "shinkansen-rails": "1.0.18",
     "vinyl-paths": "3.0.1"
   }
