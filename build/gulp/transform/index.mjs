@@ -7,9 +7,9 @@ import {
   currentDir,
   sourcePath,
   targetPath
-} from 'build/paths'
+} from '#build/paths'
 
-import handleError from 'build/gulp/handle-error'
+import handleWatchError from '#build/gulp/handle-watch-error'
 
 import {
   readFile,
@@ -62,7 +62,7 @@ export function transformWatch () {
         cwd: currentDir
       },
       transform
-    ).on('error', handleError)
+    ).on('error', handleWatchError)
   )
 }
 

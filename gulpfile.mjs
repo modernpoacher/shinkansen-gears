@@ -1,25 +1,24 @@
-require('@babel/register')
-require('regenerator-runtime/runtime')
+import 'regenerator-runtime/runtime.js'
 
-const gulp = require('gulp')
+import gulp from 'gulp'
 
-const {
+import {
   cleanFonts,
-  fonts: buildFonts,
+  fonts as buildFonts,
   watchFonts,
   cleanIcons,
-  icons: buildIcons,
+  icons as buildIcons,
   watchIcons,
   cleanCss,
-  css: buildCss,
+  css as buildCss,
   watchCss
-} = require('./build/gulp/build')
+} from '#build/gulp/build'
 
-const {
+import {
   transformClean,
   transform,
   transformWatch
-} = require('./build/gulp/transform')
+} from '#build/gulp/transform'
 
 gulp
   .task('clean:fonts', cleanFonts)

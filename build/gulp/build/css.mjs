@@ -3,18 +3,18 @@ import debug from 'debug'
 import path from 'path'
 import gulp from 'gulp'
 import vinylPaths from 'vinyl-paths'
-import del from 'del'
+import { deleteAsync as del } from 'del'
 
 import {
   currentDir,
   sourcePath,
   targetPath,
   modulePath
-} from 'build/gulp/paths'
+} from '#build/gulp/paths'
 
-import handleError from 'build/gulp/handle-error'
+import handleWatchError from '#build/gulp/handle-watch-error'
 
-import cssFromSass from './css-from-sass'
+import cssFromSass from '#build/gulp/build/css-from-sass'
 
 const log = debug('shinkansen-gears:build:gulp:build')
 
@@ -51,6 +51,6 @@ export function watchCss () {
         cwd: currentDir
       },
       gulp.series(cleanCss, css)
-    ).on('error', handleError)
+    ).on('error', handleWatchError)
   )
 }

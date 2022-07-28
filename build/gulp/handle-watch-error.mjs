@@ -6,13 +6,13 @@ import {
 
 import {
   currentDir
-} from 'build/gulp/paths'
+} from '#build/gulp/paths'
 
-const log = debug('shinkansen-gears:handle-error')
+const log = debug('shinkansen-gears:handle-watch-error')
 
-log('`handleError` is awake')
+log('`handleWatchError` is awake')
 
-export function handleError ({
+export function handleWatchError ({
   code = 'No error code defined',
   message = 'No error message defined',
   filename: f = 'No file name defined',
@@ -33,4 +33,4 @@ export function handleError ({
   }
 }
 
-export default handleError
+export default handleWatchError

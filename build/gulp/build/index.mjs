@@ -2,16 +2,16 @@ export {
   cleanFonts,
   fonts,
   watchFonts
-} from './fonts'
+} from '#build/gulp/build/fonts'
 
 export {
   cleanIcons,
   icons,
   watchIcons
-} from './icons'
+} from '#build/gulp/build/icons'
 
 export {
   cleanCss,
   css,
   watchCss
-} from './css'
+} from '#build/gulp/build/css'

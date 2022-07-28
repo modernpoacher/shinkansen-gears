@@ -8,7 +8,7 @@ import debug from 'gulp-debug'
 import postCss from 'gulp-postcss'
 import atImport from 'postcss-easy-import'
 import map from 'postcss-map'
-import normalize from 'postcss-normalize'
+// import normalize from 'postcss-normalize'
 import scss from 'postcss-scss'
 import autoprefixer from 'autoprefixer'
 import nano from 'cssnano'
@@ -21,9 +21,9 @@ import {
   sourcePath,
   targetPath,
   modulePath
-} from 'build/gulp/paths'
+} from '#build/gulp/paths'
 
-import handleError from 'build/gulp/handle-error'
+import handleWatchError from '#build/gulp/handle-watch-error'
 
 const sass = gulpSass(dartSass)
 
@@ -51,7 +51,7 @@ function getTransformForPostCss () {
       map({
         maps
       }),
-      normalize(),
+      // normalize(),
       autoprefixer(),
       nano()
     ], { syntax: scss })
@@ -91,6 +91,6 @@ export default function cssFromSass () {
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(path.join(TARGET_PATH, 'css')))
       .pipe(debug({ title: 'CSS' }))
-      .on('error', handleError)
+      .on('error', handleWatchError)
   )
 }
