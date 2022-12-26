@@ -68,7 +68,7 @@
     "babel-preset-react": "^6.24.1",
     "cheerio": "1.0.0-rc.6",
     "concurrently": "^7.6.0",
-    "core-js": "^3.26.1",
+    "core-js": "^3.27.0",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.14",
     "del": "^7.0.0",
