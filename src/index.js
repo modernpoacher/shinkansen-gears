@@ -1,1 +1,1 @@
-export Gears from './gears'
+export { default as Gears } from './gears'
