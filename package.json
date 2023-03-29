@@ -67,7 +67,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "cheerio": "1.0.0-rc.6",
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.0.1",
     "core-js": "^3.29.1",
     "cross-env": "^7.0.3",
     "cssnano": "^6.0.0",
