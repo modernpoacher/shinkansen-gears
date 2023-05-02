@@ -38,15 +38,13 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run nvm && cross-env NODE_ENV=test jest --collect-coverage false --verbose --run-in-band",
     "nvm": "bash nvm.sh",
-    "storybook": "npm run build && npm run transform && start-storybook -p 6008",
-    "pre-commit": "npm run lint && npm test && npm run build && npm run transform && git add lib .storybook"
+    "storybook": "npm run build && npm run transform && start-storybook -p 6008"
   },
   "dependencies": {
     "debug": "^4.3.4",
     "immutable": "3.8.2"
   },
   "devDependencies": {
-    "@sequencemedia/gulp": "^1.0.5",
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.21.8",
@@ -56,8 +54,9 @@
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-react": "^7.18.6",
     "@babel/register": "^7.21.0",
-    "@modernpoacher/hooks": "^1.0.391",
     "@modernpoacher/design-system": "0.0.945",
+    "@modernpoacher/hooks": "^1.0.391",
+    "@sequencemedia/gulp": "^1.0.5",
     "@storybook/addon-actions": "6.5.12",
     "@storybook/addon-essentials": "6.5.12",
     "@storybook/addon-links": "6.5.12",
