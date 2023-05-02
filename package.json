@@ -105,7 +105,7 @@
     "rimraf": "^5.0.0",
     "sass": "^1.62.1",
     "shinkansen-rails": "1.0.18",
-    "vinyl-paths": "3.0.1"
+    "vinyl-paths": "^5.0.0"
   },
   "imports": {
     "#gears/forward": "./src/gears/forward/index.cjs",
