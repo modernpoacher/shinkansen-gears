@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime.js'
 
-import gulp from 'gulp'
+import gulp from '@sequencemedia/gulp'
 
 import {
   cleanFonts,

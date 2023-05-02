@@ -1,7 +1,7 @@
-const debug = require('debug')
+import debug from 'debug'
 
 const log = debug('shinkansen-gears')
 
 log('`gears` is awake')
 
-module.exports = require('./lib')
+export default './src/index.mjs'

@@ -1,5 +1,5 @@
-import path from 'path'
-import gulp from 'gulp'
+import path from 'node:path'
+import gulp from '@sequencemedia/gulp'
 import glob from 'glob-all'
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
@@ -8,7 +8,6 @@ import debug from 'gulp-debug'
 import postCss from 'gulp-postcss'
 import atImport from 'postcss-easy-import'
 import map from 'postcss-map'
-// import normalize from 'postcss-normalize'
 import scss from 'postcss-scss'
 import autoprefixer from 'autoprefixer'
 import nano from 'cssnano'
@@ -51,7 +50,6 @@ function getTransformForPostCss () {
       map({
         maps
       }),
-      // normalize(),
       autoprefixer(),
       nano()
     ], { syntax: scss })

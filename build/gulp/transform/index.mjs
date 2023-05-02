@@ -1,7 +1,7 @@
 import debug from 'debug'
 
-import path from 'path'
-import gulp from 'gulp'
+import path from 'node:path'
+import gulp from '@sequencemedia/gulp'
 
 import {
   currentDir,

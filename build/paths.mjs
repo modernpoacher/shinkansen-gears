@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 
 export const currentDir = process.cwd()
 export const sourcePath = path.join('.storybook')

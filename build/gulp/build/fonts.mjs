@@ -1,5 +1,5 @@
-import path from 'path'
-import gulp from 'gulp'
+import path from 'node:path'
+import gulp from '@sequencemedia/gulp'
 import debug from 'gulp-debug'
 import vinylPaths from 'vinyl-paths'
 import { deleteAsync as del } from 'del'
