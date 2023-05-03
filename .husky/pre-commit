@@ -5,4 +5,4 @@ npm run lint
 npm test
 npm run build
 npm run transform
-git add lib .storybook
+git add .storybook

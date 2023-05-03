@@ -4,7 +4,7 @@ import {
   MemoryRouter
 } from 'react-router-dom'
 
-import Gears from 'shinkansen-gears/gears'
+import Gears from '#gears'
 
 const REVERSE = {
   alpha: 'alpha',

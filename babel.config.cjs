@@ -53,6 +53,9 @@ const plugins = [
       root: ['./src'],
       cwd: 'babelrc',
       alias: {
+        '#gears/forward': './src/gears/forward/index.cjs',
+        '#gears/reverse': './src/gears/reverse/index.cjs',
+        '#gears': './src/gears/index.cjs',
         'shinkansen-gears': './src',
         build: './build',
         stories: './stories'
@@ -65,8 +68,6 @@ module.exports = (api) => {
   if (api) api.cache.using(env)
 
   return {
-    compact: true,
-    comments: false,
     presets,
     plugins
   }

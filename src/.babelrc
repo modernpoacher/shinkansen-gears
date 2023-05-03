@@ -1,6 +1,4 @@
 {
-  "compact": true,
-  "comments": false,
   "presets": [
     [
       "@babel/env",
@@ -39,6 +37,9 @@
         ],
         "cwd": "babelrc",
         "alias": {
+          "#gears/forward": "./gears/forward/index.cjs",
+          "#gears/reverse": "./gears/reverse/index.cjs",
+          "#gears": "./gears/index.cjs",
           "shinkansen-gears": ".",
           "build": "../build",
           "stories": "../stories"
