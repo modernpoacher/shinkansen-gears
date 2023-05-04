@@ -55,7 +55,7 @@
     "@modernpoacher/design-system": "1.0.2",
     "@modernpoacher/hooks": "^1.0.392",
     "@sequencemedia/gulp": "^1.0.6",
-    "@storybook/addon-actions": "6.5.12",
+    "@storybook/addon-actions": "7.0.8",
     "@storybook/addon-essentials": "6.5.12",
     "@storybook/addon-links": "6.5.12",
     "@storybook/react": "6.5.12",
