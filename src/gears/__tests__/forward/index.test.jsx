@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Forward from '#gears/forward'
+import Forward from 'shinkansen-gears/forward'
 
 jest.mock('react-router-dom')
 
-describe('#gears/forward', () => {
+describe('shinkansen-gears/forward', () => {
   it('renders', () => {
     const component = (
       <Forward pathname='MOCK PATHNAME' />

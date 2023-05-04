@@ -9,7 +9,7 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Gears, { renderReverse, renderForward } from '#gears'
+import Gears, { renderReverse, renderForward } from 'shinkansen-gears'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -25,7 +25,7 @@ jest.mock('shinkansen-rails', () => ({
 
 jest.mock('react-router-dom')
 
-describe('#gears', () => {
+describe('shinkansen-gears', () => {
   beforeEach(() => {
     jest.resetAllMocks()
   })

@@ -1,3 +1,11 @@
-require('@babel/register')
+require('@babel/register')({ ignore: [/node_modules/], configFile: require.resolve('../babel.config.cjs') })
 
-module.exports = require('#gears')
+const debug = require('debug')
+
+const log = debug('shinkansen-gears')
+
+log('`shinkansen` is awake')
+
+const { default: Gears } = require('./gears')
+
+module.exports.Gears = Gears

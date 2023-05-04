@@ -105,9 +105,6 @@
     "vinyl-paths": "^5.0.0"
   },
   "imports": {
-    "#gears/forward": "./src/gears/forward/index.cjs",
-    "#gears/reverse": "./src/gears/reverse/index.cjs",
-    "#gears": "./src/gears/index.cjs",
     "#build/gulp/build": "./build/gulp/build/index.mjs",
     "#build/gulp/build/css-from-sass": "./build/gulp/build/css-from-sass.mjs",
     "#build/gulp/build/css": "./build/gulp/build/css.mjs",

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#gears/reverse renders 1`] = `
+exports[`shinkansen-gears/reverse renders 1`] = `
 <li
   className="shinkansen-gears-reverse"
 />

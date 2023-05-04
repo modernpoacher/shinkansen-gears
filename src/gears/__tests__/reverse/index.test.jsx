@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Reverse from '#gears/reverse'
+import Reverse from 'shinkansen-gears/reverse'
 
 jest.mock('react-router-dom')
 
-describe('#gears/reverse', () => {
+describe('shinkansen-gears/reverse', () => {
   it('renders', () => {
     const component = (
       <Reverse pathname='MOCK PATHNAME' />

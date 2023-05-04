@@ -6,8 +6,8 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Reverse from './reverse'
-import Forward from './forward'
+import Reverse from './reverse/index.jsx'
+import Forward from './forward/index.jsx'
 
 export function renderReverse (reverse, pattern) {
   if (Rails.go(reverse, pattern)) {

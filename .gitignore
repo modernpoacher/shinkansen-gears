@@ -6,7 +6,6 @@ node_modules
 
 # User-defined NPM configuration
 .npmrc
-.npmignore
 
 # User-defined NVM configuration
 .nvmrc

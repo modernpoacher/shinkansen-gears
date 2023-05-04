@@ -50,13 +50,13 @@ const plugins = [
   ],
   [
     'module-resolver', {
-      root: ['./src'],
-      cwd: 'babelrc',
+      root: [
+        '.'
+      ],
       alias: {
-        '#gears/forward': './src/gears/forward/index.cjs',
-        '#gears/reverse': './src/gears/reverse/index.cjs',
-        '#gears': './src/gears/index.cjs',
-        'shinkansen-gears': './src',
+        'shinkansen-gears/forward': './src/gears/forward/index.jsx',
+        'shinkansen-gears/reverse': './src/gears/reverse/index.jsx',
+        'shinkansen-gears': './src/gears/index.jsx',
         build: './build',
         stories: './stories'
       }

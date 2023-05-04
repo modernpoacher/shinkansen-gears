@@ -32,15 +32,11 @@
     [
       "module-resolver",
       {
-        "root": [
-          "."
-        ],
         "cwd": "babelrc",
         "alias": {
-          "#gears/forward": "./gears/forward/index.cjs",
-          "#gears/reverse": "./gears/reverse/index.cjs",
-          "#gears": "./gears/index.cjs",
-          "shinkansen-gears": ".",
+          "shinkansen-gears/forward": "./gears/forward/index.jsx",
+          "shinkansen-gears/reverse": "./gears/reverse/index.jsx",
+          "shinkansen-gears": "./gears/index.jsx",
           "build": "../build",
           "stories": "../stories"
         }

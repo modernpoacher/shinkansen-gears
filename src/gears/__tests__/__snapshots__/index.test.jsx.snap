@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#gears Always renders 1`] = `
+exports[`shinkansen-gears Always renders 1`] = `
 <ul
   className="shinkansen-gears"
 >
