@@ -10,7 +10,8 @@ then
 
   source $NVM/nvm.sh
 else
-  NVM=$(brew --prefix nvm)
+  NVM=$(brew --prefix nvm 2> /dev/null)
+
   if [ -f "$NVM/nvm.sh" ];
   then
     unset npm_package_scripts_nvm
@@ -21,7 +22,7 @@ else
   fi
 fi
 
-VERSION=$(nvm --version)
+VERSION=$(nvm --version 2> /dev/null)
 
 if [ -z "$VERSION" ];
 then
