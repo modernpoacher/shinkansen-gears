@@ -54,6 +54,9 @@ const plugins = [
         '.'
       ],
       alias: {
+        /**
+         *  For Storybook &/ Jest
+         */
         'shinkansen-gears/forward': './src/gears/forward/index.jsx',
         'shinkansen-gears/reverse': './src/gears/reverse/index.jsx',
         'shinkansen-gears': './src/gears/index.jsx',
@@ -69,6 +72,7 @@ module.exports = (api) => {
 
   return {
     presets,
-    plugins
+    plugins,
+    ignore: [/core-js/]
   }
 }
