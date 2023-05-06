@@ -16,7 +16,7 @@
   "author": "Jonathan Perry for Modern Poacher Limited <modernpoacher@modernpoacher.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=18.5.0"
   },
   "repository": {
     "type": "git",

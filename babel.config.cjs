@@ -73,6 +73,6 @@ module.exports = (api) => {
   return {
     presets,
     plugins,
-    ignore: [/core-js/]
+    ignore: [/node_modules\/(?!shinkansen-)/]
   }
 }
