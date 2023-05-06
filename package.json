@@ -36,7 +36,8 @@
     "pretest": "npm run nvm",
     "test": "cross-env NODE_ENV=test jest --collect-coverage false --verbose --run-in-band",
     "nvm": "bash nvm.sh",
-    "storybook": "npm run build && npm run transform && start-storybook -p 6008"
+    "storybook": "npm run build && npm run transform && start-storybook -p 6008",
+    "prepare": "husky install"
   },
   "dependencies": {
     "debug": "^4.3.4",
