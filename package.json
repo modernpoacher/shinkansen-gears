@@ -102,14 +102,10 @@
     "vinyl-paths": "^5.0.0"
   },
   "imports": {
+    "#build/gulp/build/*": "./build/gulp/build/*.mjs",
     "#build/gulp/build": "./build/gulp/build/index.mjs",
-    "#build/gulp/build/css-from-sass": "./build/gulp/build/css-from-sass.mjs",
-    "#build/gulp/build/css": "./build/gulp/build/css.mjs",
-    "#build/gulp/build/fonts": "./build/gulp/build/fonts.mjs",
-    "#build/gulp/build/icons": "./build/gulp/build/icons.mjs",
-    "#build/gulp/paths": "./build/gulp/paths.mjs",
-    "#build/gulp/handle-watch-error": "./build/gulp/handle-watch-error.mjs",
     "#build/gulp/transform": "./build/gulp/transform/index.mjs",
+    "#build/gulp/*": "./build/gulp/*.mjs",
     "#build/paths": "./build/paths.mjs"
   },
   "exports": {
