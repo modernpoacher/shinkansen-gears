@@ -50,9 +50,6 @@ const plugins = [
   ],
   [
     'module-resolver', {
-      root: [
-        '.'
-      ],
       alias: {
         /**
          *  For Storybook &/ Jest
