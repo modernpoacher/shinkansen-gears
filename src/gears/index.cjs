@@ -1,4 +1,4 @@
-require('@babel/register')
+require('@babel/register')({ ignore: [] })
 
 const debug = require('debug')
 
