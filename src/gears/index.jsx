@@ -10,7 +10,7 @@ import Reverse from './reverse/index.jsx'
 import Forward from './forward/index.jsx'
 
 /**
- *  @param {{}} reverse
+ *  @param {{} | void} reverse
  *  @param {string | void} pattern
  */
 export function renderReverse (reverse, pattern) {
@@ -28,7 +28,7 @@ export function renderReverse (reverse, pattern) {
 }
 
 /**
- *  @param {{}} forward
+ *  @param {{} | void} forward
  *  @param {string | void} pattern
  */
 export function renderForward (forward, pattern) {
