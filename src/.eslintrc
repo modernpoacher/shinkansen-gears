@@ -15,6 +15,18 @@
   "rules": {
     "react/display-name": 0
   },
+  "overrides": [
+    {
+      "files": [
+        "*.mts"
+      ],
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": "standard-with-typescript",
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"
