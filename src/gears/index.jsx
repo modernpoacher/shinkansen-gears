@@ -9,6 +9,10 @@ import {
 import Reverse from './reverse/index.jsx'
 import Forward from './forward/index.jsx'
 
+/**
+ *  @param {{}} reverse
+ *  @param {string | void} pattern
+ */
 export function renderReverse (reverse, pattern) {
   if (Rails.go(reverse, pattern)) {
     const pathname = Rails.to(reverse, pattern)
@@ -23,6 +27,10 @@ export function renderReverse (reverse, pattern) {
   return null
 }
 
+/**
+ *  @param {{}} forward
+ *  @param {string | void} pattern
+ */
 export function renderForward (forward, pattern) {
   if (Rails.go(forward, pattern)) {
     const pathname = Rails.to(forward, pattern)
@@ -43,10 +51,10 @@ export default class Gears extends Component {
   /**
    *  Convert latest 'props' to an Immutable.Map() and store in 'state'
    *
-   *  @param {Object} props   Latest props
-   *  @param {Object} state   Current state
+   *  @param {{reverse: Immutable.Map<{}, {}>, forward: Immutable.Map<{}, {}>}} props   Latest props
+   *  @param {{reverse: Immutable.Map<{}, {}>, forward: Immutable.Map<{}, {}>}} state   Current state
    */
-  static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) { // console.log('[Gears]getDerivedStateFromProps()')
+  static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) {
     const r = Immutable.Map(reverse)
     const f = Immutable.Map(forward)
 
@@ -60,8 +68,9 @@ export default class Gears extends Component {
    *  Compare latest 'props' and 'state' for changes to 'pattern', 'reverse' or 'forward'
    *
    *  @param {Object} props   Latest props
+   *  @param {Object} state   Current state
    */
-  shouldComponentUpdate ({ pattern }, state) { // console.log('(Gears)shouldComponentUpdate()', { pattern }, state)
+  shouldComponentUpdate ({ pattern }, state) {
     const {
       pattern: PATTERN
     } = this.props
@@ -84,7 +93,7 @@ export default class Gears extends Component {
     )
   }
 
-  render () { // console.log('(Gears)render()')
+  render () {
     const {
       reverse,
       forward,
