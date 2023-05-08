@@ -1,9 +1,9 @@
 import React from 'react'
 
-interface ReverseProps {
+type ReverseProps = {
   pathname: string
 }
 
-declare const Reverse: (props: ReverseProps) => React.JSX.Element
+type ReverseComponent = React.Component<ReverseProps>
 
-export default Reverse
+export default ReverseComponent

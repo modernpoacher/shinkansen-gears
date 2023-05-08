@@ -1,13 +1,18 @@
 import React from 'react'
 
-interface GearsProps {
+import ReverseComponent from './reverse/index.mjs'
+import ForwardComponent from './forward/index.mjs'
+
+type GearsProps = {
   reverse: {},
   forward: {},
   pattern: string
 }
 
-declare const Gears: (props: GearsProps) => React.JSX.Element
+type GearsComponent = React.ComponentClass<GearsProps>
 
-export function renderReverse (reverse: {}, pattern: string | void): React.JSX.Element | null
-export function renderForward (forward: {}, pattern: string | void): React.JSX.Element | null
+declare const Gears: GearsComponent
+
+export function renderReverse (reverse: {}, pattern: string | void): ReverseComponent | null
+export function renderForward (forward: {}, pattern: string | void): ForwardComponent | null
 export default Gears

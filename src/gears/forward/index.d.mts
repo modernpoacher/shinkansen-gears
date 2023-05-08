@@ -1,9 +1,9 @@
 import React from 'react'
 
-interface ForwardProps {
+type ForwardProps = {
   pathname: string
 }
 
-declare const Forward: (props: ForwardProps) => React.JSX.Element
+type ForwardComponent = React.Component<ForwardProps>
 
-export default Forward
+export default ForwardComponent
