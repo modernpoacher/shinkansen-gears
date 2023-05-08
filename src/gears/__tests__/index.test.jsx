@@ -229,8 +229,8 @@ describe('shinkansen-gears', () => {
       Rails.to.mockReturnValue('MOCK TO')
     })
 
-    describe('`Rails.go` returns true', () => {
-      it('invokes `Rails.to`', () => {
+    describe('`Rails.go()` returns true', () => {
+      it('invokes `Rails.to()`', () => {
         Rails.go.mockReturnValue(true)
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
@@ -240,8 +240,8 @@ describe('shinkansen-gears', () => {
       })
     })
 
-    describe('`Rails.go` returns false', () => {
-      it('invokes `Rails.to`', () => {
+    describe('`Rails.go()` returns false', () => {
+      it('does not invoke `Rails.to()`', () => {
         Rails.go.mockReturnValue(false)
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
@@ -257,8 +257,8 @@ describe('shinkansen-gears', () => {
       Rails.to.mockReturnValue('MOCK TO')
     })
 
-    describe('`Rails.go` returns true', () => {
-      it('invokes `Rails.to`', () => {
+    describe('`Rails.go()` returns true', () => {
+      it('invokes `Rails.to()`', () => {
         Rails.go.mockReturnValue(true)
 
         renderForward('MOCK FORWARD', 'MOCK PATTERN')
@@ -268,8 +268,8 @@ describe('shinkansen-gears', () => {
       })
     })
 
-    describe('`Rails.go` returns false', () => {
-      it('invokes `Rails.to`', () => {
+    describe('`Rails.go()` returns false', () => {
+      it('does not invoke `Rails.to()`', () => {
         Rails.go.mockReturnValue(false)
 
         renderForward('MOCK FORWARD', 'MOCK PATTERN')
