@@ -19,7 +19,7 @@ const FORWARD = {
 const EXCLUDE = {}
 
 export default {
-  title: 'Components/Gears',
+  title: 'Stories/Gears',
   component: Gears,
   decorators: [
     (Story) => (

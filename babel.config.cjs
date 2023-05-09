@@ -52,13 +52,11 @@ const plugins = [
     'module-resolver', {
       alias: {
         /**
-         *  For Storybook &/ Jest
+         *  Storybook
          */
         'shinkansen-gears/forward': './src/gears/forward/index.jsx',
         'shinkansen-gears/reverse': './src/gears/reverse/index.jsx',
-        'shinkansen-gears': './src/gears/index.jsx',
-        build: './build',
-        stories: './stories'
+        'shinkansen-gears': './src/gears/index.jsx'
       }
     }
   ]
