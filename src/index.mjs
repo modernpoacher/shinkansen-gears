@@ -1,5 +1,9 @@
 import debug from 'debug'
 
+/**
+  * @typedef {import('shinkansen-gears').Gears} Gears
+ */
+
 const log = debug('shinkansen-gears')
 
 log('`shinkansen` is awake')

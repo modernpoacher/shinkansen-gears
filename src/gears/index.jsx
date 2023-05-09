@@ -1,3 +1,8 @@
+/**
+ * @typedef {import('shinkansen-gears/gears').GearsProps} GearsProps
+ * @typedef {import('shinkansen-gears/gears').GearsState} GearsState
+ */
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Immutable from 'immutable'
@@ -10,8 +15,7 @@ import Reverse from './reverse/index.jsx'
 import Forward from './forward/index.jsx'
 
 /**
- *  @param {{} | void} reverse
- *  @param {string | void} pattern
+ * @type {(reverse: {}, pattern: string | void): React.JSX.Element | null}
  */
 export function renderReverse (reverse, pattern) {
   if (Rails.go(reverse, pattern)) {
@@ -28,8 +32,7 @@ export function renderReverse (reverse, pattern) {
 }
 
 /**
- *  @param {{} | void} forward
- *  @param {string | void} pattern
+ * @type {(reverse: {}, pattern: string | void): React.JSX.Element | null}
  */
 export function renderForward (forward, pattern) {
   if (Rails.go(forward, pattern)) {
@@ -46,13 +49,17 @@ export function renderForward (forward, pattern) {
 }
 
 export default class Gears extends Component {
+  /**
+   *  @type {GearsState}
+   */
   state = {} // define state
 
   /**
    *  Convert latest 'props' to an Immutable.Map() and store in 'state'
    *
-   *  @param {{reverse: Immutable.Map<{}, {}>, forward: Immutable.Map<{}, {}>}} props   Latest props
-   *  @param {{reverse: Immutable.Map<{}, {}>, forward: Immutable.Map<{}, {}>}} state   Current state
+   * @param {GearsProps} props   Latest props
+   * @param {GearsState} state   Current state
+   * @returns {GearsState} Derived state
    */
   static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) {
     const r = Immutable.Map(reverse)
@@ -67,8 +74,9 @@ export default class Gears extends Component {
   /**
    *  Compare latest 'props' and 'state' for changes to 'pattern', 'reverse' or 'forward'
    *
-   *  @param {Object} props   Latest props
-   *  @param {Object} state   Current state
+   * @param {{ pattern: string }} props   Latest props
+   * @param {GearsState} state   Current state
+   * @returns {boolean}
    */
   shouldComponentUpdate ({ pattern }, state) {
     const {

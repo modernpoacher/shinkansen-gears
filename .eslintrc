@@ -3,12 +3,11 @@
   "extends": "standard",
   "env": {
     "node": true,
-    "browser": true,
-    "es2020": true
+    "browser": true
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "settings": {
