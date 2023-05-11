@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import Immutable from 'immutable'
+import equal from 'fast-deep-equal'
 
 import {
   Rails
@@ -13,7 +13,7 @@ import Gears, { renderReverse, renderForward } from 'shinkansen-gears'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-jest.mock('immutable', () => ({ is: jest.fn(), Map: jest.fn() }))
+jest.mock('fast-deep-equal', () => jest.fn())
 
 jest.mock('shinkansen-rails', () => ({
   Rails: {
@@ -80,8 +80,6 @@ describe('shinkansen-gears', () => {
     )
 
     beforeEach(() => {
-      Immutable.Map.mockImplementation((v) => v)
-
       shallow(component)
     })
 
@@ -89,19 +87,9 @@ describe('shinkansen-gears', () => {
       let returnValue
 
       beforeEach(() => {
-        Immutable.is.mockReturnValue(false)
+        equal.mockReturnValue(false)
 
         returnValue = Gears.getDerivedStateFromProps({ reverse: mockReverseChanged, forward: mockForwardChanged }, { reverse: mockReverse, forward: mockForward })
-      })
-
-      it('invokes `Immutable.Map` with `reverse`', () => {
-        return expect(Immutable.Map)
-          .toBeCalledWith(mockReverseChanged)
-      })
-
-      it('invokes `Immutable.Map` with `forward`', () => {
-        return expect(Immutable.Map)
-          .toBeCalledWith(mockForwardChanged)
       })
 
       it('returns the `state`', () => {
@@ -117,19 +105,9 @@ describe('shinkansen-gears', () => {
       let returnValue
 
       beforeEach(() => {
-        Immutable.is.mockReturnValue(true)
+        equal.mockReturnValue(true)
 
         returnValue = Gears.getDerivedStateFromProps({ reverse: mockReverse, forward: mockForward }, { reverse: mockReverse, forward: mockForward })
-      })
-
-      it('invokes `Immutable.Map` with `reverse`', () => {
-        return expect(Immutable.Map)
-          .toBeCalledWith(mockReverse)
-      })
-
-      it('invokes `Immutable.Map` with `forward`', () => {
-        return expect(Immutable.Map)
-          .toBeCalledWith(mockForward)
       })
 
       it('returns the `state`', () => {
@@ -169,7 +147,7 @@ describe('shinkansen-gears', () => {
     describe('`props` has changed', () => {
       describe('`pattern` has changed', () => {
         it('returns true', () => {
-          Immutable.is.mockReturnValue(true)
+          equal.mockReturnValue(true)
 
           return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }, mockState))
             .toBe(true)
@@ -179,7 +157,7 @@ describe('shinkansen-gears', () => {
 
     describe('`props` has not changed', () => {
       beforeEach(() => {
-        Immutable.is.mockReturnValue(true)
+        equal.mockReturnValue(true)
       })
 
       describe('`state` has changed', () => {

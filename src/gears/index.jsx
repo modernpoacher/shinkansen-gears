@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Immutable from 'immutable'
+import equal from 'fast-deep-equal'
 
 import {
   Rails
@@ -62,12 +62,9 @@ export default class Gears extends Component {
    * @returns {GearsState} Derived state
    */
   static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) {
-    const r = Immutable.Map(reverse)
-    const f = Immutable.Map(forward)
-
     return {
-      reverse: Immutable.is(R, r) ? R : r,
-      forward: Immutable.is(F, f) ? F : f
+      reverse: equal(R, reverse) ? R : reverse,
+      forward: equal(F, forward) ? F : forward
     }
   }
 
