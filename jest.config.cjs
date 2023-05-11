@@ -1,5 +1,5 @@
 module.exports = {
-  bail: 1,
+  bail: true,
   verbose: true,
   rootDir: '.',
   collectCoverage: true,

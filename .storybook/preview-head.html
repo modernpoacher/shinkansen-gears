@@ -294,25 +294,25 @@ main {
   display: block
 }
 
-#root {
+#storybook-root {
   margin: 0 auto;
   max-width: 1020px
 }
 
-#root > div.alpha,
-#root > div.confirm,
-#root > div.debark,
-#root > div.embark,
-#root > div.omega,
-#root > header.alpha,
-#root > header.confirm,
-#root > header.debark,
-#root > header.embark,
-#root > header.omega {
+#storybook-root > div.alpha,
+#storybook-root > div.confirm,
+#storybook-root > div.debark,
+#storybook-root > div.embark,
+#storybook-root > div.omega,
+#storybook-root > header.alpha,
+#storybook-root > header.confirm,
+#storybook-root > header.debark,
+#storybook-root > header.embark,
+#storybook-root > header.omega {
   padding: 0 1rem
 }
 
-#root header h1 {
+#storybook-root header h1 {
   color: #171819;
   font-family: proxima-nova,sans-serif;
   font-size: 3.5rem;
@@ -322,13 +322,13 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root header h1 {
+  #storybook-root header h1 {
     font-size: 2.5rem;
     line-height: 3rem
   }
 }
 
-#root button {
+#storybook-root button {
   background-color: #24548a;
   border: 2px solid #24548a;
   border-radius: 4px;
@@ -346,34 +346,34 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root button {
+  #storybook-root button {
     font-size: .875rem;
     line-height: 1.25rem
   }
 }
 
-#root button[disabled] {
+#storybook-root button[disabled] {
   background-color: #d8d8d8;
   border: 2px solid #d8d8d8
 }
 
-#root button span {
+#storybook-root button span {
   display: block
 }
 
-#root button:focus,
-#root button:hover {
+#storybook-root button:hover {
   text-decoration: underline
 }
 
-#root button:focus {
+#storybook-root button:focus {
   background-color: #fd0;
   border: 2px solid #fd0;
   color: #171819;
-  outline-color: #171819
+  outline-color: #171819;
+  text-decoration: underline
 }
 
-#root label {
+#storybook-root label {
   color: #171819;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -387,19 +387,19 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root label {
+  #storybook-root label {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root fieldset {
+#storybook-root fieldset {
   border: none;
   margin: 0;
   padding: 0
 }
 
-#root fieldset legend {
+#storybook-root fieldset legend {
   border: none;
   color: #171819;
   font-family: proxima-nova,sans-serif;
@@ -412,15 +412,15 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root fieldset legend {
+  #storybook-root fieldset legend {
     font-size: 1.25rem;
     line-height: 1.75rem
   }
 }
 
-#root input:not([type=checkbox]):not([type=radio]),
-#root select,
-#root textarea {
+#storybook-root input:not([type=checkbox]):not([type=radio]),
+#storybook-root select,
+#storybook-root textarea {
   background-color: #fff;
   border: 2px solid #000;
   color: #171819;
@@ -435,38 +435,38 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root input:not([type=checkbox]):not([type=radio]),
-  #root select,
-  #root textarea {
+  #storybook-root input:not([type=checkbox]):not([type=radio]),
+  #storybook-root select,
+  #storybook-root textarea {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root input:not([type=checkbox]):not([type=radio]):focus,
-#root select:focus,
-#root textarea:focus {
+#storybook-root input:not([type=checkbox]):not([type=radio]):focus,
+#storybook-root select:focus,
+#storybook-root textarea:focus {
   border-color: #000;
   box-shadow: inset 0 0 0 2px;
   outline: 3px solid #fd0;
   outline-offset: 0
 }
 
-#root .sprocket {
+#storybook-root .sprocket {
   line-height: 1.375rem;
   margin: 1rem 0;
   padding: 0
 }
 
-#root .sprocket:first-child {
+#storybook-root .sprocket:first-child {
   margin-top: 0
 }
 
-#root .sprocket:last-child {
+#storybook-root .sprocket:last-child {
   margin-bottom: 0
 }
 
-#root .sprocket.error-summary {
+#storybook-root .sprocket.error-summary {
   background-color: #fff;
   border: .25rem solid #a00;
   display: block;
@@ -474,17 +474,17 @@ main {
   padding: 1rem
 }
 
-#root .sprocket.error-summary > h2:first-child {
+#storybook-root .sprocket.error-summary > h2:first-child {
   margin-top: 0
 }
 
-#root .sprocket.error-summary ul {
+#storybook-root .sprocket.error-summary ul {
   list-style-type: none;
   margin-bottom: 0;
   padding: 0
 }
 
-#root .sprocket.error-summary li {
+#storybook-root .sprocket.error-summary li {
   color: #a00;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -497,13 +497,13 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.error-summary li {
+  #storybook-root .sprocket.error-summary li {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket.error-summary a {
+#storybook-root .sprocket.error-summary a {
   color: #a00;
   font-family: proxima-nova,sans-serif;
   font-size: 1.25rem;
@@ -513,13 +513,13 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.error-summary a {
+  #storybook-root .sprocket.error-summary a {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket.error-summary a:focus {
+#storybook-root .sprocket.error-summary a:focus {
   background-color: #fd0;
   box-shadow: 0 -2px #fd0,0 4px #000;
   color: #171819;
@@ -528,34 +528,34 @@ main {
   text-decoration: none
 }
 
-#root .sprocket.error-summary:focus {
+#storybook-root .sprocket.error-summary:focus {
   border-color: #000;
   outline: 3px solid #fd0;
   outline-offset: 0
 }
 
-#root .sprocket.check-answers > h2:first-child {
+#storybook-root .sprocket.check-answers > h2:first-child {
   margin-top: 0
 }
 
-#root .sprocket.check-answers dl {
+#storybook-root .sprocket.check-answers dl {
   display: table;
   table-layout: fixed;
   width: 100%
 }
 
-#root .sprocket.check-answers dl .answer {
+#storybook-root .sprocket.check-answers dl .answer {
   display: table-row
 }
 
-#root .sprocket.check-answers dl dd,
-#root .sprocket.check-answers dl dt {
+#storybook-root .sprocket.check-answers dl dd,
+#storybook-root .sprocket.check-answers dl dt {
   border-bottom: 2px solid #dcdcdc;
   display: table-cell;
   padding: .25rem 0
 }
 
-#root .sprocket.check-answers dl .answer-title {
+#storybook-root .sprocket.check-answers dl .answer-title {
   color: #171819;
   font-family: proxima-nova,sans-serif;
   font-size: 1.25rem;
@@ -567,23 +567,23 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.check-answers dl .answer-title {
+  #storybook-root .sprocket.check-answers dl .answer-title {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket.check-answers dl .answer-value {
+#storybook-root .sprocket.check-answers dl .answer-value {
   width: 50%
 }
 
-#root .sprocket.check-answers dl .change-answer {
+#storybook-root .sprocket.check-answers dl .change-answer {
   padding-left: 1rem;
   text-align: right;
   width: 20%
 }
 
-#root .sprocket.check-answers dl .change-answer .visually-hidden-text {
+#storybook-root .sprocket.check-answers dl .change-answer .visually-hidden-text {
   clip: rect(0 0 0 0);
   border: 0;
   -webkit-clip-path: inset(50%);
@@ -597,7 +597,7 @@ main {
   width: 1px
 }
 
-#root .sprocket.fieldset legend {
+#storybook-root .sprocket.fieldset legend {
   color: #171819;
   font-family: proxima-nova,sans-serif;
   font-size: 1.625rem;
@@ -609,54 +609,54 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.fieldset legend {
+  #storybook-root .sprocket.fieldset legend {
     font-size: 1.25rem;
     line-height: 1.75rem
   }
 }
 
-#root .sprocket.fieldset.error {
+#storybook-root .sprocket.fieldset.error {
   border-left: .25rem solid #a00;
   padding: 0 1rem
 }
 
-#root .sprocket.fieldset.error input:not([type=checkbox]):not([type=radio]),
-#root .sprocket.fieldset.error select,
-#root .sprocket.fieldset.error textarea {
+#storybook-root .sprocket.fieldset.error input:not([type=checkbox]):not([type=radio]),
+#storybook-root .sprocket.fieldset.error select,
+#storybook-root .sprocket.fieldset.error textarea {
   border: 2px solid #a00
 }
 
-#root .sprocket.fieldset.error input:not([type=checkbox]):not([type=radio]):focus,
-#root .sprocket.fieldset.error select:focus,
-#root .sprocket.fieldset.error textarea:focus {
+#storybook-root .sprocket.fieldset.error input:not([type=checkbox]):not([type=radio]):focus,
+#storybook-root .sprocket.fieldset.error select:focus,
+#storybook-root .sprocket.fieldset.error textarea:focus {
   border-color: #000
 }
 
-#root .sprocket.fieldset.error.checkbox,
-#root .sprocket.fieldset.error.radio {
+#storybook-root .sprocket.fieldset.error.checkbox,
+#storybook-root .sprocket.fieldset.error.radio {
   padding-left: 4rem
 }
 
-#root .sprocket.fieldset.error.checkbox input,
-#root .sprocket.fieldset.error.radio input {
+#storybook-root .sprocket.fieldset.error.checkbox input,
+#storybook-root .sprocket.fieldset.error.radio input {
   left: 1.5rem
 }
 
-#root .sprocket.fieldset.error.checkbox label:before,
-#root .sprocket.fieldset.error.radio label:before {
+#storybook-root .sprocket.fieldset.error.checkbox label:before,
+#storybook-root .sprocket.fieldset.error.radio label:before {
   border: 2px solid #a00;
   left: 1rem
 }
 
-#root .sprocket.fieldset.error.radio input:checked + label:after {
+#storybook-root .sprocket.fieldset.error.radio input:checked + label:after {
   left: 1.5rem
 }
 
-#root .sprocket.fieldset.error.checkbox input:checked + label:after {
+#storybook-root .sprocket.fieldset.error.checkbox input:checked + label:after {
   left: 1.3125rem
 }
 
-#root .sprocket.fieldset .description {
+#storybook-root .sprocket.fieldset .description {
   color: #626a6e;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -669,13 +669,13 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.fieldset .description {
+  #storybook-root .sprocket.fieldset .description {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket.fieldset .error-message {
+#storybook-root .sprocket.fieldset .error-message {
   color: #a00;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -688,60 +688,60 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .sprocket.fieldset .error-message {
+  #storybook-root .sprocket.fieldset .error-message {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket .sprocket {
+#storybook-root .sprocket .sprocket {
   margin-bottom: 0
 }
 
-#root .cog {
+#storybook-root .cog {
   line-height: 1.375rem;
   margin: 1rem 0;
   padding: 0
 }
 
-#root .cog:first-child {
+#storybook-root .cog:first-child {
   margin-top: 0
 }
 
-#root .cog:last-child {
+#storybook-root .cog:last-child {
   margin-bottom: 0
 }
 
-#root .cog.radio {
+#storybook-root .cog.radio {
   margin-bottom: .5rem;
   min-height: 2rem;
   padding-left: 3rem;
   position: relative
 }
 
-#root .cog.radio:last-of-type {
+#storybook-root .cog.radio:last-of-type {
   margin-bottom: 0
 }
 
 @media only screen and (max-width:767px) {
-  #root .cog.radio label {
+  #storybook-root .cog.radio label {
     padding-top: .375rem
   }
 }
 
 @media only screen and (min-width:576px)and (max-width:767px) {
-  #root .cog.radio label {
+  #storybook-root .cog.radio label {
     padding-top: .375rem
   }
 }
 
 @media only screen and (max-width:319px) {
-  #root .cog.radio label {
+  #storybook-root .cog.radio label {
     padding-top: .375rem
   }
 }
 
-#root .cog.radio label:before {
+#storybook-root .cog.radio label:before {
   background-color: #fff;
   border: 2px solid;
   border-radius: 50%;
@@ -755,17 +755,17 @@ main {
   width: 32px
 }
 
-#root .cog.radio input {
+#storybook-root .cog.radio input {
   left: .5rem;
   position: absolute;
   top: .5rem
 }
 
-#root .cog.radio input:focus + label:before {
+#storybook-root .cog.radio input:focus + label:before {
   box-shadow: 0 0 0 2px #fd0
 }
 
-#root .cog.radio input:checked + label:after {
+#storybook-root .cog.radio input:checked + label:after {
   background-color: #000;
   border: 2px solid;
   border-radius: 50%;
@@ -781,36 +781,36 @@ main {
   width: 1rem
 }
 
-#root .cog.checkbox {
+#storybook-root .cog.checkbox {
   margin-bottom: .5rem;
   min-height: 2rem;
   padding-left: 3rem;
   position: relative
 }
 
-#root .cog.checkbox:last-of-type {
+#storybook-root .cog.checkbox:last-of-type {
   margin-bottom: 0
 }
 
 @media only screen and (max-width:767px) {
-  #root .cog.checkbox label {
+  #storybook-root .cog.checkbox label {
     padding-top: .375rem
   }
 }
 
 @media only screen and (min-width:576px)and (max-width:767px) {
-  #root .cog.checkbox label {
+  #storybook-root .cog.checkbox label {
     padding-top: .375rem
   }
 }
 
 @media only screen and (max-width:319px) {
-  #root .cog.checkbox label {
+  #storybook-root .cog.checkbox label {
     padding-top: .375rem
   }
 }
 
-#root .cog.checkbox label:before {
+#storybook-root .cog.checkbox label:before {
   background-color: #fff;
   border: 2px solid;
   box-sizing: border-box;
@@ -823,17 +823,17 @@ main {
   width: 2rem
 }
 
-#root .cog.checkbox input {
+#storybook-root .cog.checkbox input {
   left: .5rem;
   position: absolute;
   top: .5rem
 }
 
-#root .cog.checkbox input:focus + label:before {
+#storybook-root .cog.checkbox input:focus + label:before {
   box-shadow: 0 0 0 2px #fd0
 }
 
-#root .cog.checkbox input:checked + label:after {
+#storybook-root .cog.checkbox input:checked + label:after {
   background-color: #fff;
   border-bottom: 4px solid;
   border-left: 4px solid;
@@ -849,48 +849,48 @@ main {
   width: 1.375rem
 }
 
-#root .cog.error {
+#storybook-root .cog.error {
   border-left: .25rem solid #a00;
   padding: 0 1rem
 }
 
-#root .cog.error input:not([type=checkbox]):not([type=radio]),
-#root .cog.error select,
-#root .cog.error textarea {
+#storybook-root .cog.error input:not([type=checkbox]):not([type=radio]),
+#storybook-root .cog.error select,
+#storybook-root .cog.error textarea {
   border: 2px solid #a00
 }
 
-#root .cog.error input:not([type=checkbox]):not([type=radio]):focus,
-#root .cog.error select:focus,
-#root .cog.error textarea:focus {
+#storybook-root .cog.error input:not([type=checkbox]):not([type=radio]):focus,
+#storybook-root .cog.error select:focus,
+#storybook-root .cog.error textarea:focus {
   border-color: #000
 }
 
-#root .cog.error.checkbox,
-#root .cog.error.radio {
+#storybook-root .cog.error.checkbox,
+#storybook-root .cog.error.radio {
   padding-left: 4rem
 }
 
-#root .cog.error.checkbox input,
-#root .cog.error.radio input {
+#storybook-root .cog.error.checkbox input,
+#storybook-root .cog.error.radio input {
   left: 1.5rem
 }
 
-#root .cog.error.checkbox label:before,
-#root .cog.error.radio label:before {
+#storybook-root .cog.error.checkbox label:before,
+#storybook-root .cog.error.radio label:before {
   border: 2px solid #a00;
   left: 1rem
 }
 
-#root .cog.error.radio input:checked + label:after {
+#storybook-root .cog.error.radio input:checked + label:after {
   left: 1.5rem
 }
 
-#root .cog.error.checkbox input:checked + label:after {
+#storybook-root .cog.error.checkbox input:checked + label:after {
   left: 1.3125rem
 }
 
-#root .cog .description {
+#storybook-root .cog .description {
   color: #626a6e;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -903,13 +903,13 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .cog .description {
+  #storybook-root .cog .description {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .cog .error-message {
+#storybook-root .cog .error-message {
   color: #a00;
   display: block;
   font-family: proxima-nova,sans-serif;
@@ -922,17 +922,17 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .cog .error-message {
+  #storybook-root .cog .error-message {
     font-size: 1rem;
     line-height: 1.375rem
   }
 }
 
-#root .sprocket .cog:last-of-type {
+#storybook-root .sprocket .cog:last-of-type {
   margin-bottom: 0
 }
 
-#root > .sprocket.fieldset > fieldset > legend {
+#storybook-root > .sprocket.fieldset > fieldset > legend {
   color: #171819;
   font-family: proxima-nova,sans-serif;
   font-size: 2rem;
@@ -944,23 +944,23 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root > .sprocket.fieldset > fieldset > legend {
+  #storybook-root > .sprocket.fieldset > fieldset > legend {
     font-size: 1.5rem;
     line-height: 2rem
   }
 }
 
-#root .shinkansen-gears {
+#storybook-root .shinkansen-gears {
   margin: 2rem 0;
   padding: 0
 }
 
-#root .shinkansen-gears li {
+#storybook-root .shinkansen-gears li {
   display: inline-block;
   margin-right: .5rem
 }
 
-#root .shinkansen-gears li a {
+#storybook-root .shinkansen-gears li a {
   background-color: transparent;
   border: 2px solid #24548a;
   border-radius: 4px;
@@ -981,47 +981,47 @@ main {
 }
 
 @media only screen and (max-width:767px) {
-  #root .shinkansen-gears li a {
+  #storybook-root .shinkansen-gears li a {
     font-size: .875rem;
     line-height: 1.25rem
   }
 }
 
-#root .shinkansen-gears li a.disabled {
+#storybook-root .shinkansen-gears li a.disabled {
   background-color: #d8d8d8;
   border: 2px solid #d8d8d8
 }
 
-#root .shinkansen-gears li a span {
+#storybook-root .shinkansen-gears li a span {
   display: block
 }
 
-#root .shinkansen-gears li a:link {
+#storybook-root .shinkansen-gears li a:link {
   color: #24548a;
   text-decoration: none
 }
 
-#root .shinkansen-gears li a:hover {
+#storybook-root .shinkansen-gears li a:hover {
   color: #24548a;
   text-decoration: underline
 }
 
-#root .shinkansen-gears li a:visited {
+#storybook-root .shinkansen-gears li a:visited {
   color: #24548a
 }
 
-#root .shinkansen-gears li a:active,
-#root .shinkansen-gears li a:focus {
+#storybook-root .shinkansen-gears li a:active,
+#storybook-root .shinkansen-gears li a:focus {
   background-color: #24548a;
   color: #fff
 }
 
-#root .shinkansen-gears li a:focus {
+#storybook-root .shinkansen-gears li a:focus {
   outline-color: #fd0;
   text-decoration: underline
 }
 
-#root .shinkansen-gears li:last-of-type {
+#storybook-root .shinkansen-gears li:last-of-type {
   margin-right: auto
 }
 /*# sourceMappingURL=preview-head.css.map */
