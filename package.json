@@ -103,7 +103,7 @@
     "regenerator-runtime": "^0.13.11",
     "rimraf": "^5.0.0",
     "sass": "^1.62.1",
-    "shinkansen-rails": "1.0.37",
+    "shinkansen-rails": "1.0.40",
     "vinyl-paths": "^5.0.0"
   },
   "imports": {
