@@ -135,7 +135,8 @@ describe('shinkansen-gears', () => {
       <Gears
         reverse={mockReverse}
         forward={mockForward}
-        pattern='MOCK PATTERN' />
+        pattern='MOCK PATTERN'
+      />
     )
 
     beforeEach(() => {
