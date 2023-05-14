@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash +e
 
 NVM=~/.nvm
 
@@ -30,9 +30,7 @@ then
 else
   echo Environment has NVM version $VERSION installed
 
-  set -e
-
-  nvm use
+  nvm use 2> /dev/null
 
   if [[ $? != 0 ]];
   then
@@ -41,3 +39,5 @@ else
     echo Environment has NVM version $VERSION configured
   fi
 fi
+
+exit 0
