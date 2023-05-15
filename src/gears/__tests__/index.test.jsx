@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import renderer from 'react-test-renderer'
 
 import equal from 'fast-deep-equal'
@@ -19,7 +20,33 @@ jest.mock('shinkansen-rails', () => ({
   }
 }))
 
-jest.mock('react-router-dom')
+function MockLink ({ to, children }) {
+  return (
+    <a href={to} className='mock-link'>
+      {children}
+    </a>
+  )
+}
+
+MockLink.propTypes = {
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape()
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(
+      PropTypes.node
+    )
+  ])
+}
+
+jest.mock('react-router-dom', () => {
+  return {
+    __esModule: true,
+    Link: MockLink
+  }
+})
 
 describe('shinkansen-gears', () => {
   beforeEach(() => {

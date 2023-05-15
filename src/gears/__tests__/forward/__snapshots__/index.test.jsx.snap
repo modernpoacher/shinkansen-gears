@@ -3,5 +3,16 @@
 exports[`shinkansen-gears/forward renders 1`] = `
 <li
   className="shinkansen-gears-forward"
-/>
+>
+  <a
+    className="mock-link"
+    href={
+      {
+        "pathname": "MOCK PATHNAME",
+      }
+    }
+  >
+    Forward
+  </a>
+</li>
 `;
