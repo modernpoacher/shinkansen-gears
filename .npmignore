@@ -2,11 +2,13 @@
 
 .circleci
 .github
+.husky
 
-.storybook
 .editorconfig
 .eslintignore
 .eslintrc
+
+.gitattributes
 
 .depsrc
 
@@ -24,14 +26,11 @@ gulpfile.mjs
 __tests__
 jest.config.cjs
 
-# NYC
-.nycrc
-.nyc_output
-
 # Coverage
 coverage
 
 # Storybook
+.storybook
 stories
 
 # Shell
