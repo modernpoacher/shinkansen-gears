@@ -2,9 +2,14 @@ module.exports = {
   bail: true,
   verbose: true,
   rootDir: '.',
-  collectCoverage: true,
+  roots: [
+    './src'
+  ],
+  clearMocks: true,
+  collectCoverage: false,
   coverageDirectory: './coverage',
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(mjs?|mts?|jsx?|js?|tsx?|ts?)$',
+  coverageProvider: 'v8',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(mjs?|jsx?)$',
   transform: {
     '^.+\\.jsx$': 'babel-jest',
     '^.+\\.mjs$': 'babel-jest'

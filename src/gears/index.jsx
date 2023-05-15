@@ -128,7 +128,7 @@ Gears.defaultProps = {
 }
 
 Gears.propTypes = {
-  reverse: PropTypes.object,
-  forward: PropTypes.object,
+  reverse: PropTypes.shape(),
+  forward: PropTypes.shape(),
   pattern: PropTypes.string
 }
