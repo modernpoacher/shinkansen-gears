@@ -22,7 +22,7 @@ const SOURCE_PATH = path.relative(currentDir, sourcePath)
 const TARGET_PATH = path.relative(currentDir, targetPath)
 const MODULE_PATH = path.relative(currentDir, modulePath)
 
-log('`shinkansen-gears:build:gulp:build` is awake')
+log('`shinkansen` is awake')
 
 export function cleanCss () {
   log('cleanCss')

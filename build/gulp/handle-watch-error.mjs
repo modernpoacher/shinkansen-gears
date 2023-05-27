@@ -10,7 +10,7 @@ import {
 
 const log = debug('shinkansen-gears:handle-watch-error')
 
-log('`handleWatchError` is awake')
+log('`shinkansen` is awake')
 
 export function handleWatchError ({
   code = 'No error code defined',

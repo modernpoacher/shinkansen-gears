@@ -18,7 +18,7 @@ import {
 
 const log = debug('shinkansen-gears:build:gulp:transform')
 
-log('`transform` is awake')
+log('`shinkansen` is awake')
 
 // eslint-disable-next-line no-irregular-whitespace
 // \u200b
