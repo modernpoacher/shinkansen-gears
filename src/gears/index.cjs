@@ -1,6 +1,6 @@
 require('@babel/register')({
   ignore: [
-    /node_modules\/(?!shinkansen-)/
+    /node_modules\/(?!shinkansen|@modernpoacher)/
   ]
 })
 
