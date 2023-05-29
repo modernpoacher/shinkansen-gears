@@ -1,6 +1,6 @@
 ## `shinkansen-gears`
 
-# Shinkansen Gears
+# Gears
 
 *Gears* implements *React* + *React Router* navigation components for *Zashiki Karakuri*.
 
@@ -39,5 +39,5 @@ Gears.propTypes = {
 
 ## See also
 
-- [Shinkansen Rails](https://github.com/modernpoacher/shinkansen-rails)
-- [Shinkansen Pantograph](https://github.com/modernpoacher/shinkansen-pantograph)
+- [Rails](https://github.com/modernpoacher/shinkansen-rails)
+- [Pantograph](https://github.com/modernpoacher/shinkansen-pantograph)
