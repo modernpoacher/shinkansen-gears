@@ -1,4 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx cross-env DEBUG=@modernpoacher/hooks* node .husky/post-commit.mjs
+has_package_changes () {
+  git diff HEAD~1..HEAD~0 -- origin/main package.json
+}
+
+if has_package_changes;
+then
+  npx cross-env DEBUG=@modernpoacher/hooks* node .husky/post-commit.mjs
+fi
