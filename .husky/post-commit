@@ -1,8 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
 get_package_version_changes () {
-  git diff HEAD~1..HEAD~0 -- origin/main package.json | grep -e '+\s*\"version\":\s\".*"'
+  git diff HEAD~1..HEAD~0 -- "origin/$CURRENT_BRANCH" package.json | grep -e '+\s*\"version\":\s\".*"'
 }
 
 has_package_version_changes () {
@@ -10,7 +12,7 @@ has_package_version_changes () {
 }
 
 get_package_changes () {
-  git diff HEAD~1..HEAD~0 -- origin/main package.json
+  git diff HEAD~1..HEAD~0 -- "origin/$CURRENT_BRANCH" package.json
 }
 
 has_package_changes () {
