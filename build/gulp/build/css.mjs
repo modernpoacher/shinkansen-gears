@@ -16,7 +16,7 @@ import handleWatchError from '#build/gulp/handle-watch-error'
 
 import cssFromSass from '#build/gulp/build/css-from-sass'
 
-const log = debug('shinkansen-gears:build:gulp:build')
+const log = debug('shinkansen-gears/build/gulp/build')
 
 const SOURCE_PATH = path.relative(currentDir, sourcePath)
 const TARGET_PATH = path.relative(currentDir, targetPath)

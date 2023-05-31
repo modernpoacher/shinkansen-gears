@@ -16,7 +16,7 @@ import {
   writeFile
 } from 'fs/promises'
 
-const log = debug('shinkansen-gears:build:gulp:transform')
+const log = debug('shinkansen-gears/build/gulp/transform')
 
 log('`shinkansen` is awake')
 
