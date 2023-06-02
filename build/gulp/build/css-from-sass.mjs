@@ -11,7 +11,7 @@ import map from 'postcss-map'
 import scss from 'postcss-scss'
 import autoprefixer from 'autoprefixer'
 import nano from 'cssnano'
-import cleanCss from 'gulp-clean-css'
+import cleanCss from '@sequencemedia/gulp-clean-css'
 import cssPurge from 'gulp-css-purge'
 import sourcemaps from 'gulp-sourcemaps'
 
