@@ -3,7 +3,7 @@ import gulp from '@sequencemedia/gulp'
 import glob from 'glob-all'
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
-import debug from 'gulp-debug'
+import debug from '@sequencemedia/gulp-debug'
 
 import postCss from 'gulp-postcss'
 import atImport from 'postcss-easy-import'
