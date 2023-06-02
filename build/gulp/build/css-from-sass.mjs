@@ -5,7 +5,7 @@ import dartSass from 'sass'
 import gulpSass from '@sequencemedia/gulp-sass'
 import debug from '@sequencemedia/gulp-debug'
 
-import postCss from 'gulp-postcss'
+import postCss from '@sequencemedia/gulp-postcss'
 import atImport from 'postcss-easy-import'
 import map from 'postcss-map'
 import scss from 'postcss-scss'
