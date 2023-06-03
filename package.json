@@ -62,7 +62,7 @@
     "@sequencemedia/gulp-debug": "^1.0.3",
     "@sequencemedia/gulp-postcss": "^1.0.0",
     "@sequencemedia/gulp-sass": "^1.0.0",
-    "@sequencemedia/gulp-sourcemaps": "^1.0.1",
+    "@sequencemedia/gulp-sourcemaps": "^1.0.4",
     "@storybook/addon-actions": "^7.0.18",
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",
