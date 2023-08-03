@@ -70,7 +70,7 @@
     "@storybook/react-webpack5": "^7.2.1",
     "@types/react": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "5.61.0",
-    "@typescript-eslint/parser": "5.61.0",
+    "@typescript-eslint/parser": "5.62.0",
     "autoprefixer": "^10.4.14",
     "babel-plugin-module-resolver": "^5.0.0",
     "core-js": "^3.32.0",
