@@ -60,7 +60,7 @@
     "@babel/register": "^7.22.5",
     "@modernpoacher/design-system": "1.0.67",
     "@modernpoacher/hooks": "^1.0.429",
-    "@sequencemedia/gulp": "^1.1.54",
+    "@sequencemedia/gulp": "^1.1.56",
     "@sequencemedia/gulp-clean-css": "^1.0.25",
     "@sequencemedia/gulp-css-purge": "^1.1.18",
     "@sequencemedia/gulp-debug": "^1.0.29",
