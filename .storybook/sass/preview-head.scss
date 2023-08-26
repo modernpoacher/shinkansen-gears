@@ -1,7 +1,7 @@
 @import "design-system/layouts";
 
 #storybook-root {
-  @include zashiki;
+  @include design-system;
 
   margin: 0 auto;
 
