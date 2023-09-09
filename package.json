@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=18.5.0"
+    "node": ">=18.12.0"
   },
   "repository": {
     "type": "git",
@@ -60,13 +60,13 @@
     "@babel/register": "^7.22.15",
     "@modernpoacher/design-system": "1.0.72",
     "@modernpoacher/hooks": "^1.0.434",
-    "@sequencemedia/gulp": "^1.1.71",
-    "@sequencemedia/gulp-clean-css": "^1.0.33",
-    "@sequencemedia/gulp-css-purge": "^1.1.26",
-    "@sequencemedia/gulp-debug": "^1.0.37",
-    "@sequencemedia/gulp-postcss": "^1.0.36",
-    "@sequencemedia/gulp-sass": "^1.0.32",
-    "@sequencemedia/gulp-sourcemaps": "^1.0.33",
+    "@sequencemedia/gulp": "^1.1.72",
+    "@sequencemedia/gulp-clean-css": "^1.0.34",
+    "@sequencemedia/gulp-css-purge": "^1.1.27",
+    "@sequencemedia/gulp-debug": "^1.0.38",
+    "@sequencemedia/gulp-postcss": "^1.0.37",
+    "@sequencemedia/gulp-sass": "^1.0.33",
+    "@sequencemedia/gulp-sourcemaps": "^1.0.34",
     "@storybook/addon-actions": "^7.4.0",
     "@storybook/addon-essentials": "^7.4.0",
     "@storybook/addon-links": "^7.4.0",
