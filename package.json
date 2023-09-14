@@ -50,7 +50,7 @@
     "fast-deep-equal": "^3.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.22.19",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-export-default-from": "^7.22.17",
@@ -58,8 +58,8 @@
     "@babel/preset-env": "^7.22.15",
     "@babel/preset-react": "^7.22.15",
     "@babel/register": "^7.22.15",
-    "@modernpoacher/design-system": "1.0.72",
-    "@modernpoacher/hooks": "^1.0.434",
+    "@modernpoacher/design-system": "1.0.74",
+    "@modernpoacher/hooks": "^1.0.435",
     "@sequencemedia/gulp": "^1.1.78",
     "@sequencemedia/gulp-clean-css": "^1.0.34",
     "@sequencemedia/gulp-css-purge": "^1.1.27",
@@ -101,7 +101,7 @@
     "react-router-dom": "^6.16.0",
     "react-test-renderer": "^18.2.0",
     "regenerator-runtime": "^0.14.0",
-    "sass": "^1.66.1",
+    "sass": "^1.67.0",
     "shinkansen-rails": "1.0.92",
     "storybook": "^7.4.1",
     "vinyl-paths": "^5.0.0"
