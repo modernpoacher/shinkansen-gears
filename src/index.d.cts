@@ -20,7 +20,6 @@ declare module 'shinkansen-gears/gears/forward' {
 
 declare module 'shinkansen-gears/gears' {
   import React from 'react'
-  import Immutable from 'immutable'
 
   export type GearsProps = {
     reverse: {},
@@ -29,8 +28,8 @@ declare module 'shinkansen-gears/gears' {
   }
 
   export type GearsState = {
-    reverse?: Immutable.Map<{}, {}>
-    forward?: Immutable.Map<{}, {}>
+    reverse?: {}
+    forward?: {}
   }
 
   export function renderReverse (reverse: {}, pattern: string | void): React.JSX.Element | null

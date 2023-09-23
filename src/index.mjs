@@ -1,8 +1,8 @@
-import debug from 'debug'
-
 /**
-  * @typedef {import('shinkansen-gears').Gears} Gears
+ * @typedef {import('shinkansen-gears').Gears} Gears
  */
+
+import debug from 'debug'
 
 const log = debug('shinkansen-gears')
 

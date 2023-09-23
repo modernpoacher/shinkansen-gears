@@ -40,14 +40,6 @@ const presets = [
 
 const plugins = [
   '@babel/syntax-jsx',
-  '@babel/proposal-export-default-from',
-  '@babel/proposal-export-namespace-from',
-  [
-    '@babel/proposal-class-properties',
-    {
-      loose: false
-    }
-  ],
   [
     'module-resolver', {
       alias: {

@@ -32,7 +32,7 @@ export function renderReverse (reverse, pattern) {
 }
 
 /**
- * @type {(reverse: {}, pattern: string | void): React.JSX.Element | null}
+ * @type {(forward: {}, pattern: string | void): React.JSX.Element | null}
  */
 export function renderForward (forward, pattern) {
   if (Rails.go(forward, pattern)) {
@@ -55,7 +55,7 @@ export default class Gears extends Component {
   state = {} // define state
 
   /**
-   *  Convert latest 'props' to an Immutable.Map() and store in 'state'
+   *  Store latest 'props' in 'state'
    *
    * @param {GearsProps} props   Latest props
    * @param {GearsState} state   Current state
