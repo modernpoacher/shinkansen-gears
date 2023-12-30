@@ -50,13 +50,13 @@
     "fast-deep-equal": "^3.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
+    "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-env": "^7.23.7",
     "@babel/preset-react": "^7.23.3",
-    "@babel/register": "^7.22.15",
-    "@modernpoacher/design-system": "1.0.115",
-    "@modernpoacher/hooks": "^1.0.454",
+    "@babel/register": "^7.23.7",
+    "@modernpoacher/design-system": "1.0.116",
+    "@modernpoacher/hooks": "^1.0.455",
     "@sequencemedia/gulp": "^1.1.134",
     "@sequencemedia/gulp-clean-css": "^1.0.66",
     "@sequencemedia/gulp-css-purge": "^1.1.62",
