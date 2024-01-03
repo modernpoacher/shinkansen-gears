@@ -98,7 +98,7 @@
     "react-router-dom": "^6.21.1",
     "react-test-renderer": "^18.2.0",
     "regenerator-runtime": "^0.14.1",
-    "sass": "^1.69.6",
+    "sass": "^1.69.7",
     "shinkansen-rails": "1.0.92",
     "storybook": "^7.6.7",
     "vinyl-paths": "^5.0.0"
