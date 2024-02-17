@@ -11,7 +11,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           name: Install
-          command: npm ci
+          command: npm i --force
       - run:
           name: Lint
           command: npm run lint
@@ -52,7 +52,7 @@ jobs:
             then
               set +e
 
-              npm ci
+              npm i --force
               npm publish
 
               if [[ $? != 0 ]];
