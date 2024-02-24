@@ -13,7 +13,7 @@
   ],
   "main": "./src/index.cjs",
   "type": "module",
-  "types": "./src/index.d.cts",
+  "types": "./src/index.d.mts",
   "author": {
     "name": "Jonathan Perry for Modern Poacher Limited",
     "email": "modernpoacher@modernpoacher.com",
