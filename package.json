@@ -36,7 +36,7 @@
     "pregulp": "npm run nvm",
     "gulp": "gulp --color",
     "prelint": "npm run nvm",
-    "lint": "cross-env NODE_ENV=production eslint . .storybook --ext .mjs,.cjs,.jsx,.mts,.cts",
+    "lint": "eslint . .storybook --ext .mjs,.cjs,.jsx,.mts,.cts",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run nvm",
     "test": "cross-env NODE_ENV=test jest",
