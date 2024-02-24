@@ -1,7 +1,7 @@
 declare module 'shinkansen-gears/gears/reverse' {
-  import React from 'react'
+  import type React from 'react'
 
-  export type ReverseProps = {
+  export interface ReverseProps {
     pathname: string
   }
 
@@ -9,9 +9,9 @@ declare module 'shinkansen-gears/gears/reverse' {
 }
 
 declare module 'shinkansen-gears/gears/forward' {
-  import React from 'react'
+  import type React from 'react'
 
-  export type ForwardProps = {
+  export interface ForwardProps {
     pathname: string
   }
 
@@ -21,19 +21,19 @@ declare module 'shinkansen-gears/gears/forward' {
 declare module 'shinkansen-gears/gears' {
   import React from 'react'
 
-  export type GearsProps = {
-    reverse: {},
-    forward: {},
+  export interface GearsProps {
+    reverse: Record<string, unknown>
+    forward: Record<string, unknown>
     pattern: string
   }
 
-  export type GearsState = {
-    reverse?: {}
-    forward?: {}
+  export interface GearsState {
+    reverse?: Record<string, unknown>
+    forward?: Record<string, unknown>
   }
 
-  export function renderReverse (reverse: {}, pattern: string | void): React.JSX.Element | null
-  export function renderForward (forward: {}, pattern: string | void): React.JSX.Element | null
+  export function renderReverse (reverse: Record<string, unknown>, pattern?: string): React.JSX.Element | null
+  export function renderForward (forward: Record<string, unknown>, pattern?: string): React.JSX.Element | null
   export default class Gears extends React.Component<GearsProps, GearsState> {}
 }
 
