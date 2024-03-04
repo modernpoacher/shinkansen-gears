@@ -56,7 +56,7 @@
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@babel/register": "^7.23.7",
-    "@modernpoacher/design-system": "1.0.136",
+    "@modernpoacher/design-system": "1.0.137",
     "@modernpoacher/hooks": "^1.0.467",
     "@sequencemedia/gulp": "^1.1.168",
     "@sequencemedia/gulp-clean-css": "^1.0.87",
