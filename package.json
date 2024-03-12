@@ -101,7 +101,7 @@
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.71.1",
     "shinkansen-rails": "^1.0.144",
-    "storybook": "^7.6.17",
+    "storybook": "^8.0.0",
     "vinyl-paths": "^5.0.0"
   },
   "imports": {
