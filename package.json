@@ -67,7 +67,7 @@
     "@sequencemedia/gulp-sourcemaps": "^1.0.89",
     "@storybook/addon-actions": "^7.6.17",
     "@storybook/addon-essentials": "^7.6.17",
-    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-links": "^8.0.0",
     "@storybook/react": "^7.6.17",
     "@storybook/react-webpack5": "^7.6.17",
     "@types/react": "^18.2.64",
