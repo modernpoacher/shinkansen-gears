@@ -70,7 +70,7 @@
     "@storybook/addon-links": "^8.0.8",
     "@storybook/react": "^8.0.8",
     "@storybook/react-webpack5": "^8.0.8",
-    "@types/react": "^18.2.78",
+    "@types/react": "^18.2.79",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
     "autoprefixer": "^10.4.19",
@@ -100,7 +100,7 @@
     "react-test-renderer": "^18.2.0",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.75.0",
-    "shinkansen-rails": "^1.0.153",
+    "shinkansen-rails": "^1.0.154",
     "storybook": "^8.0.8",
     "vinyl-paths": "^5.0.0"
   },
