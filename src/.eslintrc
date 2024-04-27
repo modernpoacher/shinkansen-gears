@@ -24,7 +24,7 @@
       "plugins": [
         "@typescript-eslint"
       ],
-      "extends": "standard-with-typescript",
+      "extends": "love",
       "parser": "@typescript-eslint/parser"
     }
   ],
