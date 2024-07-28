@@ -34,7 +34,7 @@ function getTransformForSass () {
   return (
     sass({
       outputStyle: 'compressed', // 'nested',
-      includePaths: [
+      loadPaths: [
         path.join(MODULE_PATH, '@modernpoacher/design-system/src/sass')
       ]
     }).on('error', sass.logError)
