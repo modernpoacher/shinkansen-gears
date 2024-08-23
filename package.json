@@ -53,11 +53,11 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
-    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/register": "^7.24.6",
     "@modernpoacher/design-system": "1.0.179",
-    "@modernpoacher/hooks": "^1.0.491",
+    "@modernpoacher/hooks": "^1.0.492",
     "@sequencemedia/gulp": "^1.1.225",
     "@sequencemedia/gulp-clean-css": "^1.0.139",
     "@sequencemedia/gulp-css-purge": "^1.1.147",
@@ -100,7 +100,7 @@
     "react-test-renderer": "^18.3.1",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.77.8",
-    "shinkansen-rails": "^1.0.207",
+    "shinkansen-rails": "^1.0.208",
     "storybook": "^8.2.9",
     "vinyl-paths": "^5.0.0"
   },
