@@ -1,5 +1,5 @@
 module.exports = (
-  import('@modernpoacher/hooks')
+  import('./hooks/index.mjs')
     .then(({
       postCommit
     }) => (
