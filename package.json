@@ -99,7 +99,7 @@
     "react-test-renderer": "^18.3.1",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.79.5",
-    "shinkansen-rails": "^1.0.235",
+    "shinkansen-rails": "^1.0.236",
     "storybook": "^8.3.5",
     "vinyl-paths": "^5.0.0"
   },
