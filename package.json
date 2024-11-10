@@ -57,7 +57,7 @@
     "@babel/preset-react": "^7.25.9",
     "@babel/register": "^7.25.9",
     "@modernpoacher/design-system": "1.1.8",
-    "@sequencemedia/gulp": "^1.1.268",
+    "@sequencemedia/gulp": "^1.1.269",
     "@sequencemedia/gulp-clean-css": "^1.0.179",
     "@sequencemedia/gulp-css-purge": "^1.1.195",
     "@sequencemedia/gulp-debug": "^1.0.190",
@@ -99,7 +99,7 @@
     "react-test-renderer": "^18.3.1",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.80.6",
-    "shinkansen-rails": "^1.0.247",
+    "shinkansen-rails": "^1.0.248",
     "storybook": "^8.4.2",
     "vinyl-paths": "^5.0.0"
   },
