@@ -1,9 +1,10 @@
-@import "design-system/layouts";
+@use "design-system/layouts";
+@use "design-system/components";
 
 #storybook-root {
-  @include design-system;
+  @include layouts.design-system;
 
-  margin: 0 auto;
+  & { margin: 0 auto; }
 
-  .shinkansen-gears { @include gears; }
+  .shinkansen-gears { @include components.gears; }
 }
