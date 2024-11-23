@@ -1,6 +1,7 @@
-import path from 'node:path'
+import {
+  join
+} from 'node:path'
 
-export const currentDir = process.cwd()
-export const sourcePath = path.join('.storybook')
-export const targetPath = path.join('.storybook')
-export const modulePath = path.join(currentDir, 'node_modules')
+export const currentDir = process.cwd() // is resolved
+export const storybookPath = join(currentDir, '.storybook')
+export const modulePath = join(currentDir, 'node_modules')
