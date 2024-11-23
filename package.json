@@ -96,6 +96,9 @@
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
   },
+  "peerDependencies": {
+    "shinkansen-rails": "1.0.x"
+  },
   "imports": {
     "#build/paths": "./build/paths.mjs"
   },
