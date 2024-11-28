@@ -8,6 +8,7 @@
 .eslintignore
 .eslintrc
 
+.gitignore
 .gitattributes
 
 .depsrc
@@ -20,7 +21,10 @@
 
 # Build
 build
-gulpfile.mjs
+transform.sh
+
+# Mocha
+test
 
 # Jest
 __tests__
@@ -35,3 +39,10 @@ stories
 
 # Shell
 nvm.sh
+
+# Webpack
+webpack.config.mjs
+
+# TypeScript
+tsconfig.json
+jsconfig.json
