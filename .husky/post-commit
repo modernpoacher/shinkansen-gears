@@ -4,7 +4,8 @@ get_package_changes () {
   local CURRENT_BRANCH
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-  git diff HEAD~1..HEAD~0 -- "origin/$CURRENT_BRANCH" package.json
+  git diff HEAD~1..HEAD~0 -- "origin/$CURRENT_BRANCH" package.json | grep \
+    -e '+\s*\"shinkansen-rails\":\s\".*"'
 }
 
 has_package_changes () {
