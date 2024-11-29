@@ -8,7 +8,7 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Gears, { renderReverse, renderForward } from 'shinkansen-gears'
+import Gears, { renderReverse, renderForward } from '#gears/gears'
 
 jest.mock('fast-deep-equal', () => jest.fn())
 
@@ -48,7 +48,7 @@ jest.mock('react-router-dom', () => {
   }
 })
 
-describe('shinkansen-gears', () => {
+describe('#gears/gears', () => {
   beforeEach(() => {
     jest.resetAllMocks()
   })

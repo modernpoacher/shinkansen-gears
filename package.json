@@ -100,7 +100,12 @@
     "shinkansen-rails": "1.0.x"
   },
   "imports": {
-    "#build/paths": "./build/paths.mjs"
+    "#build/paths": "./build/paths.mjs",
+    "#gears": "./src/index.mjs",
+    "#gears/gears": "./src/gears/index.jsx",
+    "#gears/gears/*": "./src/gears/*/index.jsx",
+    "#gears/gears/forward": "./src/gears/forward/index.jsx",
+    "#gears/gears/reverse": "./src/gears/reverse/index.jsx"
   },
   "exports": {
     ".": {
