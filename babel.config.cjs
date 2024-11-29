@@ -40,19 +40,7 @@ const presets = [
 ]
 
 const plugins = [
-  '@babel/syntax-jsx',
-  [
-    'module-resolver', {
-      alias: {
-        /**
-         *  Jest & Storybook
-         */
-        'shinkansen-gears/forward': './src/gears/forward/index.jsx',
-        'shinkansen-gears/reverse': './src/gears/reverse/index.jsx',
-        'shinkansen-gears': './src/gears/index.jsx'
-      }
-    }
-  ]
+  '@babel/syntax-jsx'
 ]
 
 module.exports = (api) => {
