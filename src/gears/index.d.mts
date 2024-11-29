@@ -1,4 +1,4 @@
-declare module 'shinkansen-gears/gears' {
+declare module '#gears/gears' {
   import React from 'react'
 
   export interface GearsProps {
@@ -15,4 +15,9 @@ declare module 'shinkansen-gears/gears' {
   export function renderReverse (reverse: Record<string, unknown>, pattern?: string): React.JSX.Element | null
   export function renderForward (forward: Record<string, unknown>, pattern?: string): React.JSX.Element | null
   export default class Gears extends React.Component<GearsProps, GearsState> {}
+}
+
+declare module 'shinkansen-gears/gears' {
+  export { default } from '#gears/gears'
+  export * from '#gears/gears'
 }

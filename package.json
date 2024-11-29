@@ -63,14 +63,12 @@
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "autoprefixer": "^10.4.20",
-    "babel-plugin-module-resolver": "^5.0.2",
     "clean-webpack-plugin": "^4.0.0",
     "core-js": "^3.39.0",
     "cross-env": "^7.0.3",
     "eslint": "8.57.1",
     "eslint-config-love": "47.0.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-import-resolver-babel-module": "^5.3.2",
     "eslint-plugin-react": "^7.37.2",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
@@ -100,7 +98,12 @@
     "shinkansen-rails": "1.0.x"
   },
   "imports": {
-    "#build/paths": "./build/paths.mjs"
+    "#build/paths": "./build/paths.mjs",
+    "#gears": "./src/index.mjs",
+    "#gears/gears": "./src/gears/index.jsx",
+    "#gears/gears/*": "./src/gears/*/index.jsx",
+    "#gears/gears/forward": "./src/gears/forward/index.jsx",
+    "#gears/gears/reverse": "./src/gears/reverse/index.jsx"
   },
   "exports": {
     ".": {

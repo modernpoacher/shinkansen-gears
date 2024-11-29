@@ -1,11 +1,33 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
+    "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "NodeNext",
+    "allowJs": true,
+    "checkJs": false,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "strict": true,
     "isolatedModules": true,
-    "baseUrl": "."
-  }
+    "baseUrl": ".",
+    "paths": {
+      "#gears": [
+        "src/index.mjs"
+      ],
+      "#gears/gears": [
+        "src/gears/index.jsx"
+      ],
+      "#gears/gears/*": [
+        "src/gears/*/index.jsx"
+      ],
+      "#gears/gears/forward": [
+        "src/gears/forward/index.jsx"
+      ],
+      "#gears/gears/reverse": [
+        "src/gears/reverse/index.jsx"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import renderer from 'react-test-renderer'
 
-import Forward from 'shinkansen-gears/forward'
+import Forward from '#gears/gears/forward'
 
 function MockLink ({ to, children }) {
   return (
@@ -32,7 +32,7 @@ jest.mock('react-router-dom', () => {
   }
 })
 
-describe('shinkansen-gears/forward', () => {
+describe('#gears/gears/forward', () => {
   it('renders', () => {
     const component = (
       <Forward pathname='MOCK PATHNAME' />

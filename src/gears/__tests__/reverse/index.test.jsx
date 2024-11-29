@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import renderer from 'react-test-renderer'
 
-import Reverse from 'shinkansen-gears/reverse'
+import Reverse from '#gears/gears/reverse'
 
 function MockLink ({ to, children }) {
   return (
@@ -32,7 +32,7 @@ jest.mock('react-router-dom', () => {
   }
 })
 
-describe('shinkansen-gears/reverse', () => {
+describe('#gears/gears/reverse', () => {
   it('renders', () => {
     const component = (
       <Reverse pathname='MOCK PATHNAME' />
