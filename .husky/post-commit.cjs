@@ -1,8 +1,4 @@
 module.exports = (
   import('./hooks/index.mjs')
-    .then(({
-      postCommit
-    }) => (
-      postCommit()
-    ))
+    .then(({ postCommit }) => postCommit())
 )
