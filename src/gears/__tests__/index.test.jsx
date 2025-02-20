@@ -1,3 +1,13 @@
+// @ts-nocheck
+
+/**
+ *  @typedef {{
+ *    go: jest.Mock
+ *    to: jest.Mock
+ *    pattern: jest.Mock
+ *  }} MockRails
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import renderer from 'react-test-renderer'
@@ -8,21 +18,45 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Gears, { renderReverse, renderForward } from '#gears/gears'
+import Gears, {
+  renderReverse,
+  renderForward
+} from '#gears/gears'
 
 jest.mock('fast-deep-equal', () => jest.fn())
 
-jest.mock('shinkansen-rails', () => ({
-  Rails: {
-    go: jest.fn(),
-    to: jest.fn(),
-    pattern: jest.fn()
+jest.mock('shinkansen-rails', () => {
+  return {
+    /**
+     *  @type {MockRails}
+     */
+    Rails: {
+      go: jest.fn(),
+      to: jest.fn(),
+      pattern: jest.fn()
+    }
   }
-}))
+})
 
+/**
+ * @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ * @returns {React.JSX.Element}
+ */
 function MockLink ({ to, children }) {
+  if (typeof to === 'string') {
+    return (
+      <a href={to} className='mock-link'>
+        {children}
+      </a>
+    )
+  }
+
+  const {
+    pathname
+  } = to
+
   return (
-    <a href={to} className='mock-link'>
+    <a href={pathname} className='mock-link'>
       {children}
     </a>
   )
@@ -137,6 +171,9 @@ describe('#gears/gears', () => {
       reverse: mockReverse
     }
 
+    /**
+     *  @type {void | null | renderer.ReactTestInstance}
+     */
     let instance
 
     const component = (

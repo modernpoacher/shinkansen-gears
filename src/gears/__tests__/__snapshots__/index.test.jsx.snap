@@ -9,11 +9,7 @@ exports[`#gears/gears Always renders 1`] = `
   >
     <a
       className="mock-link"
-      href={
-        {
-          "pathname": "MOCK TO",
-        }
-      }
+      href="MOCK TO"
     >
       Reverse
     </a>
@@ -23,11 +19,7 @@ exports[`#gears/gears Always renders 1`] = `
   >
     <a
       className="mock-link"
-      href={
-        {
-          "pathname": "MOCK TO",
-        }
-      }
+      href="MOCK TO"
     >
       Forward
     </a>

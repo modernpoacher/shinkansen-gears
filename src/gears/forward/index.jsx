@@ -1,5 +1,5 @@
 /**
- * @typedef {import('shinkansen-gears/gears/forward').ForwardProps} ForwardProps
+ * @typedef {GearsTypes.Forward.ForwardProps} ForwardProps
  */
 
 import React from 'react'
@@ -10,7 +10,7 @@ import {
 } from 'react-router'
 
 /**
- * @param {ForwardProps}
+ * @param {ForwardProps} props
  * @returns {React.JSX.Element}
  */
 function Forward ({ pathname }) {

@@ -6,11 +6,7 @@ exports[`#gears/gears/reverse renders 1`] = `
 >
   <a
     className="mock-link"
-    href={
-      {
-        "pathname": "MOCK PATHNAME",
-      }
-    }
+    href="MOCK PATHNAME"
   >
     Reverse
   </a>

@@ -1,6 +1,6 @@
 /**
- * @typedef {import('shinkansen-gears/gears').GearsProps} GearsProps
- * @typedef {import('shinkansen-gears/gears').GearsState} GearsState
+ * @typedef {GearsTypes.GearsProps} GearsProps
+ * @typedef {GearsTypes.GearsState} GearsState
  */
 
 import React, { Component } from 'react'
@@ -15,7 +15,7 @@ import Reverse from './reverse/index.jsx'
 import Forward from './forward/index.jsx'
 
 /**
- * @type {(reverse: {}, pattern: string | void): React.JSX.Element | null}
+ * @type {(reverse?: Record<string, unknown>, pattern?: string) => React.JSX.Element | null}
  */
 export function renderReverse (reverse, pattern) {
   if (Rails.go(reverse, pattern)) {
@@ -32,7 +32,7 @@ export function renderReverse (reverse, pattern) {
 }
 
 /**
- * @type {(forward: {}, pattern: string | void): React.JSX.Element | null}
+ * @type {(forward?: Record<string, unknown>, pattern?: string) => React.JSX.Element | null}
  */
 export function renderForward (forward, pattern) {
   if (Rails.go(forward, pattern)) {
@@ -71,7 +71,7 @@ export default class Gears extends Component {
   /**
    *  Compare latest 'props' and 'state' for changes to 'pattern', 'reverse' or 'forward'
    *
-   * @param {{ pattern: string }} props   Latest props
+   * @param {GearsProps} props   Latest props
    * @param {GearsState} state   Current state
    * @returns {boolean}
    */
@@ -100,9 +100,9 @@ export default class Gears extends Component {
 
   render () {
     const {
-      reverse,
-      forward,
-      pattern
+      reverse = {},
+      forward = {},
+      pattern = Rails.pattern()
     } = this.props
 
     const reverseGear = renderReverse(reverse, pattern)

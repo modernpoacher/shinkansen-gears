@@ -4,9 +4,25 @@ import renderer from 'react-test-renderer'
 
 import Forward from '#gears/gears/forward'
 
+/**
+ * @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ * @returns {React.JSX.Element}
+ */
 function MockLink ({ to, children }) {
+  if (typeof to === 'string') {
+    return (
+      <a href={to} className='mock-link'>
+        {children}
+      </a>
+    )
+  }
+
+  const {
+    pathname
+  } = to
+
   return (
-    <a href={to} className='mock-link'>
+    <a href={pathname} className='mock-link'>
       {children}
     </a>
   )
@@ -35,7 +51,9 @@ jest.mock('react-router', () => {
 describe('#gears/gears/forward', () => {
   it('renders', () => {
     const component = (
-      <Forward pathname='MOCK PATHNAME' />
+      <Forward
+        pathname='MOCK PATHNAME'
+      />
     )
 
     return expect(renderer.create(component).toJSON())

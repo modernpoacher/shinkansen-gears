@@ -1,10 +1,27 @@
+/**
+ *  @typedef {GearsTypes.GearsProps} GearsProps
+ */
+
 import React from 'react'
 
 import {
   MemoryRouter
-} from 'react-router-dom'
+} from 'react-router'
 
-import Gears from 'shinkansen-gears'
+import {
+  Gears
+} from 'shinkansen-gears'
+
+/**
+ *  @type {Array<(Story: () => React.JSX.Element) => React.JSX.Element>}
+ */
+const decorators = [
+  (Story) => (
+    <MemoryRouter>
+      <Story />
+    </MemoryRouter>
+  )
+]
 
 const REVERSE = {
   alpha: 'alpha',
@@ -21,13 +38,7 @@ const EXCLUDE = {}
 export default {
   title: 'Stories/Gears',
   component: Gears,
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    )
-  ],
+  decorators,
   args: {
     reverse: 'REVERSE',
     forward: 'FORWARD',
@@ -59,8 +70,14 @@ export default {
   }
 }
 
-export const Default = (args) => (
-  <Gears
-    {...args}
-  />
-)
+/**
+ * @param {GearsProps} props
+ * @returns {React.JSX.Element}
+ */
+export function Default (props) {
+  return (
+    <Gears
+      {...props}
+    />
+  )
+}

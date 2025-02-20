@@ -1,5 +1,5 @@
 /**
- * @typedef {import('shinkansen-gears/gears/reverse').ReverseProps} ReverseProps
+ * @typedef {GearsTypes.Reverse.ReverseProps} ReverseProps
  */
 
 import React from 'react'
@@ -10,7 +10,7 @@ import {
 } from 'react-router'
 
 /**
- * @param {ReverseProps}
+ * @param {ReverseProps} props
  * @returns {React.JSX.Element}
  */
 function Reverse ({ pathname }) {

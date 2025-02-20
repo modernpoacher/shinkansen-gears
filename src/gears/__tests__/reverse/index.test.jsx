@@ -4,9 +4,25 @@ import renderer from 'react-test-renderer'
 
 import Reverse from '#gears/gears/reverse'
 
+/**
+ * @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ * @returns {React.JSX.Element}
+ */
 function MockLink ({ to, children }) {
+  if (typeof to === 'string') {
+    return (
+      <a href={to} className='mock-link'>
+        {children}
+      </a>
+    )
+  }
+
+  const {
+    pathname
+  } = to
+
   return (
-    <a href={to} className='mock-link'>
+    <a href={pathname} className='mock-link'>
       {children}
     </a>
   )
@@ -35,7 +51,9 @@ jest.mock('react-router', () => {
 describe('#gears/gears/reverse', () => {
   it('renders', () => {
     const component = (
-      <Reverse pathname='MOCK PATHNAME' />
+      <Reverse
+        pathname='MOCK PATHNAME'
+      />
     )
 
     return expect(renderer.create(component).toJSON())
