@@ -43,6 +43,7 @@ const plugins = [
   '@babel/syntax-jsx'
 ]
 
+// @ts-ignore
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
