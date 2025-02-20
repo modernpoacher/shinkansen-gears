@@ -9,7 +9,7 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: './coverage',
   coverageProvider: 'v8',
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(mjs?|jsx?)$',
+  testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(mjs?|jsx?)$',
   transform: {
     '^.+\\.jsx$': 'babel-jest',
     '^.+\\.mjs$': 'babel-jest'
