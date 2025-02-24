@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /**
  *  @typedef {{
  *    go: jest.Mock

@@ -9,24 +9,7 @@
     "strict": true,
     "isolatedModules": true,
     "baseUrl": ".",
-    "jsx": "react",
-    "paths": {
-      "#gears": [
-        "src/index.mjs"
-      ],
-      "#gears/gears": [
-        "src/gears/index.jsx"
-      ],
-      "#gears/gears/*": [
-        "src/gears/*/index.jsx"
-      ],
-      "#gears/gears/forward": [
-        "src/gears/forward/index.jsx"
-      ],
-      "#gears/gears/reverse": [
-        "src/gears/reverse/index.jsx"
-      ]
-    }
+    "jsx": "react"
   },
   "include": [
     ".",
