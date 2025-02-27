@@ -55,7 +55,7 @@
     "@babel/register": "^7.25.9",
     "@modernpoacher/design-system": "1.1.30",
     "@sequencemedia/eslint-config-standard": "^0.2.35",
-    "@sequencemedia/eslint-config-typescript": "^0.1.49",
+    "@sequencemedia/eslint-config-typescript": "^0.1.50",
     "@storybook/addon-actions": "7.6.20",
     "@storybook/addon-essentials": "7.6.20",
     "@storybook/addon-links": "7.6.20",
