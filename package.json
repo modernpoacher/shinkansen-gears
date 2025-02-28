@@ -11,7 +11,7 @@
     "React",
     "React Router"
   ],
-  "main": "./src/index.cjs",
+  "main": "./src/index.mjs",
   "type": "module",
   "types": "./index.d.mts",
   "author": {
@@ -105,11 +105,14 @@
   },
   "imports": {
     "#build/paths": "./build/paths.mjs",
-    "#gears": "./src/index.mjs",
-    "#gears/gears": "./src/gears/index.jsx",
-    "#gears/gears/*": "./src/gears/*/index.jsx",
-    "#gears/gears/forward": "./src/gears/forward/index.jsx",
-    "#gears/gears/reverse": "./src/gears/reverse/index.jsx"
+    "#gears": {
+      "require": "./src/index.cjs",
+      "import": "./src/index.mjs"
+    },
+    "#gears/gears": "./src/gears/index.cjs",
+    "#gears/gears/*": "./src/gears/*/index.cjs",
+    "#gears/gears/forward": "./src/gears/forward/index.cjs",
+    "#gears/gears/reverse": "./src/gears/reverse/index.cjs"
   },
   "exports": {
     ".": {

@@ -130,11 +130,11 @@ export default [
       globals: {
         ...globals.browser
       }
-    },
+    }, // @ts-expect-error Storybook
     plugins: {
       ...reactPlugins,
       ...storybookPlugins
-    },
+    }, // @ts-expect-error Storybook
     rules: {
       ...reactRules
     },
@@ -160,11 +160,11 @@ export default [
         ...globals.browser,
         ...globals.jest
       }
-    },
+    }, // @ts-expect-error Storybook
     plugins: {
       ...reactPlugins,
       ...storybookPlugins
-    },
+    }, // @ts-expect-error Storybook
     rules: {
       ...reactRules
     },
