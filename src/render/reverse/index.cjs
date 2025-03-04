@@ -6,15 +6,15 @@ require('@babel/register')({
 
 const debug = require('debug')
 
-const log = debug('shinkansen-gears/gears/forward')
+const log = debug('shinkansen-gears/render/reverse')
 
 log('`shinkansen` is awake')
 
 const {
-  default: Forward // @ts-expect-error
+  default: renderReverse // @ts-expect-error
 } = require('./index.jsx')
 
 /**
  *  Exports only default
  */
-module.exports = Forward
+module.exports = renderReverse
