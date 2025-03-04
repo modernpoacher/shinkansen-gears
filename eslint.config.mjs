@@ -139,10 +139,7 @@ export default [
       ...reactRules
     },
     settings: {
-      ...reactSettings,
-      'import/resolver': {
-        'babel-module': {}
-      }
+      ...reactSettings
     }
   }),
   standard({
@@ -169,10 +166,7 @@ export default [
       ...reactRules
     },
     settings: {
-      ...reactSettings,
-      'import/resolver': {
-        'babel-module': {}
-      }
+      ...reactSettings
     }
   }),
   /**
@@ -184,7 +178,6 @@ export default [
     ],
     ignores: [
       'src',
-      'stories',
       'test'
     ],
     languageOptions: {

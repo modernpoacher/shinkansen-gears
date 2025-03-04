@@ -1,5 +1,5 @@
 /**
- * @typedef {GearsTypes.Reverse.ReverseProps} ReverseProps
+ *  @typedef {GearsTypes.Reverse.ReverseProps} ReverseProps
  */
 
 import React from 'react'
@@ -10,8 +10,8 @@ import {
 } from 'react-router'
 
 /**
- * @param {ReverseProps} props
- * @returns {React.JSX.Element}
+ *  @param {ReverseProps} props
+ *  @returns {React.JSX.Element}
  */
 function Reverse ({ pathname }) {
   const key = pathname.concat('-reverse')

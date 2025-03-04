@@ -1,6 +1,6 @@
 /**
- * @typedef {GearsTypes.GearsProps} GearsProps
- * @typedef {GearsTypes.GearsState} GearsState
+ *  @typedef {GearsTypes.GearsProps} GearsProps
+ *  @typedef {GearsTypes.GearsState} GearsState
  */
 
 import React, { Component } from 'react'
@@ -11,42 +11,9 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Reverse from './reverse/index.jsx'
-import Forward from './forward/index.jsx'
+import renderReverse from '#gears/render/reverse'
 
-/**
- * @type {(reverse?: Record<string, unknown>, pattern?: string) => React.JSX.Element | null}
- */
-export function renderReverse (reverse, pattern) {
-  if (Rails.go(reverse, pattern)) {
-    const pathname = Rails.to(reverse, pattern)
-
-    return (
-      <Reverse
-        pathname={pathname}
-      />
-    )
-  }
-
-  return null
-}
-
-/**
- * @type {(forward?: Record<string, unknown>, pattern?: string) => React.JSX.Element | null}
- */
-export function renderForward (forward, pattern) {
-  if (Rails.go(forward, pattern)) {
-    const pathname = Rails.to(forward, pattern)
-
-    return (
-      <Forward
-        pathname={pathname}
-      />
-    )
-  }
-
-  return null
-}
+import renderForward from '#gears/render/forward'
 
 export default class Gears extends Component {
   /**
@@ -57,9 +24,9 @@ export default class Gears extends Component {
   /**
    *  Store latest 'props' in 'state'
    *
-   * @param {GearsProps} props   Latest props
-   * @param {GearsState} state   Current state
-   * @returns {GearsState} Derived state
+   *  @param {GearsProps} props   Latest props
+   *  @param {GearsState} state   Current state
+   *  @returns {GearsState} Derived state
    */
   static getDerivedStateFromProps ({ reverse, forward }, { reverse: R, forward: F }) {
     return {
@@ -71,9 +38,9 @@ export default class Gears extends Component {
   /**
    *  Compare latest 'props' and 'state' for changes to 'pattern', 'reverse' or 'forward'
    *
-   * @param {GearsProps} props   Latest props
-   * @param {GearsState} state   Current state
-   * @returns {boolean}
+   *  @param {GearsProps} props   Latest props
+   *  @param {GearsState} state   Current state
+   *  @returns {boolean}
    */
   shouldComponentUpdate ({ pattern }, state) {
     const {

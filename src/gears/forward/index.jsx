@@ -1,5 +1,5 @@
 /**
- * @typedef {GearsTypes.Forward.ForwardProps} ForwardProps
+ *  @typedef {GearsTypes.Forward.ForwardProps} ForwardProps
  */
 
 import React from 'react'
@@ -10,8 +10,8 @@ import {
 } from 'react-router'
 
 /**
- * @param {ForwardProps} props
- * @returns {React.JSX.Element}
+ *  @param {ForwardProps} props
+ *  @returns {React.JSX.Element}
  */
 function Forward ({ pathname }) {
   const key = pathname.concat('-forward')

@@ -4,17 +4,41 @@
     "target": "ESNext",
     "allowJs": true,
     "checkJs": true,
-    "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "strict": true,
-    "isolatedModules": true,
+    "jsx": "react",
     "baseUrl": ".",
-    "jsx": "react"
+    "paths": {
+      "#gears": [
+        "src/index.cjs",
+        "src/index.mjs"
+      ],
+      "#gears/gears": [
+        "src/gears/index.cjs"
+      ],
+      "#gears/gears/*": [
+        "src/gears/*/index.cjs"
+      ],
+      "#gears/gears/forward": [
+        "src/gears/forward/index.cjs"
+      ],
+      "#gears/gears/reverse": [
+        "src/gears/reverse/index.cjs"
+      ],
+      "#gears/render": [
+        "src/render/index.cjs",
+        "src/render/index.mjs"
+      ],
+      "#gears/render/forward": [
+        "src/render/forward/index.cjs"
+      ],
+      "#gears/render/reverse": [
+        "src/render/reverse/index.cjs"
+      ]
+    }
   },
   "include": [
-    ".",
-    "src/**/*",
-    "stories/**/*"
+    "."
   ],
   "exclude": [
     "**/__tests__/**/*"
