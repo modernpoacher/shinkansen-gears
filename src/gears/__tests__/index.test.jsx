@@ -16,10 +16,7 @@ import {
   Rails
 } from 'shinkansen-rails'
 
-import Gears, {
-  renderReverse,
-  renderForward
-} from '#gears/gears'
+import Gears from '#gears/gears'
 
 jest.mock('fast-deep-equal', () => jest.fn())
 
@@ -37,8 +34,8 @@ jest.mock('shinkansen-rails', () => {
 })
 
 /**
- * @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
- * @returns {React.JSX.Element}
+ *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ *  @returns {React.JSX.Element}
  */
 function MockLink ({ to, children }) {
   if (typeof to === 'string') {
@@ -99,20 +96,6 @@ describe('#gears/gears', () => {
     })
   })
 
-  describe('`renderReverse`', () => {
-    it('is defined', () => {
-      return expect(renderReverse)
-        .toBeDefined()
-    })
-  })
-
-  describe('`renderForward`', () => {
-    it('is defined', () => {
-      return expect(renderForward)
-        .toBeDefined()
-    })
-  })
-
   describe('`Gears.getDerivedStateFromProps`', () => {
     it('is defined', () => {
       return expect(Gears.getDerivedStateFromProps)
@@ -136,7 +119,9 @@ describe('#gears/gears', () => {
       it('returns the `state`', () => {
         equal.mockReturnValue(false)
 
-        const returnValue = Gears.getDerivedStateFromProps({ reverse: mockReverseChanged, forward: mockForwardChanged }, { reverse: mockReverse, forward: mockForward })
+        const props = { reverse: mockReverseChanged, forward: mockForwardChanged }
+        const state = { reverse: mockReverse, forward: mockForward }
+        const returnValue = Gears.getDerivedStateFromProps(props, state)
 
         return expect(returnValue)
           .toEqual({
@@ -150,7 +135,9 @@ describe('#gears/gears', () => {
       it('returns the `state`', () => {
         equal.mockReturnValue(true)
 
-        const returnValue = Gears.getDerivedStateFromProps({ reverse: mockReverse, forward: mockForward }, { reverse: mockReverse, forward: mockForward })
+        const props = { reverse: mockReverse, forward: mockForward }
+        const state = { reverse: mockReverse, forward: mockForward }
+        const returnValue = Gears.getDerivedStateFromProps(props, state)
 
         return expect(returnValue)
           .toEqual({
@@ -235,62 +222,6 @@ describe('#gears/gears', () => {
               .toBe(false)
           })
         })
-      })
-    })
-  })
-
-  describe('`renderReverse()`', () => {
-    beforeEach(() => {
-      Rails.to.mockReturnValue('MOCK TO')
-    })
-
-    describe('`Rails.go()` returns true', () => {
-      it('invokes `Rails.to()`', () => {
-        Rails.go.mockReturnValue(true)
-
-        renderReverse('MOCK REVERSE', 'MOCK PATTERN')
-
-        return expect(Rails.to)
-          .toBeCalledWith('MOCK REVERSE', 'MOCK PATTERN')
-      })
-    })
-
-    describe('`Rails.go()` returns false', () => {
-      it('does not invoke `Rails.to()`', () => {
-        Rails.go.mockReturnValue(false)
-
-        renderReverse('MOCK REVERSE', 'MOCK PATTERN')
-
-        return expect(Rails.to)
-          .not.toBeCalled()
-      })
-    })
-  })
-
-  describe('`renderForward()`', () => {
-    beforeEach(() => {
-      Rails.to.mockReturnValue('MOCK TO')
-    })
-
-    describe('`Rails.go()` returns true', () => {
-      it('invokes `Rails.to()`', () => {
-        Rails.go.mockReturnValue(true)
-
-        renderForward('MOCK FORWARD', 'MOCK PATTERN')
-
-        return expect(Rails.to)
-          .toBeCalledWith('MOCK FORWARD', 'MOCK PATTERN')
-      })
-    })
-
-    describe('`Rails.go()` returns false', () => {
-      it('does not invoke `Rails.to()`', () => {
-        Rails.go.mockReturnValue(false)
-
-        renderForward('MOCK FORWARD', 'MOCK PATTERN')
-
-        return expect(Rails.to)
-          .not.toBeCalled()
       })
     })
   })
