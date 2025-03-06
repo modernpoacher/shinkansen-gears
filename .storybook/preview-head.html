@@ -1035,6 +1035,20 @@ main{
   background-color:#000;
 }
 
+#storybook-root .cog.radio.disabled input:checked+label::before,
+#storybook-root .cog.radio.disabled input:checked+label::after{
+  border-color:#737d82;
+}
+
+#storybook-root .cog.radio.disabled input:checked+label::after{
+  background-color:#737d82;
+}
+
+#storybook-root .cog.radio.disabled input+label::before,
+#storybook-root .cog.radio.disabled input+label::after{
+  border-color:#737d82;
+}
+
 #storybook-root .cog.checkbox{
   position:relative;
   padding-left:3rem;
@@ -1101,6 +1115,25 @@ main{
   content:"​";
   background-color:#fff;
   transform:rotate(-45deg);
+}
+
+#storybook-root .cog.checkbox.disabled input:checked+label::before{
+  border-color:#737d82;
+}
+
+#storybook-root .cog.checkbox.disabled input:checked+label::after{
+  border-left-color:#737d82;
+  border-bottom-color:#737d82;
+}
+
+#storybook-root .cog.checkbox.disabled input+label::before{
+  border-color:#737d82;
+}
+
+#storybook-root .cog.disabled input:not([type=checkbox]):not([type=radio]),
+#storybook-root .cog.disabled select, #storybook-root .cog.disabled textarea{
+  border-color:#737d82;
+  color:#737d82;
 }
 
 #storybook-root .cog.error{
