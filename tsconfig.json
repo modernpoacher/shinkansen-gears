@@ -10,30 +10,30 @@
     "baseUrl": ".",
     "paths": {
       "#gears": [
-        "src/index.cjs",
-        "src/index.mjs"
+        "src/js/index.cjs",
+        "src/js/index.mjs"
       ],
       "#gears/gears": [
-        "src/gears/index.cjs"
+        "src/js/gears/index.cjs"
       ],
       "#gears/gears/*": [
-        "src/gears/*/index.cjs"
+        "src/js/gears/*/index.cjs"
       ],
       "#gears/gears/forward": [
-        "src/gears/forward/index.cjs"
+        "src/js/gears/forward/index.cjs"
       ],
       "#gears/gears/reverse": [
-        "src/gears/reverse/index.cjs"
+        "src/js/gears/reverse/index.cjs"
       ],
       "#gears/render": [
-        "src/render/index.cjs",
-        "src/render/index.mjs"
+        "src/js/render/index.cjs",
+        "src/js/render/index.mjs"
       ],
       "#gears/render/forward": [
-        "src/render/forward/index.cjs"
+        "src/js/render/forward/index.cjs"
       ],
       "#gears/render/reverse": [
-        "src/render/reverse/index.cjs"
+        "src/js/render/reverse/index.cjs"
       ]
     }
   },
@@ -41,6 +41,7 @@
     "."
   ],
   "exclude": [
-    "**/__tests__/**/*"
+    "**/__tests__/**/*",
+    ".storybook/**/*"
   ]
 }

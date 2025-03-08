@@ -1,4 +1,6 @@
-/** @type { import('@storybook/react').Preview } */
+/**
+ *  @type {import('@storybook/react').Preview}
+ */
 
 export default {
   parameters: {

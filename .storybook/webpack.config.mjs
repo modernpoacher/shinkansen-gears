@@ -4,29 +4,24 @@ import {
 
 import Webpack from 'webpack'
 
-import {
-  CleanWebpackPlugin as CleanPlugin
-} from 'clean-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import RemoveFilesPlugin from 'remove-files-webpack-plugin'
 
-import {
-  storybookPath as STORYBOOK_PATH,
-  modulePath as MODULE_PATH
-} from '#build/paths'
-
 const {
-  EnvironmentPlugin,
-  SourceMapDevToolPlugin
+  EnvironmentPlugin
 } = Webpack
+
+const PATH = process.cwd()
+const STORYBOOK = join(PATH, '.storybook')
+const DEPS = join(PATH, 'node_modules')
 
 export default {
   mode: 'production',
   entry: {
-    'preview-head': join(STORYBOOK_PATH, 'sass/preview-head.scss')
+    'preview-head': join(STORYBOOK, 'preview-head.scss')
   },
   output: {
-    path: join(STORYBOOK_PATH, 'css')
+    path: STORYBOOK
   },
   stats: {
     colors: true
@@ -58,7 +53,7 @@ export default {
                   [
                     'postcss-map', {
                       maps: [
-                        join(MODULE_PATH, '@modernpoacher/design-system/src/tokens/palette.json')
+                        join(DEPS, '@modernpoacher/design-system/src/tokens/palette.json')
                       ]
                     }
                   ],
@@ -86,7 +81,8 @@ export default {
               sourceMap: false,
               sassOptions: {
                 loadPaths: [
-                  join(MODULE_PATH, '@modernpoacher/design-system/src/sass')
+                  join(DEPS, '@modernpoacher/design-system/src/sass'),
+                  join(PATH, 'src/sass')
                 ]
               }
             }
@@ -96,19 +92,8 @@ export default {
     ]
   },
   plugins: [
-    new CleanPlugin({
-      verbose: false,
-      cleanOnceBeforeBuildPatterns: [
-        join(STORYBOOK_PATH, 'css/*.css'),
-        join(STORYBOOK_PATH, 'css/*.css.map')
-      ]
-    }),
     new EnvironmentPlugin({
       NODE_ENV: 'production'
-    }),
-    new SourceMapDevToolPlugin({
-      test: /\.css$/i,
-      filename: '[name].css.map'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
@@ -117,9 +102,9 @@ export default {
       after: {
         test: [
           {
-            folder: join(STORYBOOK_PATH, 'css'),
+            folder: STORYBOOK,
             method (filePath) {
-              return /\.js$/m.test(filePath)
+              return /preview-head\.js$/m.test(filePath)
             }
           }
         ]

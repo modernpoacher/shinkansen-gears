@@ -1,0 +1,28 @@
+@use "design-system/typography/actions";
+
+@mixin gears {
+  padding: 0;
+  margin: 2rem 0;
+
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    a {
+      @include actions.anchor-secondary-action;
+
+      // stylelint-disable-next-line no-duplicate-selectors
+      & {
+        outline-color: transparent;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: auto;
+    }
+  }
+}
+
+%gears {
+  @include gears;
+}

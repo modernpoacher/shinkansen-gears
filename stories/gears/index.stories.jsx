@@ -10,7 +10,7 @@ import {
 
 import {
   Gears
-} from 'shinkansen-gears'
+} from '#gears'
 
 /**
  *  @type {Array<(Story: () => React.JSX.Element) => React.JSX.Element>}

@@ -1,0 +1,15 @@
+@use "design-system/layouts";
+@use "gears";
+
+#storybook-root {
+  @include layouts.design-system;
+
+  // stylelint-disable-next-line no-duplicate-selectors
+  & {
+    margin: 0 auto;
+  }
+
+  .shinkansen-gears {
+    @include gears.gears;
+  }
+}

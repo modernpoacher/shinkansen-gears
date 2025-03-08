@@ -1,0 +1,4 @@
+*.html
+*.mjs
+*.cjs
+.stylelintrc

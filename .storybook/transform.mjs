@@ -1,7 +1,6 @@
 import debug from 'debug'
 
 import {
-  relative,
   join
 } from 'node:path'
 
@@ -10,12 +9,7 @@ import {
   writeFile
 } from 'node:fs/promises'
 
-import {
-  currentDir,
-  storybookPath
-} from '#build/paths'
-
-const log = debug('shinkansen-gears/build/transform')
+const log = debug('shinkansen-gears/storybook/transform')
 
 log('`gears` is awake')
 
@@ -25,12 +19,13 @@ log('`gears` is awake')
 
 const CSS = /(<style.*>)[ -~"'+-:;,#%{}()/*\n\s\u200b\u2713\u2022]*(<\/style>)/gm
 
-const STORYBOOK_PATH = relative(currentDir, storybookPath)
+const PATH = process.cwd()
+const STORYBOOK = join(PATH, '.storybook')
 
 async function getCss () {
   log('getCss')
 
-  const filePath = join(STORYBOOK_PATH, 'css/preview-head.css')
+  const filePath = join(STORYBOOK, 'preview-head.css')
 
   return `$1\n${(await readFile(filePath, 'utf8')).trim()}\n$2`.trim()
 }
@@ -38,7 +33,7 @@ async function getCss () {
 export default async function transform () {
   log('transform')
 
-  const filePath = join(STORYBOOK_PATH, 'preview-head.html')
+  const filePath = join(STORYBOOK, 'preview-head.html')
 
   return (await writeFile(filePath, (await readFile(filePath, 'utf8')).replace(CSS, await getCss()), 'utf8'))
 }

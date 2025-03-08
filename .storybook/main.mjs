@@ -1,8 +1,9 @@
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+/**
+ *  @type {import('@storybook/react-webpack5').StorybookConfig}
+ */
 
 export default {
   stories: [
-    '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.jsx'
   ],
 

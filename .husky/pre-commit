@@ -5,6 +5,8 @@ rm -rf .coverage coverage 2> /dev/null
 NODE_OPTIONS='--disable-warning=ExperimentalWarning'
 npm run lint
 npm test
+NODE_ENV=production
 npm run build
+npm run prettier
 npm run transform
-git add .storybook
+git add .storybook/*.scss .storybook/*.css .storybook/*.html
