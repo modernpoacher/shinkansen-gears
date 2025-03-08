@@ -516,6 +516,20 @@ main{
   padding:0;
 }
 
+#storybook-root .gremlin.radio.disabled input+label::before,
+#storybook-root .gremlin.radio.disabled input+label::after{
+  border-color:#737d82;
+}
+
+#storybook-root .gremlin.radio.disabled input:checked+label::before,
+#storybook-root .gremlin.radio.disabled input:checked+label::after{
+  border-color:#737d82;
+}
+
+#storybook-root .gremlin.radio.disabled input:checked+label::after{
+  background-color:#737d82;
+}
+
 #storybook-root .gremlin.checkbox{
   position:relative;
   margin-bottom:0.5rem;
@@ -568,6 +582,26 @@ main{
 #storybook-root .gremlin.checkbox input+label{
   margin:0;
   padding:0;
+}
+
+#storybook-root .gremlin.checkbox.disabled input:checked+label::before{
+  border-color:#737d82;
+}
+
+#storybook-root .gremlin.checkbox.disabled input:checked+label::after{
+  border-left-color:#737d82;
+  border-bottom-color:#737d82;
+}
+
+#storybook-root .gremlin.checkbox.disabled input+label::before{
+  border-color:#737d82;
+}
+
+#storybook-root .gremlin.disabled input:not([type=checkbox]):not([type=radio]),
+#storybook-root .gremlin.disabled select,
+#storybook-root .gremlin.disabled textarea{
+  border-color:#737d82;
+  color:#737d82;
 }
 
 #storybook-root .gremlin.error{
@@ -1032,6 +1066,11 @@ main{
   background-color:#000;
 }
 
+#storybook-root .cog.radio.disabled input+label::before,
+#storybook-root .cog.radio.disabled input+label::after{
+  border-color:#737d82;
+}
+
 #storybook-root .cog.radio.disabled input:checked+label::before,
 #storybook-root .cog.radio.disabled input:checked+label::after{
   border-color:#737d82;
@@ -1039,11 +1078,6 @@ main{
 
 #storybook-root .cog.radio.disabled input:checked+label::after{
   background-color:#737d82;
-}
-
-#storybook-root .cog.radio.disabled input+label::before,
-#storybook-root .cog.radio.disabled input+label::after{
-  border-color:#737d82;
 }
 
 #storybook-root .cog.checkbox{
