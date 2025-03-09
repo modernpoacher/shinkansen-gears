@@ -318,19 +318,6 @@ main {
   margin: 0 auto;
 }
 
-#storybook-root > header.alpha,
-#storybook-root > header.omega,
-#storybook-root > header.embark,
-#storybook-root > header.debark,
-#storybook-root > header.confirm,
-#storybook-root > div.alpha,
-#storybook-root > div.omega,
-#storybook-root > div.embark,
-#storybook-root > div.debark,
-#storybook-root > div.confirm {
-  padding: 0 1rem;
-}
-
 #storybook-root header h1 {
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
