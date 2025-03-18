@@ -43,7 +43,7 @@ jest.mock('shinkansen-rails', () => {
 })
 
 /**
- *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} props
  *  @returns {React.JSX.Element}
  */
 function MockLink ({ to, children }) {
