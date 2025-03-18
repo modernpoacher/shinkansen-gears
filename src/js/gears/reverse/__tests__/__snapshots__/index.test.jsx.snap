@@ -4,11 +4,13 @@ exports[`#gears/gears/reverse renders 1`] = `
 <li
   className="shinkansen-gears-reverse"
 >
-  <a
-    className="mock-link"
-    href="MOCK PATHNAME"
-  >
-    Reverse
-  </a>
+  <MockLink>
+    <a
+      className="mock-link"
+      href="MOCK PATHNAME"
+    >
+      Reverse
+    </a>
+  </MockLink>
 </li>
 `;

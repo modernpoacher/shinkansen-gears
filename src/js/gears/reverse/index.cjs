@@ -11,7 +11,7 @@ const log = debug('shinkansen-gears/gears/reverse')
 log('`shinkansen` is awake')
 
 const {
-  default: Reverse // @ts-expect-error
+  default: Reverse
 } = require('./index.jsx')
 
 /**

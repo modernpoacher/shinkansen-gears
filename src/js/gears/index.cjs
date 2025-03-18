@@ -11,7 +11,7 @@ const log = debug('shinkansen-gears/gears')
 log('`shinkansen` is awake')
 
 const {
-  default: Gears // @ts-expect-error
+  default: Gears
 } = require('./index.jsx')
 
 /**

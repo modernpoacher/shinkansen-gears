@@ -4,25 +4,33 @@ exports[`#gears/gears Always renders 1`] = `
 <ul
   className="shinkansen-gears"
 >
-  <li
-    className="shinkansen-gears-reverse"
-  >
-    <a
-      className="mock-link"
-      href="MOCK TO"
+  <Reverse>
+    <li
+      className="shinkansen-gears-reverse"
     >
-      Reverse
-    </a>
-  </li>
-  <li
-    className="shinkansen-gears-forward"
-  >
-    <a
-      className="mock-link"
-      href="MOCK TO"
+      <MockLink>
+        <a
+          className="mock-link"
+          href="MOCK TO"
+        >
+          Reverse
+        </a>
+      </MockLink>
+    </li>
+  </Reverse>
+  <Forward>
+    <li
+      className="shinkansen-gears-forward"
     >
-      Forward
-    </a>
-  </li>
+      <MockLink>
+        <a
+          className="mock-link"
+          href="MOCK TO"
+        >
+          Forward
+        </a>
+      </MockLink>
+    </li>
+  </Forward>
 </ul>
 `;

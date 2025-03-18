@@ -1,6 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import renderer from 'react-test-renderer'
+import snapshotOf, {
+  getComponentElement
+} from 'react-component-snapshot'
+
+import '@testing-library/jest-dom'
+
+import {
+  render
+} from '@testing-library/react'
 
 import Reverse from '#gears/gears/reverse'
 
@@ -50,13 +58,11 @@ jest.mock('react-router', () => {
 
 describe('#gears/gears/reverse', () => {
   it('renders', () => {
-    const component = (
+    expect(snapshotOf(getComponentElement(render(
       <Reverse
         pathname='MOCK PATHNAME'
       />
-    )
-
-    return expect(renderer.create(component).toJSON())
+    ))))
       .toMatchSnapshot()
   })
 })

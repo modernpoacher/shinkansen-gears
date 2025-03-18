@@ -6,13 +6,14 @@
  *  }} MockRails
  */
 
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import {
   Rails
 } from 'shinkansen-rails'
 
 import renderReverse from '#gears/render/reverse'
-
-jest.mock('#gears/gears/reverse', () => jest.fn())
 
 jest.mock('shinkansen-rails', () => {
   return {
@@ -27,14 +28,54 @@ jest.mock('shinkansen-rails', () => {
   }
 })
 
-describe('#gears/render/reverse', () => {
-  beforeEach(() => {
-    jest.resetAllMocks()
-  })
+/**
+ *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} param0
+ *  @returns {React.JSX.Element}
+ */
+function MockLink ({ to, children }) {
+  if (typeof to === 'string') {
+    return (
+      <a href={to} className='mock-link'>
+        {children}
+      </a>
+    )
+  }
 
+  const {
+    pathname
+  } = to
+
+  return (
+    <a href={pathname} className='mock-link'>
+      {children}
+    </a>
+  )
+}
+
+MockLink.propTypes = {
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({})
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(
+      PropTypes.node
+    )
+  ])
+}
+
+jest.mock('react-router', () => {
+  return {
+    __esModule: true,
+    Link: MockLink
+  }
+})
+
+describe('#gears/render/reverse', () => {
   describe('`renderReverse`', () => {
     it('is defined', () => {
-      return expect(renderReverse)
+      expect(renderReverse)
         .toBeDefined()
     })
   })
@@ -50,8 +91,8 @@ describe('#gears/render/reverse', () => {
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
 
-        return expect(Rails.to)
-          .toBeCalledWith('MOCK REVERSE', 'MOCK PATTERN')
+        expect(Rails.to)
+          .toHaveBeenCalledWith('MOCK REVERSE', 'MOCK PATTERN')
       })
     })
 
@@ -61,8 +102,8 @@ describe('#gears/render/reverse', () => {
 
         renderReverse('MOCK REVERSE', 'MOCK PATTERN')
 
-        return expect(Rails.to)
-          .not.toBeCalled()
+        expect(Rails.to)
+          .not.toHaveBeenCalled()
       })
     })
   })

@@ -80,7 +80,8 @@ export default [
     ignores: [
       'src',
       'stories',
-      'test'
+      'test',
+      'jest.*.mjs'
     ],
     languageOptions: {
       globals: {
@@ -145,7 +146,8 @@ export default [
   standard({
     files: [
       'src/**/__tests__/**/*.jsx',
-      'stories/**/__tests__/**/*.jsx'
+      'stories/**/__tests__/**/*.jsx',
+      'jest.*.mjs'
     ],
     languageOptions: {
       parser: babelParser,

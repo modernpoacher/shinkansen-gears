@@ -11,7 +11,7 @@ const log = debug('shinkansen-gears/gears/forward')
 log('`shinkansen` is awake')
 
 const {
-  default: Forward // @ts-expect-error
+  default: Forward
 } = require('./index.jsx')
 
 /**

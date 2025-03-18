@@ -1,6 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import renderer from 'react-test-renderer'
+import snapshotOf, {
+  getComponentElement
+} from 'react-component-snapshot'
+
+import '@testing-library/jest-dom'
+
+import {
+  render
+} from '@testing-library/react'
 
 import Forward from '#gears/gears/forward'
 
@@ -50,13 +58,11 @@ jest.mock('react-router', () => {
 
 describe('#gears/gears/forward', () => {
   it('renders', () => {
-    const component = (
+    expect(snapshotOf(getComponentElement(render(
       <Forward
         pathname='MOCK PATHNAME'
       />
-    )
-
-    return expect(renderer.create(component).toJSON())
+    ))))
       .toMatchSnapshot()
   })
 })

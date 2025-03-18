@@ -8,7 +8,16 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import renderer from 'react-test-renderer'
+import getComponentInstanceFrom from 'react-component-instance'
+import snapshotOf, {
+  getComponentElement
+} from 'react-component-snapshot'
+
+import '@testing-library/jest-dom'
+
+import {
+  render
+} from '@testing-library/react'
 
 import equal from 'fast-deep-equal'
 
@@ -78,27 +87,21 @@ jest.mock('react-router', () => {
 })
 
 describe('#gears/gears', () => {
-  beforeEach(() => {
-    jest.resetAllMocks()
-  })
-
   describe('Always', () => {
     it('renders', () => {
-      const component = (
-        <Gears />
-      )
-
       Rails.go.mockReturnValue(true)
       Rails.to.mockReturnValue('MOCK TO')
 
-      return expect(renderer.create(component).toJSON())
+      expect(snapshotOf(getComponentElement(render(
+        <Gears />
+      ))))
         .toMatchSnapshot()
     })
   })
 
   describe('`Gears.getDerivedStateFromProps`', () => {
     it('is defined', () => {
-      return expect(Gears.getDerivedStateFromProps)
+      expect(Gears.getDerivedStateFromProps)
         .toBeDefined()
     })
   })
@@ -123,7 +126,7 @@ describe('#gears/gears', () => {
         const state = { reverse: mockReverse, forward: mockForward }
         const returnValue = Gears.getDerivedStateFromProps(props, state)
 
-        return expect(returnValue)
+        expect(returnValue)
           .toEqual({
             reverse: mockReverseChanged,
             forward: mockForwardChanged
@@ -139,7 +142,7 @@ describe('#gears/gears', () => {
         const state = { reverse: mockReverse, forward: mockForward }
         const returnValue = Gears.getDerivedStateFromProps(props, state)
 
-        return expect(returnValue)
+        expect(returnValue)
           .toEqual({
             reverse: mockReverse,
             forward: mockForward
@@ -149,31 +152,20 @@ describe('#gears/gears', () => {
   })
 
   describe('`shouldComponentUpdate()`', () => {
-    const mockReverse = {}
-    const mockForward = {}
-    const mockState = {
-      forward: mockForward,
-      reverse: mockReverse
-    }
-
     /**
-     *  @type {void | null | renderer.ReactTestInstance}
+     *  @type {undefined | Gears}
      */
     let instance
 
-    const component = (
-      <Gears
-        reverse={mockReverse}
-        forward={mockForward}
-        pattern='MOCK PATTERN'
-      />
-    )
-
     beforeEach(() => {
-      instance = (
-        renderer.create(component)
-          .getInstance()
-      )
+      Rails.go.mockReturnValue(true)
+      Rails.to.mockReturnValue('MOCK TO')
+
+      instance = getComponentInstanceFrom(getComponentElement(
+        render(
+          <Gears />
+        )
+      ))
     })
 
     describe('`props` has changed', () => {
@@ -181,7 +173,16 @@ describe('#gears/gears', () => {
         it('returns true', () => {
           equal.mockReturnValue(true)
 
-          return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN CHANGED' }, mockState))
+          const props = {
+            ...instance.props,
+            pattern: 'MOCK PATTERN CHANGED'
+          }
+
+          const state = {
+            ...instance.state
+          }
+
+          expect(instance.shouldComponentUpdate(props, state))
             .toBe(true)
         })
       })
@@ -195,14 +196,38 @@ describe('#gears/gears', () => {
       describe('`state` has changed', () => {
         describe('`reverse` has changed', () => {
           it('returns true', () => {
-            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, reverse: {} }))
+            const props = {
+              ...instance.props
+            }
+
+            const state = {
+              ...instance.state,
+              reverse: {
+                alpha: 'MOCK CHANGED ALPHA',
+                omega: 'MOCK CHANGED OMEGA'
+              }
+            }
+
+            expect(instance.shouldComponentUpdate(props, state))
               .toBe(true)
           })
         })
 
         describe('`forward` has changed', () => {
           it('returns true', () => {
-            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, { ...mockState, forward: {} }))
+            const props = {
+              ...instance.props
+            }
+
+            const state = {
+              ...instance.state,
+              forward: {
+                alpha: 'MOCK CHANGED ALPHA',
+                omega: 'MOCK CHANGED OMEGA'
+              }
+            }
+
+            expect(instance.shouldComponentUpdate(props, state))
               .toBe(true)
           })
         })
@@ -211,14 +236,40 @@ describe('#gears/gears', () => {
       describe('`state` has not changed', () => {
         describe('`reverse` has not changed', () => {
           it('returns false', () => {
-            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+            const props = {}
+
+            const state = {
+              ...instance.state,
+              reverse: {
+                alpha: 'MOCK ALPHA',
+                omega: 'MOCK OMEGA'
+              }
+            }
+
+            instance.props = props
+            instance.state = state
+
+            expect(instance.shouldComponentUpdate(props, state))
               .toBe(false)
           })
         })
 
         describe('`forward` has not changed', () => {
           it('returns false', () => {
-            return expect(instance.shouldComponentUpdate({ pattern: 'MOCK PATTERN' }, mockState))
+            const props = {}
+
+            const state = {
+              ...instance.state,
+              forward: {
+                alpha: 'MOCK ALPHA',
+                omega: 'MOCK OMEGA'
+              }
+            }
+
+            instance.props = props
+            instance.state = state
+
+            expect(instance.shouldComponentUpdate(props, state))
               .toBe(false)
           })
         })
