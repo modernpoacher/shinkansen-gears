@@ -9,7 +9,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import getComponentInstanceFrom from 'react-component-instance'
-import snapshotOf, {
+import {
+  snapshotOf,
   getComponentElement
 } from 'react-component-snapshot'
 

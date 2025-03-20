@@ -16,7 +16,8 @@ export default {
   },
   transformIgnorePatterns: [
     '/node_modules\\/(?!react-component-instance)\\/',
-    '/node_modules\\/(?!react-component-snapshot)\\/'
+    '/node_modules\\/(?!react-component-snapshot)\\/',
+    '/node_modules\\/(?!react-component-name)\\/'
   ],
   moduleFileExtensions: ['js', 'jsx', 'mjs'],
   testEnvironment: 'jsdom',
