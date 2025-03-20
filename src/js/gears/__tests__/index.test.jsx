@@ -8,11 +8,14 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import getComponentInstanceFrom from 'react-component-instance'
+
 import {
-  snapshotOf,
-  getComponentElement
+  toSnapshot
 } from 'react-component-snapshot'
+
+import {
+  getInstance
+} from 'react-component-instance'
 
 import '@testing-library/jest-dom'
 
@@ -93,9 +96,9 @@ describe('#gears/gears', () => {
       Rails.go.mockReturnValue(true)
       Rails.to.mockReturnValue('MOCK TO')
 
-      expect(snapshotOf(getComponentElement(render(
+      expect(toSnapshot(render(
         <Gears />
-      ))))
+      )))
         .toMatchSnapshot()
     })
   })
@@ -162,10 +165,8 @@ describe('#gears/gears', () => {
       Rails.go.mockReturnValue(true)
       Rails.to.mockReturnValue('MOCK TO')
 
-      instance = getComponentInstanceFrom(getComponentElement(
-        render(
-          <Gears />
-        )
+      instance = getInstance(render(
+        <Gears />
       ))
     })
 
