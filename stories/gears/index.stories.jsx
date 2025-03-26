@@ -71,8 +71,8 @@ export default {
 }
 
 /**
- * @param {GearsProps} props
- * @returns {React.JSX.Element}
+ *  @param {GearsProps} props
+ *  @returns {React.JSX.Element}
  */
 export function Default (props) {
   return (
