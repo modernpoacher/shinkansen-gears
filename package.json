@@ -114,7 +114,7 @@
     "remove-files-webpack-plugin": "^1.5.0",
     "sass": "^1.88.0",
     "sass-loader": "^16.0.5",
-    "shinkansen-rails": "1.1.36",
+    "shinkansen-rails": "1.1.37",
     "storybook": "^8.6.12",
     "stylelint": "^16.19.1",
     "stylelint-config-recommended-scss": "^15.0.0",
