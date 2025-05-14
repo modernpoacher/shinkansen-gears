@@ -51,7 +51,7 @@
     "transform": "cross-env DEBUG=shinkansen-gears* .storybook/transform.sh"
   },
   "dependencies": {
-    "debug": "^4.4.0",
+    "debug": "^4.4.1",
     "fast-deep-equal": "^3.1.3"
   },
   "devDependencies": {
@@ -81,7 +81,7 @@
     "@types/mocha": "^10.0.10",
     "@types/prop-types": "^15.7.14",
     "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "autoprefixer": "^10.4.21",
@@ -107,8 +107,8 @@
     "prettier": "^3.5.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
-    "react-component-instance": "^0.0.45",
-    "react-component-snapshot": "^0.0.57",
+    "react-component-instance": "^0.0.46",
+    "react-component-snapshot": "^0.0.59",
     "react-dom": "^19.1.0",
     "react-router": "^7.6.0",
     "remove-files-webpack-plugin": "^1.5.0",
