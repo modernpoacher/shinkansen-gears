@@ -120,6 +120,9 @@
   "peerDependencies": {
     "shinkansen-rails": "1.1.x"
   },
+  "overrides": {
+    "storybook": "$storybook"
+  },
   "imports": {
     "#gears": {
       "require": "./src/js/index.cjs",
@@ -151,8 +154,5 @@
     },
     "./render/forward": "./src/js/render/forward/index.cjs",
     "./render/reverse": "./src/js/render/reverse/index.cjs"
-  },
-  "overrides": {
-    "storybook": "$storybook"
   }
 }
