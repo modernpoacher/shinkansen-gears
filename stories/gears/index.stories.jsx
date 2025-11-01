@@ -75,7 +75,7 @@ export default {
  *  @returns {React.JSX.Element}
  */
 export function Default (props) {
-  return (
+  return ( // @ts-ignore
     <Gears
       {...props}
     />

@@ -68,7 +68,7 @@ export default [
   },
   /**
    *  Storybook config
-   */
+   */ // @ts-ignore
   ...storybookPlugin.configs['flat/recommended'],
   /**
    *  Standard config

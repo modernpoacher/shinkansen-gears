@@ -48,7 +48,8 @@
     "test": "npm run test:mocha && npm run test:jest",
     "test:jest": "cross-env NODE_ENV=test jest",
     "test:mocha": "cross-env NODE_ENV=test mocha test --recursive",
-    "transform": "cross-env DEBUG=shinkansen-gears* .storybook/transform.sh"
+    "transform": "cross-env DEBUG=shinkansen-gears* .storybook/transform.sh",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "debug": "^4.4.3",
