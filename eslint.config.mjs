@@ -191,6 +191,9 @@ export default [
         ...globals.node,
         GearsTypes: 'readonly'
       }
+    },
+    rules: {
+      '@typescript-eslint/no-redundant-type-constituents': 'off'
     }
   }),
   typescript({
@@ -207,6 +210,9 @@ export default [
         ...globals.browser,
         GearsTypes: 'readonly'
       }
+    },
+    rules: {
+      '@typescript-eslint/no-redundant-type-constituents': 'off'
     }
   })
 ]
