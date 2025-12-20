@@ -108,7 +108,7 @@
     "react-dom": "^19.2.3",
     "react-router": "^7.11.0",
     "remove-files-webpack-plugin": "^1.5.0",
-    "sass": "^1.97.0",
+    "sass": "^1.97.1",
     "sass-loader": "^16.0.6",
     "shinkansen-rails": "1.1.130",
     "storybook": "^10.1.10",
