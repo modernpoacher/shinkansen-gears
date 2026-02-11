@@ -112,10 +112,10 @@
     "sass-loader": "^16.0.7",
     "shinkansen-rails": "1.1.130",
     "storybook": "^10.2.8",
-    "stylelint": "^17.1.1",
+    "stylelint": "^17.2.0",
     "stylelint-config-recommended-scss": "^17.0.0",
     "stylelint-scss": "^7.0.0",
-    "webpack": "^5.105.0",
+    "webpack": "^5.105.1",
     "webpack-cli": "^6.0.1"
   },
   "peerDependencies": {
