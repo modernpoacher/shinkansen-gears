@@ -100,7 +100,7 @@
     "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.1",
     "postcss-map": "^0.11.0",
-    "prettier": "^3.8.2",
+    "prettier": "^3.8.3",
     "prop-types": "^15.8.1",
     "react": "^19.2.5",
     "react-component-instance": "^0.0.126",
