@@ -8,33 +8,32 @@
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react",
-    "baseUrl": ".",
     "paths": {
       "#gears": [
-        "src/js/index.cjs",
-        "src/js/index.mjs"
+        "./src/js/index.cjs",
+        "./src/js/index.mjs"
       ],
       "#gears/gears": [
-        "src/js/gears/index.cjs"
+        "./src/js/gears/index.cjs"
       ],
       "#gears/gears/*": [
-        "src/js/gears/*/index.cjs"
+        "./src/js/gears/*/index.cjs"
       ],
       "#gears/gears/forward": [
-        "src/js/gears/forward/index.cjs"
+        "./src/js/gears/forward/index.cjs"
       ],
       "#gears/gears/reverse": [
-        "src/js/gears/reverse/index.cjs"
+        "./src/js/gears/reverse/index.cjs"
       ],
       "#gears/render": [
-        "src/js/render/index.cjs",
-        "src/js/render/index.mjs"
+        "./src/js/render/index.cjs",
+        "./src/js/render/index.mjs"
       ],
       "#gears/render/forward": [
-        "src/js/render/forward/index.cjs"
+        "./src/js/render/forward/index.cjs"
       ],
       "#gears/render/reverse": [
-        "src/js/render/reverse/index.cjs"
+        "./src/js/render/reverse/index.cjs"
       ]
     }
   },
