@@ -40,7 +40,7 @@
     "nvm": "bash nvm.sh",
     "prebuild": "npm run nvm",
     "prelint": "npm run nvm",
-    "prepare": "husky",
+    "prepare": "node husky.mjs",
     "prestorybook": "npm run build && npm run prettier && npm run transform",
     "pretest": "npm run nvm",
     "prettier": "prettier src/sass/**/*.scss .storybook --write",
