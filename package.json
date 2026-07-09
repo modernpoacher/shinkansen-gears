@@ -106,7 +106,7 @@
     "react-component-instance": "^0.0.126",
     "react-component-snapshot": "^0.0.168",
     "react-dom": "^19.2.7",
-    "react-router": "^8.1.0",
+    "react-router": "^8.2.0",
     "remove-files-webpack-plugin": "^1.5.0",
     "sass": "^1.101.0",
     "sass-loader": "^17.0.0",
