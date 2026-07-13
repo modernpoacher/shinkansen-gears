@@ -94,7 +94,7 @@
     "mini-css-extract-plugin": "^2.10.2",
     "mocha": "^11.7.6",
     "perfectionist": "^2.4.0",
-    "postcss": "^8.5.17",
+    "postcss": "^8.5.18",
     "postcss-discard-comments": "^8.0.1",
     "postcss-discard-empty": "^8.0.1",
     "postcss-import": "^16.1.1",
