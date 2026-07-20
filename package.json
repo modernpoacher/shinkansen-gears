@@ -112,7 +112,7 @@
     "sass-loader": "^17.0.0",
     "shinkansen-rails": "1.1.130",
     "storybook": "^10.5.2",
-    "stylelint": "^17.14.0",
+    "stylelint": "^17.14.1",
     "stylelint-config-recommended-scss": "^17.0.1",
     "stylelint-scss": "^7.2.0",
     "webpack": "^5.108.4",
