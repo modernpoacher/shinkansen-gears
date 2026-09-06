@@ -17,7 +17,9 @@ jobs:
           command: npm run lint
       - run:
           name: Test
-          command: npm test -- --runInBand --collectCoverage false
+          command: |
+            npm run test:mocha
+            npm run test:jest -- --runInBand --collectCoverage false
   publish:
     docker:
       - image: cimg/node:lts

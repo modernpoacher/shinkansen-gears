@@ -6,7 +6,7 @@ export default {
     './src'
   ],
   clearMocks: true,
-  collectCoverage: true,
+  collectCoverage: false,
   coverageDirectory: './coverage',
   coverageProvider: 'v8',
   testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(jsx?|mjs?)$',

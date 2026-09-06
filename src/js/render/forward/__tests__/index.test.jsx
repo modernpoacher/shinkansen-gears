@@ -73,6 +73,14 @@ jest.mock('react-router', () => {
 })
 
 describe('#gears/render/forward', () => {
+  beforeAll(() => {
+    jest.useFakeTimers()
+  })
+
+  afterAll(() => {
+    jest.useRealTimers()
+  })
+
   describe('`renderForward`', () => {
     it('is defined', () => {
       expect(renderForward)
