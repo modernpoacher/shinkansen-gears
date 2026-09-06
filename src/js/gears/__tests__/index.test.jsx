@@ -91,14 +91,6 @@ jest.mock('react-router', () => {
 })
 
 describe('#gears/gears', () => {
-  beforeAll(() => {
-    jest.useFakeTimers()
-  })
-
-  afterAll(() => {
-    jest.useRealTimers()
-  })
-
   describe('Always', () => {
     it('renders', () => {
       Rails.go.mockReturnValue(true)

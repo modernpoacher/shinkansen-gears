@@ -73,14 +73,6 @@ jest.mock('react-router', () => {
 })
 
 describe('#gears/render/reverse', () => {
-  beforeAll(() => {
-    jest.useFakeTimers()
-  })
-
-  afterAll(() => {
-    jest.useRealTimers()
-  })
-
   describe('`renderReverse`', () => {
     it('is defined', () => {
       expect(renderReverse)
