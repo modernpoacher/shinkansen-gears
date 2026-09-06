@@ -105,7 +105,7 @@
     "prop-types": "^15.8.1",
     "react": "^19.2.8",
     "react-component-instance": "^0.0.159",
-    "react-component-snapshot": "^0.0.216",
+    "react-component-snapshot": "^0.0.217",
     "react-dom": "^19.2.8",
     "react-router": "^8.3.1",
     "remove-files-webpack-plugin": "^1.5.0",
