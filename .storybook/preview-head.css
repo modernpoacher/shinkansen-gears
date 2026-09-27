@@ -172,12 +172,12 @@ li {
   }
 }
 .heading-l,
-h1,
 .heading-m,
-h2,
 .heading-s,
-h3,
 .paragraph,
+h1,
+h2,
+h3,
 p {
   margin: 1em 0;
 }
