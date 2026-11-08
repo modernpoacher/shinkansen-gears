@@ -1,13 +1,13 @@
 .heading-l,
 h1 {
+  color: #171819;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #171819;
   font-size: 2rem;
   line-height: 2.5rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .heading-l,
   h1 {
     font-size: 1.5rem;
@@ -16,14 +16,14 @@ h1 {
 }
 .heading-m,
 h2 {
+  color: #171819;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #171819;
   font-size: 1.625rem;
   line-height: 2.125rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .heading-m,
   h2 {
     font-size: 1.25rem;
@@ -32,14 +32,14 @@ h2 {
 }
 .heading-s,
 h3 {
+  color: #171819;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .heading-s,
   h3 {
     font-size: 1rem;
@@ -47,42 +47,42 @@ h3 {
   }
 }
 .body-l {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.5rem;
   line-height: 2rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .body-l {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 .body-m {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .body-m {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 .body-s {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1rem;
   line-height: 1.375rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .body-s {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -90,14 +90,14 @@ h3 {
 }
 .paragraph,
 p {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   .paragraph,
   p {
     font-size: 1rem;
@@ -107,17 +107,17 @@ p {
 .anchor,
 .skip-link,
 a {
+  color: #4d90fe;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
   text-decoration: underline;
-  color: #4d90fe;
 }
 .anchor:link,
 .skip-link:link,
 a:link {
-  text-decoration: underline;
   color: #4d90fe;
+  text-decoration: underline;
 }
 .anchor:hover,
 .skip-link:hover,
@@ -135,21 +135,21 @@ a:visited {
 .skip-link:focus,
 a:active,
 a:focus {
-  outline: 2px solid#0000;
-  background-color: #fd0;
   color: #171819;
+  background-color: #fd0;
+  outline: 2px solid transparent;
 }
 dl,
 ol,
 ul {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   dl,
   ol,
   ul {
@@ -158,14 +158,14 @@ ul {
   }
 }
 li {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   li {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -194,44 +194,44 @@ li {
   margin: 0;
 }
 .skip-link {
-  font-size: 14px;
-  line-height: 16px;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-  display: block;
-  padding: 10px 15px;
   outline-offset: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  position: absolute;
+  overflow: hidden;
 }
 .skip-link:active,
 .skip-link:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
   clip: auto;
   clip-path: none;
+  width: auto;
+  height: auto;
   margin: 3px;
+  position: static;
+  overflow: visible;
 }
 .skip-link:active {
-  outline: 3px solid#fff;
-  background-color: #dcdcdc;
   color: #fff;
+  background-color: #dcdcdc;
+  outline: 3px solid #fff;
 }
 header {
-  flex-shrink: 0;
   background-color: #fff;
+  flex-shrink: 0;
   min-width: 320px;
   margin: 0 0 auto;
 }
 footer {
-  flex-shrink: 0;
   background-color: #fff;
+  flex-shrink: 0;
   min-width: 320px;
   margin: auto 0 0;
 }
@@ -240,40 +240,39 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  color: #171819;
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
   font-size: 16px;
   line-height: 22px;
   overflow: auto;
 }
 main {
-  display: block;
+  border: none;
   width: 100%;
   margin: 0;
   padding: 0;
-  border: none;
+  display: block;
 }
 #storybook-root {
   max-width: 1020px;
-  margin: 0 auto;
 }
 #storybook-root header h1 {
+  color: #171819;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #171819;
   font-size: 3.5rem;
   line-height: 3.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root header h1 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -282,34 +281,31 @@ main {
 #storybook-root button {
   outline-offset: 2px;
   font-family: proxima-nova-regular, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #171819;
   font-size: 1rem;
   line-height: 1.375rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root button {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 #storybook-root button {
-  font-family: proxima-nova-bold, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: relative;
-  display: block;
   text-align: center;
   color: #fff;
   background-color: #24548a;
-  border: 2px solid#24548a;
+  border: 2px solid #24548a;
   border-radius: 4px;
   padding: 8px 16px;
+  font-family: proxima-nova-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  position: relative;
 }
 #storybook-root button[disabled] {
   background-color: #d8d8d8;
-  border: 2px solid#d8d8d8;
+  border: 2px solid #d8d8d8;
 }
 #storybook-root button span {
   display: block;
@@ -320,65 +316,63 @@ main {
 #storybook-root button:focus {
   color: #171819;
   background-color: #fd0;
-  border: 2px solid#fd0;
-  text-decoration: underline;
+  border: 2px solid #fd0;
   outline-color: #171819;
+  text-decoration: underline;
 }
 #storybook-root label {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
-  line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root label {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 #storybook-root label {
-  display: block;
-  padding: 0;
   margin: 0 0 0.25rem;
+  padding: 0;
   line-height: 2rem;
+  display: block;
 }
 #storybook-root fieldset {
+  border: none;
   margin: 0;
   padding: 0;
-  border: none;
 }
 #storybook-root fieldset legend {
+  color: #171819;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #171819;
   font-size: 1.625rem;
   line-height: 2.125rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root fieldset legend {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 #storybook-root fieldset legend {
-  padding: 0;
-  margin: 0 0 1em;
   border: none;
+  margin: 0 0 1em;
+  padding: 0;
 }
 #storybook-root input:not([type="checkbox"]):not([type="radio"]),
 #storybook-root select,
 #storybook-root textarea {
+  color: #171819;
   font-family: proxima-nova-regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #171819;
   font-size: 1.25rem;
-  line-height: 1.75rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root input:not([type="checkbox"]):not([type="radio"]),
   #storybook-root select,
   #storybook-root textarea {
@@ -390,89 +384,86 @@ main {
 #storybook-root select,
 #storybook-root textarea {
   background-color: #fff;
-  border: 2px solid#000;
-  display: inline-block;
+  border: 2px solid #000;
   padding: 0.25rem;
   line-height: 2rem;
+  display: inline-block;
 }
 #storybook-root input:not([type="checkbox"]):not([type="radio"]):focus,
 #storybook-root select:focus,
 #storybook-root textarea:focus {
-  outline: 3px solid#fd0;
+  border-color: #000;
+  outline: 3px solid #fd0;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
-  border-color: #000;
 }
 #storybook-root {
   margin: 0 auto;
 }
 #storybook-root .shinkansen-gears {
-  padding: 0;
   margin: 2rem 0;
+  padding: 0;
 }
 #storybook-root .shinkansen-gears li {
-  display: inline-block;
   margin-right: 0.5rem;
+  display: inline-block;
 }
 #storybook-root .shinkansen-gears li a {
   outline-offset: 2px;
   outline-width: 1px;
   outline-style: auto;
   font-family: proxima-nova-regular, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #171819;
   font-size: 1rem;
   line-height: 1.375rem;
 }
-@media only screen and (width<=767px) {
+@media only screen and (max-width: 767px) {
   #storybook-root .shinkansen-gears li a {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 #storybook-root .shinkansen-gears li a {
+  text-align: center;
+  color: #24548a;
+  background-color: transparent;
+  border: 2px solid #24548a;
+  border-radius: 4px;
+  padding: 8px 16px;
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
-  position: relative;
   display: block;
-  text-align: center;
-  color: #24548a;
-  background-color: #0000;
-  border: 2px solid#24548a;
-  border-radius: 4px;
-  padding: 8px 16px;
+  position: relative;
 }
 #storybook-root .shinkansen-gears li a.disabled {
   background-color: #d8d8d8;
-  border: 2px solid#d8d8d8;
+  border: 2px solid #d8d8d8;
 }
 #storybook-root .shinkansen-gears li a span {
   display: block;
 }
 #storybook-root .shinkansen-gears li a:link {
-  text-decoration: none;
   color: #24548a;
+  text-decoration: none;
 }
 #storybook-root .shinkansen-gears li a:hover {
-  text-decoration: underline;
   color: #24548a;
+  text-decoration: underline;
 }
 #storybook-root .shinkansen-gears li a:visited {
   color: #24548a;
 }
 #storybook-root .shinkansen-gears li a:active,
 #storybook-root .shinkansen-gears li a:focus {
-  background-color: #24548a;
   color: #fff;
+  background-color: #24548a;
 }
 #storybook-root .shinkansen-gears li a:focus {
-  text-decoration: underline;
   outline-color: #fd0;
+  text-decoration: underline;
 }
 #storybook-root .shinkansen-gears li a {
-  outline-color: #0000;
+  outline-color: transparent;
 }
 #storybook-root .shinkansen-gears li:last-of-type {
   margin-right: auto;
