@@ -11,7 +11,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           name: Install
-          command: npm i --force
+          command: npm ci
       - run:
           name: Lint
           command: npm run lint
