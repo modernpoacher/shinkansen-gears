@@ -51,19 +51,22 @@ export default {
                   'postcss-discard-comments',
                   'postcss-discard-empty',
                   [
-                    'postcss-map', {
+                    'postcss-map',
+                    {
                       maps: [
                         join(DEPS, '@modernpoacher/design-system/src/tokens/palette.json')
                       ]
                     }
                   ],
                   [
-                    'autoprefixer', {
+                    'autoprefixer',
+                    {
                       remove: false
                     }
                   ],
                   [
-                    'perfectionist', {
+                    'perfectionist',
+                    {
                       trimLeadingZero: false,
                       sourcemap: true,
                       indentSize: 2,
